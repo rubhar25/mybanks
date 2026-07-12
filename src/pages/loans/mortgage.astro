@@ -1,0 +1,180 @@
+---
+import { banks, products, getBank, t } from '../../lib/data.js';
+
+const mortgages = products
+  .filter((p) => p.type === 'mortgage')
+  .sort((a, b) => a.effectiveRate - b.effectiveRate);
+
+// Market context, computed from the same data the table shows
+const effMin = Math.min(...mortgages.map((p) => p.effectiveRate));
+const effMax = Math.max(...mortgages.map((p) => p.effectiveRateMax ?? p.effectiveRate));
+const effAvg =
+  mortgages.reduce((s, p) => s + p.effectiveRate, 0) / mortgages.length;
+const lastUpdated = mortgages
+  .map((p) => p.updatedAt)
+  .sort()
+  .at(-1);
+
+const fmtAmount = (n) =>
+  n == null ? '—' : n >= 1000000 ? `${(n / 1000000).toLocaleString('hy-AM')} մլն` : n.toLocaleString('hy-AM');
+const fmtTerm = (min, max) => {
+  const y = (m) => (m % 12 === 0 ? `${m / 12} տ` : `${m} ամիս`);
+  if (min == null && max == null) return '—';
+  if (min == null) return `մինչև ${y(max)}`;
+  return `${y(min)} – ${y(max)}`;
+};
+const fmtRate = (min, max) => (max != null && max !== min ? `${min}–${max}%` : `${min}%`);
+---
+
+<html lang="hy">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Հիփոթեքային վարկերի համեմատություն — Հայաստանի բոլոր բանկերը</title>
+    <style>
+      body { font-family: system-ui, sans-serif; max-width: 1000px; margin: 0 auto; padding: 1rem; }
+      table { border-collapse: collapse; width: 100%; }
+      th, td { border: 1px solid #ccc; padding: 0.5rem; text-align: left; font-size: 0.9rem; }
+      th { background: #f4f4f4; }
+      .context { background: #f4f8ff; padding: 1rem; border-radius: 8px; margin-bottom: 1rem; }
+      .filters { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem; }
+      .filters label { display: flex; flex-direction: column; font-size: 0.85rem; gap: 0.25rem; }
+      .calc { background: #f9f6f0; padding: 1rem; border-radius: 8px; margin-top: 1.5rem; }
+      .calc-result { font-size: 1.2rem; font-weight: bold; }
+      .eff { font-weight: bold; }
+      .hidden { display: none; }
+    </style>
+  </head>
+  <body>
+    <nav><a href="/">← Գլխավոր</a></nav>
+    <h1>Հիփոթեքային վարկեր. համեմատություն</h1>
+
+    <div class="context">
+      <strong>Շուկան այս պահին.</strong> {mortgages.length} բանկի պայմաններ ·
+      փաստացի տոկոսադրույք՝ {effMin}%-ից {effMax}% · միջին նվազագույն ՓՏԴ՝ {effAvg.toFixed(2)}% ·
+      թարմացվել է՝ {lastUpdated}
+    </div>
+
+    <div class="filters">
+      <label>
+        Վարկի գումարը (AMD)
+        <input type="number" id="f-amount" placeholder="օր.՝ 25000000" step="1000000" min="0" />
+      </label>
+      <label>
+        Ժամկետը (տարի)
+        <input type="number" id="f-term" placeholder="օր.՝ 15" min="1" max="30" />
+      </label>
+    </div>
+
+    <table id="cmp">
+      <thead>
+        <tr>
+          <th>Բանկ</th>
+          <th>Անվանական</th>
+          <th>Փաստացի (ՓՏԴ) ↑</th>
+          <th>Ժամկետ</th>
+          <th>Գումար (AMD)</th>
+          <th>Կանխավճար</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {mortgages.map((p) => {
+          const bank = getBank(p.bankId);
+          return (
+            <tr
+              data-amount-min={p.amountMin ?? ''}
+              data-amount-max={p.amountMax ?? ''}
+              data-term-min={p.termMonthsMin ?? ''}
+              data-term-max={p.termMonthsMax ?? ''}
+              data-rate={p.nominalRate}
+              data-bank={t(bank.name)}
+            >
+              <td><a href={`/banks/${bank.id}/`}>{t(bank.name)}</a></td>
+              <td>{fmtRate(p.nominalRate, p.nominalRateMax)}</td>
+              <td class="eff">{fmtRate(p.effectiveRate, p.effectiveRateMax)}</td>
+              <td>{fmtTerm(p.termMonthsMin, p.termMonthsMax)}</td>
+              <td>{fmtAmount(p.amountMin)} – {fmtAmount(p.amountMax)}</td>
+              <td>{p.downPaymentMinPct == null ? '—' : `${p.downPaymentMinPct}%-ից`}</td>
+              <td><button class="calc-btn" type="button">Հաշվել</button></td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+    <p><small>ՓՏԴ = փաստացի տոկոսադրույք, ներառում է բոլոր վճարները։ Աղբյուրը՝ բանկերի պաշտոնական էջերը։ «—» նշանակում է՝ բանկը այդ պայմանը հրապարակել չի։</small></p>
+
+    <div class="calc" id="calc">
+      <h2>Ամսական վճարի հաշվիչ</h2>
+      <div class="filters">
+        <label>Գումար (AMD) <input type="number" id="c-amount" value="25000000" step="1000000" /></label>
+        <label>Ժամկետ (տարի) <input type="number" id="c-years" value="15" min="1" max="30" /></label>
+        <label>Տոկոսադրույք (%) <input type="number" id="c-rate" value="13" step="0.05" /></label>
+      </div>
+      <p>Ամսական վճար՝ <span class="calc-result" id="c-monthly">—</span></p>
+      <p><small>Ընդհանուր վճարվելիք՝ <span id="c-total">—</span> · Անուիտետային մոտավոր հաշվարկ է, ոչ առաջարկ։</small></p>
+    </div>
+
+    <script>
+      // Filters: hide rows that can't serve the requested amount/term.
+      // Missing (null) bounds are treated as "no limit" so the row stays visible.
+      const rows = [...document.querySelectorAll('#cmp tbody tr')];
+      const fAmount = document.getElementById('f-amount');
+      const fTerm = document.getElementById('f-term');
+
+      function applyFilters() {
+        const amount = Number(fAmount.value) || null;
+        const termMonths = fTerm.value ? Number(fTerm.value) * 12 : null;
+        for (const row of rows) {
+          const aMin = row.dataset.amountMin ? Number(row.dataset.amountMin) : null;
+          const aMax = row.dataset.amountMax ? Number(row.dataset.amountMax) : null;
+          const tMin = row.dataset.termMin ? Number(row.dataset.termMin) : null;
+          const tMax = row.dataset.termMax ? Number(row.dataset.termMax) : null;
+          let ok = true;
+          if (amount != null) {
+            if (aMin != null && amount < aMin) ok = false;
+            if (aMax != null && amount > aMax) ok = false;
+          }
+          if (termMonths != null) {
+            if (tMin != null && termMonths < tMin) ok = false;
+            if (tMax != null && termMonths > tMax) ok = false;
+          }
+          row.classList.toggle('hidden', !ok);
+        }
+      }
+      fAmount.addEventListener('input', applyFilters);
+      fTerm.addEventListener('input', applyFilters);
+
+      // Annuity calculator
+      const cAmount = document.getElementById('c-amount');
+      const cYears = document.getElementById('c-years');
+      const cRate = document.getElementById('c-rate');
+      const cMonthly = document.getElementById('c-monthly');
+      const cTotal = document.getElementById('c-total');
+
+      function recalc() {
+        const A = Number(cAmount.value);
+        const n = Number(cYears.value) * 12;
+        const r = Number(cRate.value) / 100 / 12;
+        if (!A || !n || !r) { cMonthly.textContent = '—'; cTotal.textContent = '—'; return; }
+        const m = (A * r) / (1 - Math.pow(1 + r, -n));
+        cMonthly.textContent = Math.round(m).toLocaleString('hy-AM') + ' ֏';
+        cTotal.textContent = Math.round(m * n).toLocaleString('hy-AM') + ' ֏';
+      }
+      [cAmount, cYears, cRate].forEach((el) => el.addEventListener('input', recalc));
+      recalc();
+
+      // "Հաշվել" on a row prefills the calculator with that bank's nominal rate
+      document.querySelectorAll('.calc-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const row = btn.closest('tr');
+          cRate.value = row.dataset.rate;
+          if (fAmount.value) cAmount.value = fAmount.value;
+          if (fTerm.value) cYears.value = fTerm.value;
+          recalc();
+          document.getElementById('calc').scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+    </script>
+  </body>
+</html>

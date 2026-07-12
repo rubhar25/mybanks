@@ -38,6 +38,7 @@ const bankProducts = getProductsOfBank(bank.id);
       {bankProducts.map((p) => (
         <li>
           {t(p.name)} — անվանական {p.nominalRate}%, <strong>փաստացի {p.effectiveRate}%</strong>
+          {p.type === 'mortgage' && <a href="/loans/mortgage/">(համեմատել բոլոր բանկերի հետ)</a>}
         </li>
       ))}
     </ul>
