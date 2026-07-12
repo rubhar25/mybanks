@@ -1,0 +1,5 @@
+# PRE-LAUNCH: block all crawlers until the site is ready.
+# TODO before go-live: replace with an allow-all robots.txt + sitemap reference,
+# and remove the noindex meta tag from src/layouts/Base.astro.
+User-agent: *
+Disallow: /

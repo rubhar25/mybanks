@@ -1,0 +1,38 @@
+{
+  "id": "mellat-deposit-standard",
+  "bankId": "mellat",
+  "type": "deposit",
+  "name": { "hy": "Ժամկետային ավանդ", "en": "Term deposit", "ru": "Срочный вклад" },
+  "rates": [
+    { "currency": "AMD", "termMonths": 3, "rate": 5.4 },
+    { "currency": "AMD", "termMonths": 6, "rate": 6.6 },
+    { "currency": "AMD", "termMonths": 9, "rate": 8.0 },
+    { "currency": "AMD", "termMonths": 12, "rate": 8.6 },
+    { "currency": "AMD", "termMonths": 18, "rate": 9.2 },
+    { "currency": "AMD", "termMonths": 24, "rate": 9.4 },
+    { "currency": "AMD", "termMonths": 36, "rate": 9.5 },
+    { "currency": "USD", "termMonths": 3, "rate": 1.0 },
+    { "currency": "USD", "termMonths": 6, "rate": 1.7 },
+    { "currency": "USD", "termMonths": 9, "rate": 2.5 },
+    { "currency": "USD", "termMonths": 12, "rate": 3.0 },
+    { "currency": "USD", "termMonths": 18, "rate": 3.7 },
+    { "currency": "USD", "termMonths": 24, "rate": 3.8 },
+    { "currency": "USD", "termMonths": 36, "rate": 3.9 },
+    { "currency": "EUR", "termMonths": 3, "rate": 0.3 },
+    { "currency": "EUR", "termMonths": 6, "rate": 0.6 },
+    { "currency": "EUR", "termMonths": 9, "rate": 1.1 },
+    { "currency": "EUR", "termMonths": 12, "rate": 1.3 },
+    { "currency": "EUR", "termMonths": 18, "rate": 1.9 },
+    { "currency": "EUR", "termMonths": 24, "rate": 2.0 },
+    { "currency": "EUR", "termMonths": 36, "rate": 2.2 }
+  ],
+  "amountMin": null,
+  "notes": {
+    "hy": "Տարեկան անվանական (պարզ) տոկոսադրույքներ՝ տոկոսների վճարումը ժամկետի վերջում տարբերակի համար. եռամսյակային վճարման դրույքները մի փոքր ցածր են (օր.՝ AMD 12 ամիս՝ 8.3%): termMonths-ը օրային միջակայքի վերին սահմանն է (31-90, 91-180, 181-270, 271-365, 366-545, 546-730, 731-1095 օր): Նվազագույն գումարը էջում նշված չէ (մանրամասները՝ «Պայմաններ/Սակագներ» PDF-ում): Հավաքվել է Playwright բրաուզերով (կայքը լրիվ JS-render է):"
+  },
+  "sources": [
+    "https://mellatbank.am/hy/Deposits"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-12"
+}

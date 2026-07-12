@@ -1,0 +1,36 @@
+{
+  "id": "converse-deposit-standard",
+  "bankId": "converse",
+  "type": "deposit",
+  "name": { "hy": "Ավանդ «Պրոգրես»", "en": "Progress deposit", "ru": "Вклад «Прогресс»" },
+  "rates": [
+    { "currency": "AMD", "termMonths": 3, "rate": 7.75 },
+    { "currency": "AMD", "termMonths": 6, "rate": 8.25 },
+    { "currency": "AMD", "termMonths": 9, "rate": 8.75 },
+    { "currency": "AMD", "termMonths": 12, "rate": 9.5 },
+    { "currency": "AMD", "termMonths": 18, "rate": 9.5 },
+    { "currency": "AMD", "termMonths": 24, "rate": 9.5 },
+    { "currency": "USD", "termMonths": 3, "rate": 2.0 },
+    { "currency": "USD", "termMonths": 6, "rate": 2.9 },
+    { "currency": "USD", "termMonths": 9, "rate": 3.6 },
+    { "currency": "USD", "termMonths": 12, "rate": 4.25 },
+    { "currency": "USD", "termMonths": 18, "rate": 4.4 },
+    { "currency": "USD", "termMonths": 24, "rate": 4.5 },
+    { "currency": "EUR", "termMonths": 3, "rate": 0.75 },
+    { "currency": "EUR", "termMonths": 6, "rate": 1.2 },
+    { "currency": "EUR", "termMonths": 9, "rate": 1.5 },
+    { "currency": "EUR", "termMonths": 12, "rate": 2.0 },
+    { "currency": "EUR", "termMonths": 18, "rate": 2.15 },
+    { "currency": "EUR", "termMonths": 24, "rate": 2.25 }
+  ],
+  "amountMin": 30000,
+  "notes": {
+    "hy": "«Պրոգրես» ժամկետային ավանդ, տարեկան պարզ տոկոսադրույքներ՝ տոկոսները ժամկետի վերջում վճարման դեպքում (45-օրյա տարբերակ նույնպես կա՝ AMD 5.00%): Մասնակի նվազեցման հնարավորությամբ, առանց համալրման: Նվազագույն գումար՝ 30,000 AMD / 500 USD / 500 EUR: 50 մլն AMD / 100,000 USD / 50,000 EUR-ը գերազանցող գումարների դեպքում՝ պայմանագրային դրույք: Ամսական վճարման դրույքներն ավելի ցածր են (օր.՝ AMD 12 ամիս՝ 9.00%): Հավաքվել է Playwright բրաուզերով (կայքը Cloudflare-ի հետևում է):"
+  },
+  "sources": [
+    "https://conversebank.am/hy/progress/",
+    "https://www.conversebank.am/hy/ddeposits"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-12"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "inecobank-deposit-standard",
+  "bankId": "inecobank",
+  "type": "deposit",
+  "name": { "hy": "Պարզ ավանդ", "en": "Simple deposit", "ru": "Простой вклад" },
+  "rates": [
+    { "currency": "AMD", "termMonths": 3, "rate": 7.0 },
+    { "currency": "AMD", "termMonths": 6, "rate": 8.0 },
+    { "currency": "AMD", "termMonths": 9, "rate": 8.5 },
+    { "currency": "AMD", "termMonths": 12, "rate": 9.5 },
+    { "currency": "AMD", "termMonths": 18, "rate": 9.5 },
+    { "currency": "AMD", "termMonths": 24, "rate": 9.75 },
+    { "currency": "AMD", "termMonths": 36, "rate": 10.0 }
+  ],
+  "amountMin": 100000,
+  "notes": {
+    "hy": "«Պարզ» ավանդ, տոկոսների վճարումը ժամկետի վերջում, առանց համալրման: Բանկի ցանցը ամսային միջակայքերով է (1-2, 3-5, 6-8, 9-11, 12-14, 15-23, 24-30, 31-36 ամիս). termMonths-ը միջակայքի կիրառելի արժեքն է (օր.՝ 3-5 ամիս → 3): 1-2 ամիս ժամկետով դրույքը՝ 5.5%: Այս էջում արտարժութային դրույքներ չեն հրապարակվում: 200 մլն ՀՀ դրամը գերազանցող ավանդների պայմանները անհատական են: Էջի թարմացումը՝ 08.07.2026: Հավաքվել է Playwright բրաուզերով (կայքը WAF-ով է):"
+  },
+  "sources": [
+    "https://www.inecobank.am/hy/Individual/deposits/simple/terms"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-12"
+}
