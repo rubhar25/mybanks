@@ -1,4 +1,5 @@
 ---
+import Base from '../../layouts/Base.astro';
 import { banks, getProductsOfBank, t } from '../../lib/data.js';
 
 export function getStaticPaths() {
@@ -9,42 +10,56 @@ const { bank } = Astro.props;
 const bankProducts = getProductsOfBank(bank.id);
 ---
 
-<html lang="hy">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{t(bank.name)} — պրոֆիլ</title>
-  </head>
-  <body>
-    <nav><a href="/">← Բոլոր բանկերը</a></nav>
+<Base title={`${t(bank.name)} — պրոֆիլ`}>
+  <nav class="breadcrumb"><a href="/">← Բոլոր բանկերը</a></nav>
 
+  <div class="profile-header">
     <h1>{t(bank.name)}</h1>
-    <p>{t(bank.fullName)}</p>
+    <span class="badge" title="SWIFT / BIC">SWIFT՝ {bank.swift}</span>
+  </div>
+  <p class="muted">{t(bank.fullName)}</p>
 
+  <section class="card">
     <h2>Կոնտակտներ</h2>
-    <ul>
+    <ul class="contact-list">
       {bank.phones.map((p) => (
-        <li>{t(p.label)}: <a href={`tel:${p.number.replace(/\s/g, '')}`}>{p.number}</a></li>
-      ))}
-      <li>Կայք՝ <a href={bank.website}>{bank.website}</a></li>
-      <li>Հասցե՝ {t(bank.headOffice)}</li>
-    </ul>
-
-    <h2>SWIFT / BIC</h2>
-    <p><code>{bank.swift}</code></p>
-
-    <h2>Պրոդուկտներ</h2>
-    <ul>
-      {bankProducts.map((p) => (
         <li>
-          {t(p.name)} — անվանական {p.nominalRate}%, <strong>փաստացի {p.effectiveRate}%</strong>
-          {p.type === 'mortgage' && <a href="/loans/mortgage/">(համեմատել բոլոր բանկերի հետ)</a>}
+          <span class="label">{t(p.label)}</span>
+          <a href={`tel:${p.number.replace(/\s/g, '')}`}>{p.number}</a>
         </li>
       ))}
+      <li>
+        <span class="label">Կայք</span>
+        <a href={bank.website}>{bank.website}</a>
+      </li>
+      <li>
+        <span class="label">Հասցե</span>
+        <span>{t(bank.headOffice)}</span>
+      </li>
     </ul>
+  </section>
 
-    <footer>
-      <small>Թարմացվել է՝ {bank.updatedAt}</small>
-    </footer>
-  </body>
-</html>
+  <h2>Պրոդուկտներ</h2>
+  {bankProducts.map((p) => (
+    <article class="card product-card">
+      <div>
+        <h3>{t(p.name)}</h3>
+        {p.type === 'mortgage' && (
+          <a href="/loans/mortgage/">Համեմատել բոլոր բանկերի հետ</a>
+        )}
+      </div>
+      <div class="rates">
+        <div class="rate-block">
+          <span class="value">{p.nominalRate}%</span>
+          <span class="label">անվանական</span>
+        </div>
+        <div class="rate-block effective">
+          <span class="value">{p.effectiveRate}%</span>
+          <span class="label">փաստացի</span>
+        </div>
+      </div>
+    </article>
+  ))}
+
+  <p class="updated-stamp">Թարմացվել է՝ {bank.updatedAt}</p>
+</Base>

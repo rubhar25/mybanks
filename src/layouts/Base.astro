@@ -1,0 +1,48 @@
+---
+import '../styles/global.css';
+
+const { title, description = 'Հայաստանի բանկերի, վարկերի, ավանդների և փոխարժեքների պորտալ' } = Astro.props;
+---
+
+<html lang="hy">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="/">
+          <svg width="24" height="24" viewBox="0 0 32 32" aria-hidden="true" fill="none">
+            <rect x="4" y="18" width="5" height="10" rx="1" fill="currentColor" opacity="0.6" />
+            <rect x="13" y="12" width="5" height="16" rx="1" fill="currentColor" opacity="0.8" />
+            <rect x="22" y="5" width="5" height="23" rx="1" fill="currentColor" />
+          </svg>
+          Ֆինպորտալ
+        </a>
+        <nav class="site-nav" aria-label="Հիմնական նավիգացիա">
+          <ul>
+            <li><a href="/">Բանկեր</a></li>
+            <li><a href="/loans/mortgage/">Վարկեր</a></li>
+            <li><a href="#">Ավանդներ</a></li>
+            <li><a href="#">Հաշվիչներ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>Տվյալները թարմացվում են բանկերի պաշտոնական աղբյուրներից։</p>
+        <p>© 2026 Ֆինպորտալ</p>
+      </div>
+    </footer>
+  </body>
+</html>

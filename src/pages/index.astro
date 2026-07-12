@@ -1,24 +1,18 @@
 ---
+import Base from '../layouts/Base.astro';
 import { banks } from '../lib/data.js';
 import { t } from '../lib/data.js';
 ---
 
-<html lang="hy">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Հայաստանի ֆինանսական պորտալ</title>
-  </head>
-  <body>
-    <h1>Հայաստանի ֆինանսական պորտալ</h1>
-    <p><a href="/loans/mortgage/">→ Հիփոթեքային վարկերի համեմատություն</a></p>
-    <h2>Բանկերը</h2>
-    <ul>
-      {banks.map((bank) => (
-        <li>
-          <a href={`/banks/${bank.id}/`}>{t(bank.name)}</a>
-        </li>
-      ))}
-    </ul>
-  </body>
-</html>
+<Base title="Հայաստանի ֆինանսական պորտալ">
+  <h1>Հայաստանի ֆինանսական պորտալ</h1>
+  <p><a href="/loans/mortgage/">→ Հիփոթեքային վարկերի համեմատություն</a></p>
+  <h2>Բանկերը</h2>
+  <ul class="card-grid">
+    {banks.map((bank) => (
+      <li>
+        <a class="card-link" href={`/banks/${bank.id}/`}>{t(bank.name)}</a>
+      </li>
+    ))}
+  </ul>
+</Base>
