@@ -1,0 +1,25 @@
+{
+  "id": "araratbank-mortgage-standard",
+  "bankId": "araratbank",
+  "type": "mortgage",
+  "name": { "hy": "Բնակելի անշարժ գույքի ձեռքբերման հիփոթեքային վարկ", "en": "Mortgage loan (residential purchase)", "ru": "Ипотечный кредит (покупка жилья)" },
+  "currency": "AMD",
+  "nominalRate": 12.5,
+  "nominalRateMax": null,
+  "effectiveRate": 12.84,
+  "effectiveRateMax": 14.78,
+  "termMonthsMin": 60,
+  "termMonthsMax": 300,
+  "amountMin": 5000000,
+  "amountMax": 150000000,
+  "downPaymentMinPct": 20,
+  "govPrograms": [],
+  "notes": {
+    "hy": "Հաստատուն 12.5% առաջին 36 ամիսների համար, 37-րդ ամսից ճշգրտվում է (ՀՀ ԿԲ հրապարակվող ավանդների միջին տոկոսադրույք + 4.5%, +/-8 տոկոսային կետ սահմանաչափով): Փաստացի՝ 12.84-14.78%: Կանխավճարը ուղղակիորեն նշված չէ. վարկ/գրավ առավելագույնը 80% է ՀՀ դրամի դեպքում (մինչև 100%՝ լրացուցիչ գույքի գրավադրմամբ), որից բխում է downPaymentMinPct=20 գնահատականը: Սպասարկման վճար՝ վարկի գումարի 1%, առավելագույնը 250,000 դրամ:"
+  },
+  "sources": [
+    "https://www.araratbank.am/hy/hipoteqayin-varker/24/"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-12"
+}

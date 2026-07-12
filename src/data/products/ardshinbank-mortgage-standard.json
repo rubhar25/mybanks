@@ -1,0 +1,26 @@
+{
+  "id": "ardshinbank-mortgage-standard",
+  "bankId": "ardshinbank",
+  "type": "mortgage",
+  "name": { "hy": "Հիփոթեքային վարկ՝ առաջնային կամ երկրորդային շուկայից բնակելի անշարժ գույքի ձեռքբերում", "en": "Mortgage loan (residential purchase, primary or secondary market)", "ru": "Ипотечный кредит (покупка жилья, первичный или вторичный рынок)" },
+  "currency": "AMD",
+  "nominalRate": 13.7,
+  "nominalRateMax": 14.5,
+  "effectiveRate": 14.4,
+  "effectiveRateMax": 15.7,
+  "termMonthsMin": 120,
+  "termMonthsMax": 240,
+  "amountMin": null,
+  "amountMax": 200000000,
+  "downPaymentMinPct": 10,
+  "govPrograms": [],
+  "notes": {
+    "hy": "Բանկի սեփական միջոցներով վարկեր. հաստատուն (ճշգրտվող)՝ մինչև 35 մլն դրամի դեպքում 13.7%, 35.1-200 մլն դրամի դեպքում 14.5%. լողացող՝ ՀԴ+4.5%: Վարկ/գրավ առավելագույնը 90%: Նվազագույն գումար սահմանված չէ: Աղբյուրը՝ պաշտոնական տեղեկատվական ամփոփագիր, խմբ. 5, ուժի մեջ է 21.04.2025-ից:"
+  },
+  "sources": [
+    "https://ardshinbank.am/api/files/documents/%D5%80%D5%AB%D6%83%D5%B8%D5%A9%D5%A5%D6%84%20_%D5%B1%D5%A5%D5%BC%D6%84%D5%A2%D5%A5%D6%80%D5%B8%D6%82%D5%B4.pdf",
+    "https://ardshinbank.am/for-you/hipotek?lang=hy"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-12"
+}

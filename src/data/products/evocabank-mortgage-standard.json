@@ -1,0 +1,39 @@
+{
+  "id": "evocabank-mortgage-standard",
+  "bankId": "evocabank",
+  "type": "mortgage",
+  "name": { "hy": "Բնակարանային հիփոթեքային վարկ Բանկի ռեսուրսով", "en": "Residential mortgage loan (bank resources)", "ru": "Ипотечный кредит на жилье (ресурсы банка)" },
+  "currency": "AMD",
+  "nominalRate": 13.2,
+  "nominalRateMax": 15.0,
+  "effectiveRate": 9.7,
+  "effectiveRateMax": 18.7,
+  "termMonthsMin": 60,
+  "termMonthsMax": 240,
+  "amountMin": 2000000,
+  "amountMax": 80000000,
+  "downPaymentMinPct": 10,
+  "govPrograms": [],
+  "documents": {
+    "hy": [
+      "Հիփոթեքային վարկի տրամադրման դիմում-հայտ",
+      "Անձնագիր կամ նույնականացման քարտ, սոցիալական քարտ (կամ չունենալու տեղեկանք)",
+      "Ամուսնության վկայական (առկայության դեպքում)",
+      "Անչափահաս երեխաների ծննդյան վկայական (առկայության դեպքում)",
+      "Տեղեկանք աշխատանքի վայրից աշխատավարձի չափի մասին (ոչ ավելի, քան 30 օր վաղեմության)",
+      "Այլ եկամուտները հավաստող տեղեկատվություն (առկայության դեպքում)",
+      "Ձեռք բերվող անշարժ գույքի գնահատման հաշվետվություն",
+      "Վաճառվող անշարժ գույքի սեփականության վկայական և ձեռքբերման հիմքեր",
+      "Անշարժ գույքի սեփականատերերի անձնագրեր"
+    ]
+  },
+  "notes": {
+    "hy": "Ձեռքբերման դեպքում՝ հաստատուն 14-15% (ժամկետ 60-180 ամիս, փաստացի 15.2-18.7%) կամ լողացող՝ սկսած 13.2%-ից (հաստատուն բաղադրիչ 4.2%-ից + փոփոխուն, ժամկետ 60-240 ամիս, փաստացի 9.7-18.4%, տատանման շեմ +/-4%): Վարկ/գրավ՝ առաջնային շուկա մինչև 90%, երկրորդային՝ մինչև 85%, որից բխում է downPaymentMinPct=10 գնահատականը (առաջնային շուկա):"
+  },
+  "sources": [
+    "https://www.evoca.am/hy/loans/mortgage-loans/residential-mortgage-loans/residential-mortgage-loans-terms-and-conditions",
+    "https://www.evoca.am/hy/loans/mortgage-loans/residential-mortgage-loans/residential-mortgage-loans-required-documents"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-12"
+}

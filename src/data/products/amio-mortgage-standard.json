@@ -1,0 +1,25 @@
+{
+  "id": "amio-mortgage-standard",
+  "bankId": "amio",
+  "type": "mortgage",
+  "name": { "hy": "Հիփոթեքային վարկ՝ առաջնային շուկայից ձեռքբերում", "en": "Mortgage loan (primary market purchase)", "ru": "Ипотечный кредит (покупка на первичном рынке)" },
+  "currency": "AMD",
+  "nominalRate": 13.4,
+  "nominalRateMax": 14.5,
+  "effectiveRate": 14.3,
+  "effectiveRateMax": 16.68,
+  "termMonthsMin": 12,
+  "termMonthsMax": 360,
+  "amountMin": 5000000,
+  "amountMax": 150000000,
+  "downPaymentMinPct": 10,
+  "govPrograms": [],
+  "notes": {
+    "hy": "Անվանական՝ 13.4% եկամուտների հիմնավորմամբ, 14.5% առանց հիմնավորման (հաստատուն ճշգրտվող, կարող է վերանայվել 37-րդ ամսից, +/-2.5 տոկոսային կետ): Փաստացի՝ 14.3-15.3% (եկամուտների հիմնավորմամբ), 15.51-16.68% (առանց): Վարկ/գրավ՝ մինչև 90% (12-240 ամիս) կամ մինչև 80% (240+ ամիս), որից բխում է downPaymentMinPct=10 գնահատականը. 50% կանխավճարի դեպքում եկամուտ չի դիտարկվում:"
+  },
+  "sources": [
+    "https://amiobank.am/loans/mortgage-loans"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-12"
+}

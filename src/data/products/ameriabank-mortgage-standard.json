@@ -2,19 +2,33 @@
   "id": "ameriabank-mortgage-standard",
   "bankId": "ameriabank",
   "type": "mortgage",
-  "name": { "hy": "Հիփոթեքային վարկ", "en": "Standard mortgage", "ru": "Ипотечный кредит" },
+  "name": { "hy": "Հիփոթեքային վարկ երկրորդային շուկայից", "en": "Mortgage loan (secondary market)", "ru": "Ипотечный кредит (вторичный рынок)" },
   "currency": "AMD",
-  "nominalRate": 12.5,
-  "effectiveRate": 13.2,
-  "termMonthsMin": 12,
-  "termMonthsMax": 240,
-  "amountMin": 5000000,
-  "amountMax": 100000000,
-  "downPaymentMinPct": 10,
-  "govPrograms": ["mortgage-income-tax-refund"],
+  "nominalRate": 14.0,
+  "nominalRateMax": 14.0,
+  "effectiveRate": 14.97,
+  "effectiveRateMax": 17.21,
+  "termMonthsMin": null,
+  "termMonthsMax": 360,
+  "amountMin": 3000000,
+  "amountMax": 150000000,
+  "downPaymentMinPct": 5,
+  "govPrograms": [],
   "documents": {
-    "hy": ["Անձնագիր և սոց. քարտ", "Եկամուտների մասին տեղեկանք", "Գնվող գույքի փաստաթղթեր"]
+    "hy": [
+      "Վարկի հայտ-դիմում",
+      "Անձը հաստատող փաստաթուղթ (բնօրինակ)",
+      "Ձեռքբերվող/գրավադրվող գույքի սեփականության վկայականի պատճեն",
+      "Տեղեկանք աշխատավարձի վերաբերյալ և/կամ եկամուտը հավաստող այլ փաստաթղթեր (նախնական հաստատումից հետո)"
+    ]
   },
-  "verified": false,
+  "notes": {
+    "hy": "Հաստատուն 14.0% տոկոսադրույքը գործում է մինչև 60 ամիս ժամկետով վարկերի համար. 61-360 ամիս ժամկետի դեպքում կիրառվում է ճշգրտվող հաստատուն տոկոսադրույք (հաստատուն բաղադրիչ 8% + բազային տոկոսադրույք, կարող է փոփոխվել 37-րդ ամսից), փաստացի՝ 14.92-17.17%: Նվազագույն ժամկետը PDF-ից միանշանակ չի ընթերցվում (null): Աղբյուրը՝ պաշտոնական պայմանների PDF, խմբ. 61, ուժի մեջ է 01.02.2024-ից:"
+  },
+  "sources": [
+    "https://ameriabank.am/Portals/0/files/Personal/Loans/mortage_personal_purchase_Secondary_ed61_arm.pdf",
+    "https://ameriabank.am/personal/loans/mortgage/secondary-market"
+  ],
+  "verified": true,
   "updatedAt": "2026-07-12"
 }

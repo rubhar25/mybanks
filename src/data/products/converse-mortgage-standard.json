@@ -1,0 +1,25 @@
+{
+  "id": "converse-mortgage-standard",
+  "bankId": "converse",
+  "type": "mortgage",
+  "name": { "hy": "Տան ձեռքբերման վարկ", "en": "Home purchase loan", "ru": "Кредит на покупку жилья" },
+  "currency": "AMD",
+  "nominalRate": 13.05,
+  "nominalRateMax": 15.35,
+  "effectiveRate": 13.94,
+  "effectiveRateMax": 22.43,
+  "termMonthsMin": 36,
+  "termMonthsMax": 240,
+  "amountMin": 2000000,
+  "amountMax": null,
+  "downPaymentMinPct": null,
+  "govPrograms": [],
+  "notes": {
+    "hy": "ՀՀ դրամով անվանական տոկոսադրույք՝ (ԿԲԼՏ+2.33)%-ից (ԿԲԼՏ+4.63)%, էջի թարմացման պահին՝ 13.05-15.35% (առաջին 36 ամիսը ֆիքսված, հետո լողացող, +/-2.5 տոկոսային կետ սահմանաչափով): Փաստացի՝ 13.94-22.43%: Առավելագույն գումար սահմանված չէ: Կանխավճարի նվազագույն տոկոս ուղղակիորեն նշված չէ. վարկ/գրավ առավելագույնը գնահատված շուկայական արժեքի 70% է, կանխավճարի ապահովագրության կամ առաջնային շուկայից ՀՀ դրամով ֆինանսավորման դեպքում՝ մինչև 90%:"
+  },
+  "sources": [
+    "https://www.conversebank.am/hy/mortgage/"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-12"
+}

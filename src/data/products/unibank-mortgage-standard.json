@@ -1,0 +1,25 @@
+{
+  "id": "unibank-mortgage-standard",
+  "bankId": "unibank",
+  "type": "mortgage",
+  "name": { "hy": "Հիփոթեքային վարկ «Դասական»", "en": "Classic mortgage loan", "ru": "Ипотечный кредит «Классический»" },
+  "currency": "AMD",
+  "nominalRate": 13.3,
+  "nominalRateMax": 13.8,
+  "effectiveRate": 14.66,
+  "effectiveRateMax": 16.14,
+  "termMonthsMin": 60,
+  "termMonthsMax": 240,
+  "amountMin": 5000000,
+  "amountMax": 100000000,
+  "downPaymentMinPct": 15,
+  "govPrograms": [],
+  "notes": {
+    "hy": "Անվանական՝ 13.3-13.8% (ֆիքսված առաջին 36 ամիսների համար, 37-րդ ամսից՝ ՅՀՏ+4.5%). 30%-ից պակաս կանխավճարի դեպքում +0.5%: Փաստացի՝ 14.66-16.14%: Նվազագույն կանխավճար՝ առաջնային շուկա 15%, երկրորդային՝ 30% (կամ առնվազն 10%՝ լրացուցիչ գրավի կամ հիփոթեքային պարտավորության ապահովագրության դեպքում): Վարկ/գրավ առավելագույնը 85%:"
+  },
+  "sources": [
+    "https://www.unibank.am/hy/service/mort/6103/"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-12"
+}

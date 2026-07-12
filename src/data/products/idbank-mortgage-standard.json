@@ -1,0 +1,25 @@
+{
+  "id": "idbank-mortgage-standard",
+  "bankId": "idbank",
+  "type": "mortgage",
+  "name": { "hy": "Հիփոթեքային վարկ Բանկի սեփական միջոցներից (ձեռքբերում)", "en": "Mortgage loan from bank's own resources (purchase)", "ru": "Ипотечный кредит из собственных средств банка (покупка)" },
+  "currency": "AMD",
+  "nominalRate": 12.25,
+  "nominalRateMax": 14.0,
+  "effectiveRate": 12.98,
+  "effectiveRateMax": 16.7,
+  "termMonthsMin": 120,
+  "termMonthsMax": 240,
+  "amountMin": 5000000,
+  "amountMax": 125000000,
+  "downPaymentMinPct": 0,
+  "govPrograms": [],
+  "notes": {
+    "hy": "Հաստատուն տոկոսադրույք առաջին 36 (կամ 6) ամիսների համար՝ 12.25-14%, այնուհետև լողացող՝ ԱԲՀՏ+(2.95-4.7%): Փաստացի՝ 12.98-16.70%: Կանխավճար՝ սկսած 0%-ից. վարկ/գրավ մինչև 90%, 90%-ը գերազանցելու դեպքում պահանջվում է լրացուցիչ գրավ: IDsalary փաթեթի դեպքում՝ 0.25%-ով ցածր տոկոսադրույք:"
+  },
+  "sources": [
+    "https://idbank.am/credits/mortgage/for-the-purchase-own-resources/"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-12"
+}
