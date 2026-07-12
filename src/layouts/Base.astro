@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { url } from '../lib/url.js';
 
 const { title, description = 'Հայաստանի բանկերի, վարկերի, ավանդների և փոխարժեքների պորտալ' } = Astro.props;
 ---
@@ -12,12 +13,12 @@ const { title, description = 'Հայաստանի բանկերի, վարկերի,
     <meta name="description" content={description} />
     <!-- PRE-LAUNCH: remove together with public/robots.txt Disallow before go-live -->
     <meta name="robots" content="noindex, nofollow" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={url('/favicon.svg')} />
   </head>
   <body>
     <header class="site-header">
       <div class="container">
-        <a class="brand" href="/">
+        <a class="brand" href={url('/')}>
           <svg width="24" height="24" viewBox="0 0 32 32" aria-hidden="true" fill="none">
             <rect x="4" y="18" width="5" height="10" rx="1" fill="currentColor" opacity="0.6" />
             <rect x="13" y="12" width="5" height="16" rx="1" fill="currentColor" opacity="0.8" />
@@ -27,9 +28,9 @@ const { title, description = 'Հայաստանի բանկերի, վարկերի,
         </a>
         <nav class="site-nav" aria-label="Հիմնական նավիգացիա">
           <ul>
-            <li><a href="/">Բանկեր</a></li>
-            <li><a href="/loans/mortgage/">Վարկեր</a></li>
-            <li><a href="/deposits/">Ավանդներ</a></li>
+            <li><a href={url('/')}>Բանկեր</a></li>
+            <li><a href={url('/loans/mortgage/')}>Վարկեր</a></li>
+            <li><a href={url('/deposits/')}>Ավանդներ</a></li>
             <li><a href="#">Հաշվիչներ</a></li>
           </ul>
         </nav>

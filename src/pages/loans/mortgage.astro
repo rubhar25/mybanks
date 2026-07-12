@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { banks, products, getBank, t } from '../../lib/data.js';
+import { url } from '../../lib/url.js';
 
 const mortgages = products
   .filter((p) => p.type === 'mortgage')
@@ -28,7 +29,7 @@ const fmtRate = (min, max) => (max != null && max !== min ? `${min}–${max}%` :
 ---
 
 <Base title="Հիփոթեքային վարկերի համեմատություն — Հայաստանի բոլոր բանկերը">
-  <nav class="breadcrumb"><a href="/">← Գլխավոր</a></nav>
+  <nav class="breadcrumb"><a href={url('/')}>← Գլխավոր</a></nav>
   <h1>Հիփոթեքային վարկեր. համեմատություն</h1>
 
   <div class="context">
@@ -73,7 +74,7 @@ const fmtRate = (min, max) => (max != null && max !== min ? `${min}–${max}%` :
               data-rate={p.nominalRate}
               data-bank={t(bank.name)}
             >
-              <td><a href={`/banks/${bank.id}/`}>{t(bank.name)}</a></td>
+              <td><a href={url(`/banks/${bank.id}/`)}>{t(bank.name)}</a></td>
               <td class="num">{fmtRate(p.nominalRate, p.nominalRateMax)}</td>
               <td class="num eff">{fmtRate(p.effectiveRate, p.effectiveRateMax)}</td>
               <td class="num">{fmtTerm(p.termMonthsMin, p.termMonthsMax)}</td>

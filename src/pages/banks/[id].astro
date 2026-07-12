@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { banks, getProductsOfBank, t } from '../../lib/data.js';
+import { url } from '../../lib/url.js';
 
 export function getStaticPaths() {
   return banks.map((bank) => ({ params: { id: bank.id }, props: { bank } }));
@@ -11,7 +12,7 @@ const bankProducts = getProductsOfBank(bank.id);
 ---
 
 <Base title={`${t(bank.name)} — պրոֆիլ`}>
-  <nav class="breadcrumb"><a href="/">← Բոլոր բանկերը</a></nav>
+  <nav class="breadcrumb"><a href={url('/')}>← Բոլոր բանկերը</a></nav>
 
   <div class="profile-header">
     <h1>{t(bank.name)}</h1>
@@ -45,7 +46,10 @@ const bankProducts = getProductsOfBank(bank.id);
       <div>
         <h3>{t(p.name)}</h3>
         {p.type === 'mortgage' && (
-          <a href="/loans/mortgage/">Համեմատել բոլոր բանկերի հետ</a>
+          <a href={url('/loans/mortgage/')}>Համեմատել բոլոր բանկերի հետ</a>
+        )}
+        {p.type === 'deposit' && (
+          <a href={url('/deposits/')}>Համեմատել բոլոր բանկերի հետ</a>
         )}
       </div>
       <div class="rates">

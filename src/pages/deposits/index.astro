@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { products, getBank, t } from '../../lib/data.js';
+import { url } from '../../lib/url.js';
 
 const TERMS = [3, 6, 12, 24];
 const CURRENCIES = ['AMD', 'USD', 'EUR', 'RUB'];
@@ -27,7 +28,7 @@ const fmtAmount = (n) =>
 ---
 
 <Base title="Ավանդների տոկոսադրույքների համեմատություն — Հայաստանի բանկեր">
-  <nav class="breadcrumb"><a href="/">← Գլխավոր</a></nav>
+  <nav class="breadcrumb"><a href={url('/')}>← Գլխավոր</a></nav>
   <h1>Ժամկետային ավանդներ. համեմատություն</h1>
 
   <div class="context">
@@ -58,7 +59,7 @@ const fmtAmount = (n) =>
           return (
             <tr data-rates={JSON.stringify(p.rates)}>
               <td>
-                <a href={`/banks/${bank.id}/`}>{t(bank.name)}</a>
+                <a href={url(`/banks/${bank.id}/`)}>{t(bank.name)}</a>
                 <br /><small class="muted">{t(p.name)}</small>
               </td>
               {TERMS.map((tm) => {
