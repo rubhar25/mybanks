@@ -1,0 +1,379 @@
+<title>Armenian Finance Portal — Site Mindmap</title>
+<style>
+  :root {
+    --paper: #f7f6f2;
+    --card: #ffffff;
+    --ink: #1d2433;
+    --ink-soft: #5a6274;
+    --line: #d9d6cd;
+    --spine: #b9b4a6;
+    --apricot: #d97e21;
+    --apricot-soft: #f7e8d6;
+
+    --c-banks: #2456a6;
+    --c-loans: #b0453a;
+    --c-cards: #7a4a9e;
+    --c-deposits: #2e7d5b;
+    --c-currency: #d97e21;
+    --c-calc: #3a7ca5;
+    --c-gov: #8a6d1f;
+    --c-other: #5c6b7a;
+    --c-news: #a04a6e;
+    --c-platform: #4a4f5c;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #171a21;
+      --card: #1f2430;
+      --ink: #e8e6df;
+      --ink-soft: #a2a8b8;
+      --line: #353b4a;
+      --spine: #4a5163;
+      --apricot: #e9963f;
+      --apricot-soft: #3a2d1c;
+      --c-banks: #6f9bd9;
+      --c-loans: #d98276;
+      --c-cards: #b48cd6;
+      --c-deposits: #6fb894;
+      --c-currency: #e9963f;
+      --c-calc: #7ab3d4;
+      --c-gov: #c4a94e;
+      --c-other: #97a6b4;
+      --c-news: #cf85a3;
+      --c-platform: #9aa0ad;
+    }
+  }
+  :root[data-theme="light"] {
+    --paper: #f7f6f2;
+    --card: #ffffff;
+    --ink: #1d2433;
+    --ink-soft: #5a6274;
+    --line: #d9d6cd;
+    --spine: #b9b4a6;
+    --apricot: #d97e21;
+    --apricot-soft: #f7e8d6;
+    --c-banks: #2456a6;
+    --c-loans: #b0453a;
+    --c-cards: #7a4a9e;
+    --c-deposits: #2e7d5b;
+    --c-currency: #d97e21;
+    --c-calc: #3a7ca5;
+    --c-gov: #8a6d1f;
+    --c-other: #5c6b7a;
+    --c-news: #a04a6e;
+    --c-platform: #4a4f5c;
+  }
+  :root[data-theme="dark"] {
+    --paper: #171a21;
+    --card: #1f2430;
+    --ink: #e8e6df;
+    --ink-soft: #a2a8b8;
+    --line: #353b4a;
+    --spine: #4a5163;
+    --apricot: #e9963f;
+    --apricot-soft: #3a2d1c;
+    --c-banks: #6f9bd9;
+    --c-loans: #d98276;
+    --c-cards: #b48cd6;
+    --c-deposits: #6fb894;
+    --c-currency: #e9963f;
+    --c-calc: #7ab3d4;
+    --c-gov: #c4a94e;
+    --c-other: #97a6b4;
+    --c-news: #cf85a3;
+    --c-platform: #9aa0ad;
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font: 15px/1.5 "Segoe UI", "Noto Sans Armenian", system-ui, sans-serif;
+    padding: 2.5rem 1rem 4rem;
+  }
+  .wrap { max-width: 1060px; margin: 0 auto; }
+
+  header.intro { margin-bottom: 2.5rem; max-width: 62ch; }
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--apricot);
+    margin-bottom: 0.5rem;
+  }
+  h1 {
+    font-size: clamp(1.6rem, 4vw, 2.3rem);
+    line-height: 1.15;
+    font-weight: 700;
+    text-wrap: balance;
+    margin-bottom: 0.6rem;
+  }
+  .intro p { color: var(--ink-soft); }
+
+  /* ---- mindmap tree ---- */
+  .map-scroll { overflow-x: auto; }
+  .map { min-width: 720px; display: flex; align-items: stretch; }
+
+  .root-col { display: flex; align-items: center; }
+  .root {
+    background: var(--ink);
+    color: var(--paper);
+    border-radius: 14px;
+    padding: 1.2rem 1.3rem;
+    width: 190px;
+    flex-shrink: 0;
+  }
+  :root[data-theme="dark"] .root, .root { box-shadow: 0 2px 10px rgba(0,0,0,0.12); }
+  .root .hy { color: var(--apricot); font-size: 0.8rem; letter-spacing: 0.06em; display: block; margin-bottom: 0.3rem; }
+  .root strong { font-size: 1.15rem; line-height: 1.25; display: block; }
+  .root span.sub { font-size: 0.78rem; opacity: 0.75; display: block; margin-top: 0.5rem; }
+
+  /* trunk from root to spine */
+  .trunk { width: 34px; flex-shrink: 0; position: relative; }
+  .trunk::before {
+    content: ""; position: absolute; left: 0; top: 50%;
+    width: 100%; height: 2px; background: var(--spine);
+  }
+
+  .branches { flex: 1; position: relative; padding-left: 34px; display: flex; flex-direction: column; gap: 0.9rem; }
+  /* vertical spine */
+  .branches::before {
+    content: ""; position: absolute; left: 0;
+    top: 34px; bottom: 34px;
+    width: 2px; background: var(--spine);
+  }
+
+  .branch { position: relative; }
+  /* elbow from spine to card */
+  .branch::before {
+    content: ""; position: absolute; left: -34px; top: 33px;
+    width: 34px; height: 2px; background: var(--spine);
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--bc, var(--spine));
+    border-radius: 10px;
+    padding: 0.85rem 1rem 0.95rem;
+  }
+  .card h2 {
+    font-size: 1rem; font-weight: 700;
+    display: flex; align-items: baseline; gap: 0.6rem; flex-wrap: wrap;
+  }
+  .card h2 .hy { font-weight: 400; font-size: 0.8rem; color: var(--ink-soft); letter-spacing: 0.03em; }
+  .card .note { font-size: 0.82rem; color: var(--ink-soft); margin-top: 0.15rem; }
+
+  .leaves { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.65rem; }
+  .leaf {
+    font-size: 0.8rem;
+    border: 1px solid color-mix(in srgb, var(--bc) 45%, transparent);
+    color: var(--ink);
+    background: color-mix(in srgb, var(--bc) 9%, var(--card));
+    border-radius: 999px;
+    padding: 0.18rem 0.65rem;
+    white-space: nowrap;
+  }
+  .leaf.key {
+    background: color-mix(in srgb, var(--bc) 22%, var(--card));
+    font-weight: 600;
+  }
+
+  .count {
+    font-family: Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+    font-size: 0.72rem;
+    color: var(--bc);
+    margin-left: auto;
+  }
+
+  footer.legend {
+    margin-top: 2.2rem; padding-top: 1rem; border-top: 1px solid var(--line);
+    font-size: 0.82rem; color: var(--ink-soft); max-width: 70ch;
+  }
+  footer.legend .leaf { margin: 0 0.15rem; --bc: var(--apricot); }
+</style>
+
+<div class="wrap">
+  <header class="intro">
+    <div class="eyebrow">Site plan · Draft 1 · July 2026</div>
+    <h1>Armenian Finance Portal — full site mindmap</h1>
+    <p>Everything about banking and finance in Armenia, in one place. Ten main sections; darker chips mark the pages that answer the most common searches.</p>
+  </header>
+
+  <div class="map-scroll">
+    <div class="map">
+      <div class="root-col">
+        <div class="root">
+          <span class="hy">Ֆինանսական պորտալ</span>
+          <strong>All banking &amp; finance of Armenia</strong>
+          <span class="sub">hy · en · ru</span>
+        </div>
+      </div>
+      <div class="trunk"></div>
+
+      <div class="branches">
+
+        <section class="branch" style="--bc: var(--c-banks)">
+          <div class="card">
+            <h2>Banks — directory <span class="hy">Բանկեր</span> <span class="count">~18 pages</span></h2>
+            <div class="note">One consistent profile page per bank — the gap competitors don't cover.</div>
+            <div class="leaves">
+              <span class="leaf key">Bank profile &amp; brand</span>
+              <span class="leaf key">Contacts &amp; hotline</span>
+              <span class="leaf">Branches &amp; ATMs + map</span>
+              <span class="leaf">Working hours</span>
+              <span class="leaf key">SWIFT / BIC codes</span>
+              <span class="leaf">Mobile &amp; online banking apps</span>
+              <span class="leaf">Products offered (links in)</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="branch" style="--bc: var(--c-loans)">
+          <div class="card">
+            <h2>Loans <span class="hy">Վարկեր</span></h2>
+            <div class="note">Every type: comparison table across banks + detail pages. Always show the effective rate, not just nominal. Each offer answers on the spot: monthly payment for YOUR numbers, required documents, and whether a government program applies — the visitor never needs to leave the page to find out.</div>
+            <div class="leaves">
+              <span class="leaf key">Mortgage</span>
+              <span class="leaf key">Consumer / cash</span>
+              <span class="leaf">Car loans</span>
+              <span class="leaf">Gold-pledge loans</span>
+              <span class="leaf">Business / SME</span>
+              <span class="leaf">Student loans</span>
+              <span class="leaf">Refinancing</span>
+              <span class="leaf key">Embedded payment calculator per offer</span>
+              <span class="leaf key">Required-documents checklist per product</span>
+              <span class="leaf key">Gov-program eligibility hint on offer</span>
+              <span class="leaf">Market context header (CBA rate · market avg · range)</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="branch" style="--bc: var(--c-cards)">
+          <div class="card">
+            <h2>Cards <span class="hy">Քարտեր</span></h2>
+            <div class="leaves">
+              <span class="leaf key">Debit cards</span>
+              <span class="leaf key">Credit cards</span>
+              <span class="leaf">Premium / metal</span>
+              <span class="leaf">Visa · Mastercard · ArCa</span>
+              <span class="leaf">Cashback &amp; miles comparison</span>
+              <span class="leaf">Fees &amp; limits table</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="branch" style="--bc: var(--c-deposits)">
+          <div class="card">
+            <h2>Deposits &amp; savings <span class="hy">Ավանդներ</span></h2>
+            <div class="leaves">
+              <span class="leaf key">AMD / USD / EUR / RUB deposits</span>
+              <span class="leaf">Term vs demand</span>
+              <span class="leaf key">Rate comparison table</span>
+              <span class="leaf">Deposit Guarantee Fund rules</span>
+              <span class="leaf">Savings accounts</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="branch" style="--bc: var(--c-currency)">
+          <div class="card">
+            <h2>Currency <span class="hy">Արժույթ</span> <span class="count">daily data</span></h2>
+            <div class="note">Your example page: AMD↔USD, AMD↔RUB and more — per-bank buy/sell rates next to the Central Bank rate.</div>
+            <div class="leaves">
+              <span class="leaf key">AMD ↔ USD</span>
+              <span class="leaf key">AMD ↔ RUB</span>
+              <span class="leaf">EUR · GBP · GEL · CHF</span>
+              <span class="leaf key">Best-rate finder (which bank today)</span>
+              <span class="leaf">Converter</span>
+              <span class="leaf">History charts</span>
+              <span class="leaf">CBA official rate</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="branch" style="--bc: var(--c-calc)">
+          <div class="card">
+            <h2>Calculators <span class="hy">Հաշվիչներ</span></h2>
+            <div class="note">No data maintenance needed — strong pages for search traffic. All calculators are client-side JS, live in MVP, and also embedded (prefilled) on product/offer pages — banki.ru parity.</div>
+            <div class="leaves">
+              <span class="leaf key">Mortgage payment</span>
+              <span class="leaf key">Loan payment (annuity)</span>
+              <span class="leaf">Deposit yield</span>
+              <span class="leaf">Currency converter</span>
+              <span class="leaf">Mortgage income-tax refund</span>
+              <span class="leaf">Salary gross ↔ net</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="branch" style="--bc: var(--c-gov)">
+          <div class="card">
+            <h2>Government programs <span class="hy">Պետական ծրագրեր</span></h2>
+            <div class="note">Underexplained elsewhere — a "which program fits me?" quiz can be a signature feature.</div>
+            <div class="leaves">
+              <span class="leaf key">Young family mortgage</span>
+              <span class="leaf key">Income-tax refund on mortgage</span>
+              <span class="leaf">IT sector benefits</span>
+              <span class="leaf">Subsidized agri loans</span>
+              <span class="leaf">Eligibility quiz</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="branch" style="--bc: var(--c-other)">
+          <div class="card">
+            <h2>Beyond banks <span class="hy">Այլ ֆինանսներ</span></h2>
+            <div class="leaves">
+              <span class="leaf">Credit organizations (UCOs)</span>
+              <span class="leaf">Insurance companies</span>
+              <span class="leaf key">Money transfers (SWIFT, Unistream…)</span>
+              <span class="leaf">Payment apps: Idram · Telcell · EasyPay</span>
+              <span class="leaf">Pension funds</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="branch" style="--bc: var(--c-news)">
+          <div class="card">
+            <h2>News &amp; guides <span class="hy">Նորություններ</span></h2>
+            <div class="note">Feeds the Facebook page; guides answer "how do I…" searches.</div>
+            <div class="leaves">
+              <span class="leaf key">Bank news (rates, products, promos)</span>
+              <span class="leaf">How-to guides (get a mortgage, open account…)</span>
+              <span class="leaf">Glossary of terms</span>
+              <span class="leaf">Editorial picks («Ամսվա լավագույն…») generated from data + short text</span>
+              <span class="leaf">FAQ</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="branch" style="--bc: var(--c-platform)">
+          <div class="card">
+            <h2>Platform &amp; business <span class="hy">Հարթակ</span></h2>
+            <div class="leaves">
+              <span class="leaf">3 languages: hy · en · ru</span>
+              <span class="leaf">Site-wide search</span>
+              <span class="leaf key">Interconnection: bank ↔ product ↔ comparison ↔ calculator ↔ guide (generated from data-file IDs, no dead-end pages)</span>
+              <span class="leaf key">SEO layer: schema.org markup · breadcrumbs · hreflang · sitemap</span>
+              <span class="leaf">Interactive filters &amp; sorting on all comparison pages (client-side)</span>
+              <span class="leaf">Quick filter chips + "compare side-by-side" checkboxes on product lists</span>
+              <span class="leaf">Rate-history charts (client-side)</span>
+              <span class="leaf key">Facebook page (traffic engine)</span>
+              <span class="leaf key">Banner ads (monetization)</span>
+              <span class="leaf">Lead form → we broker client to bank (FUTURE phase, not MVP)</span>
+              <span class="leaf">About · contacts · data sources</span>
+              <span class="leaf">"Last updated" stamp on every data page</span>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="legend">
+    Darker chips <span class="leaf key">like this</span> are the highest-value pages — build and polish those first inside each section. Armenian labels are the future section names on the live site.
+  </footer>
+</div>
