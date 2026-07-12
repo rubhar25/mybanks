@@ -1,0 +1,27 @@
+{
+  "id": "byblos",
+  "name": { "hy": "Բիբլոս Բանկ Արմենիա", "en": "Byblos Bank Armenia", "ru": "Библос Банк Армения" },
+  "fullName": { "hy": "«Բիբլոս Բանկ Արմենիա» ՓԲԸ", "en": "Byblos Bank Armenia CJSC", "ru": "ЗАО «Библос Банк Армения»" },
+  "website": "https://www.byblosbankarmenia.am",
+  "phones": [
+    { "label": { "hy": "Թեժ գիծ", "en": "Hotline", "ru": "Горячая линия" }, "number": "+374 60 616100" }
+  ],
+  "swift": "BYBAAM22",
+  "cbaRegistryUrl": "http://old.cba.am/en/SitePages/fscfobanks.aspx",
+  "socials": {
+    "facebook": "https://www.facebook.com/ByblosBankArmenia",
+    "instagram": "https://www.instagram.com/byblosbankarmenia/"
+  },
+  "apps": {
+    "ios": "https://apps.apple.com/am/app/byblos-bank-armenia/id1279786277",
+    "android": "https://play.google.com/store/apps/details?id=am.byblosbank.mobilebank"
+  },
+  "headOffice": {
+    "hy": "Երևան, Ամիրյան 18/3",
+    "en": "18/3 Amiryan St, Yerevan",
+    "ru": "Ереван, ул. Амиряна 18/3"
+  },
+  "verified": true,
+  "sources": ["https://www.byblosbankarmenia.am/", "http://old.cba.am/en/SitePages/fscfobanks.aspx"],
+  "updatedAt": "2026-07-12"
+}

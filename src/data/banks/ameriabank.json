@@ -7,7 +7,7 @@
     { "label": { "hy": "Թեժ գիծ", "en": "Hotline", "ru": "Горячая линия" }, "number": "+374 10 561111" }
   ],
   "swift": "ARMIAM22",
-  "cbaRegistryUrl": "https://www.cba.am",
+  "cbaRegistryUrl": "http://old.cba.am/en/SitePages/fscfobanks.aspx",
   "socials": {
     "facebook": "https://www.facebook.com/ameriabank",
     "instagram": "https://www.instagram.com/ameriabank"
@@ -22,5 +22,6 @@
     "ru": "Ереван, ул. Вазгена Саргсяна 2"
   },
   "verified": false,
+  "sources": ["http://old.cba.am/en/SitePages/fscfobanks.aspx"],
   "updatedAt": "2026-07-12"
 }

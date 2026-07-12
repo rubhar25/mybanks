@@ -1,0 +1,25 @@
+{
+  "id": "vtb",
+  "name": { "hy": "ՎՏԲ-Հայաստան Բանկ", "en": "VTB Bank (Armenia)", "ru": "Банк ВТБ (Армения)" },
+  "fullName": { "hy": "«ՎՏԲ-Հայաստան Բանկ» ՓԲԸ", "en": "VTB Bank (Armenia) CJSC", "ru": "ЗАО «Банк ВТБ (Армения)»" },
+  "website": "https://www.vtb.am",
+  "phones": [
+    { "label": { "hy": "Թեժ գիծ (ՀՀ ներսում)", "en": "Hotline (domestic)", "ru": "Горячая линия (внутри РА)" }, "number": "8787" },
+    { "label": { "hy": "Թեժ գիծ", "en": "Hotline", "ru": "Горячая линия" }, "number": "+374 8000 8787" }
+  ],
+  "swift": "ARMJAM22",
+  "cbaRegistryUrl": "http://old.cba.am/en/SitePages/fscfobanks.aspx",
+  "socials": {
+    "facebook": "https://www.facebook.com/vtbarmenia",
+    "instagram": "https://www.instagram.com/vtb_armenia/"
+  },
+  "apps": {},
+  "headOffice": {
+    "hy": "Երևան 0006, Մանանդյան 33/3",
+    "en": "33/3 Manandyan St, Yerevan 0006",
+    "ru": "Ереван 0006, ул. Манандяна 33/3"
+  },
+  "verified": true,
+  "sources": ["https://www.vtb.am/", "http://old.cba.am/en/SitePages/fscfobanks.aspx"],
+  "updatedAt": "2026-07-12"
+}

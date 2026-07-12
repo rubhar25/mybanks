@@ -1,0 +1,27 @@
+{
+  "id": "acba",
+  "name": { "hy": "ԱԿԲԱ Բանկ", "en": "ACBA Bank", "ru": "АКБА Банк" },
+  "fullName": { "hy": "«ԱԿԲԱ ԲԱՆԿ» ԲԲԸ", "en": "ACBA BANK OJSC", "ru": "ОАО «АКБА БАНК»" },
+  "website": "https://www.acba.am",
+  "phones": [
+    { "label": { "hy": "Թեժ գիծ", "en": "Hotline", "ru": "Горячая линия" }, "number": "+374 10 318888" }
+  ],
+  "swift": "AGCAAM22",
+  "cbaRegistryUrl": "http://old.cba.am/en/SitePages/fscfobanks.aspx",
+  "socials": {
+    "facebook": "https://www.facebook.com/acbabank.ojsc",
+    "instagram": "https://www.instagram.com/acbabank"
+  },
+  "apps": {
+    "ios": "https://apps.apple.com/ru/app/acba-digital/id1515436600",
+    "android": "https://play.google.com/store/apps/details?id=am.acba.ACBA_Mobile"
+  },
+  "headOffice": {
+    "hy": "Երևան, Արամի 82-84",
+    "en": "82-84 Arami St, Yerevan",
+    "ru": "Ереван, ул. Арами 82-84"
+  },
+  "verified": true,
+  "sources": ["https://www.acba.am/en", "http://old.cba.am/en/SitePages/fscfobanks.aspx"],
+  "updatedAt": "2026-07-12"
+}

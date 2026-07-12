@@ -1,0 +1,24 @@
+{
+  "id": "armswissbank",
+  "name": { "hy": "ԱրմՍվիսԲանկ", "en": "ArmSwissBank", "ru": "АрмСвиссБанк" },
+  "fullName": { "hy": "«ԱՐՄՍՎԻՍԲԱՆԿ» ՓԲԸ", "en": "ArmSwissBank CJSC", "ru": "ЗАО «АрмСвиссБанк»" },
+  "website": "https://www.armswissbank.am",
+  "phones": [
+    { "label": { "hy": "Հեռախոս", "en": "Phone", "ru": "Телефон" }, "number": "+374 60 757000" },
+    { "label": { "hy": "Հեռախոս", "en": "Phone", "ru": "Телефон" }, "number": "+374 11 757000" }
+  ],
+  "swift": "ARSJAM22",
+  "cbaRegistryUrl": "http://old.cba.am/en/SitePages/fscfobanks.aspx",
+  "socials": {
+    "facebook": "https://www.facebook.com/Armswissbank"
+  },
+  "apps": {},
+  "headOffice": {
+    "hy": "Երևան, Վազգեն Սարգսյան 10",
+    "en": "10 Vazgen Sargsyan St, Yerevan 0010",
+    "ru": "Ереван, ул. Вазгена Саргсяна 10"
+  },
+  "verified": true,
+  "sources": ["http://www.armswissbank.am/en/", "http://old.cba.am/en/SitePages/fscfobanks.aspx"],
+  "updatedAt": "2026-07-12"
+}

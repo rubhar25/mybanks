@@ -1,0 +1,21 @@
+{
+  "id": "converse",
+  "name": { "hy": "Կոնվերս Բանկ", "en": "Converse Bank", "ru": "Конверс Банк" },
+  "fullName": { "hy": "«Կոնվերս Բանկ» ՓԲԸ", "en": "Converse Bank CJSC", "ru": "ЗАО «Конверс Банк»" },
+  "website": "https://conversebank.am",
+  "phones": [
+    { "label": { "hy": "Հեռախոս", "en": "Phone", "ru": "Телефон" }, "number": "+374 10 511200" }
+  ],
+  "swift": "COVBAM22",
+  "cbaRegistryUrl": "http://old.cba.am/en/SitePages/fscfobanks.aspx",
+  "socials": {},
+  "apps": {},
+  "headOffice": {
+    "hy": "Երևան, Վազգեն Սարգսյան 26/1",
+    "en": "26/1 Vazgen Sargsyan St, Yerevan",
+    "ru": "Ереван, ул. Вазгена Саргсяна 26/1"
+  },
+  "verified": false,
+  "sources": ["http://old.cba.am/en/SitePages/fscfobanks.aspx"],
+  "updatedAt": "2026-07-12"
+}

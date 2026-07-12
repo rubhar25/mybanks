@@ -1,0 +1,27 @@
+{
+  "id": "araratbank",
+  "name": { "hy": "Արարատբանկ", "en": "Araratbank", "ru": "Араратбанк" },
+  "fullName": { "hy": "«ԱՐԱՐԱՏԲԱՆԿ» ԲԲԸ", "en": "ARARATBANK OJSC", "ru": "ОАО «АРАРАТБАНК»" },
+  "website": "https://www.araratbank.am",
+  "phones": [
+    { "label": { "hy": "Թեժ գիծ", "en": "Hotline", "ru": "Горячая линия" }, "number": "+374 10 592323" }
+  ],
+  "swift": "ARMCAM22",
+  "cbaRegistryUrl": "http://old.cba.am/en/SitePages/fscfobanks.aspx",
+  "socials": {
+    "facebook": "https://www.facebook.com/ARARATBANKOFFICIAL/",
+    "instagram": "https://www.instagram.com/araratbank/"
+  },
+  "apps": {
+    "ios": "https://apps.apple.com/am/app/araratmobile/id1585797128",
+    "android": "https://play.google.com/store/apps/details?id=am.araratbank.araratbankmobile"
+  },
+  "headOffice": {
+    "hy": "Երևան, Բյուզանդի 87/85",
+    "en": "87/85 Byuzand St, Yerevan",
+    "ru": "Ереван, ул. Бюзанда 87/85"
+  },
+  "verified": true,
+  "sources": ["https://www.araratbank.am/en", "http://old.cba.am/en/SitePages/fscfobanks.aspx"],
+  "updatedAt": "2026-07-12"
+}

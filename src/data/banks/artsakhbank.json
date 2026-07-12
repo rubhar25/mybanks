@@ -1,0 +1,28 @@
+{
+  "id": "artsakhbank",
+  "name": { "hy": "Արցախբանկ", "en": "Artsakhbank", "ru": "Арцахбанк" },
+  "fullName": { "hy": "«Արցախբանկ» ՓԲԸ", "en": "Artsakhbank CJSC", "ru": "ЗАО «Арцахбанк»" },
+  "website": "https://www.artsakhbank.am",
+  "phones": [
+    { "label": { "hy": "Կոնտակտ կենտրոն", "en": "Contact center", "ru": "Контакт-центр" }, "number": "+374 12 777771" },
+    { "label": { "hy": "Կոնտակտ կենտրոն", "en": "Contact center", "ru": "Контакт-центр" }, "number": "+374 12 777772" }
+  ],
+  "swift": "ARTSAM22",
+  "cbaRegistryUrl": "http://old.cba.am/en/SitePages/fscfobanks.aspx",
+  "socials": {
+    "facebook": "https://www.facebook.com/artsakhbank",
+    "instagram": "https://www.instagram.com/artsakhbank.am/"
+  },
+  "apps": {
+    "ios": "https://apps.apple.com/am/app/artsakhbank-mobile/id1520052839",
+    "android": "https://play.google.com/store/apps/details?id=am.lsoft.mobilebanking.artsakh"
+  },
+  "headOffice": {
+    "hy": "Երևան, Չարենցի 1բ",
+    "en": "1b Charents St, Yerevan 0025",
+    "ru": "Ереван, ул. Чаренца 1б"
+  },
+  "verified": true,
+  "sources": ["https://www.artsakhbank.am/en/", "http://old.cba.am/en/SitePages/fscfobanks.aspx"],
+  "updatedAt": "2026-07-12"
+}

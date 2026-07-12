@@ -1,0 +1,28 @@
+{
+  "id": "unibank",
+  "name": { "hy": "Յունիբանկ", "en": "Unibank", "ru": "Юнибанк" },
+  "fullName": { "hy": "«Յունիբանկ» ԲԲԸ", "en": "Unibank OJSC", "ru": "ОАО «Юнибанк»" },
+  "website": "https://www.unibank.am",
+  "phones": [
+    { "label": { "hy": "Հեռախոս", "en": "Phone", "ru": "Телефон" }, "number": "+374 10 595555" },
+    { "label": { "hy": "Հեռախոս", "en": "Phone", "ru": "Телефон" }, "number": "+374 10 712222" }
+  ],
+  "swift": "UNIJAM22",
+  "cbaRegistryUrl": "http://old.cba.am/en/SitePages/fscfobanks.aspx",
+  "socials": {
+    "facebook": "https://www.facebook.com/UnibankOJSC",
+    "instagram": "https://www.instagram.com/unibankarmenia/"
+  },
+  "apps": {
+    "ios": "https://apps.apple.com/us/app/unimobile-banking/id1156381731",
+    "android": "https://play.google.com/store/apps/details?id=am.lsoft.dev.lsmobilebanking.uniproduction"
+  },
+  "headOffice": {
+    "hy": "Երևան 0025, Չարենցի 12, թիվ 53 շենք, 1-5 տարածք",
+    "en": "12 Charents St, bldg 53, areas 1-5, Yerevan 0025",
+    "ru": "Ереван 0025, ул. Чаренца 12, зд. 53, пом. 1-5"
+  },
+  "verified": true,
+  "sources": ["https://www.unibank.am/en/", "http://old.cba.am/en/SitePages/fscfobanks.aspx"],
+  "updatedAt": "2026-07-12"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "fastbank",
+  "name": { "hy": "Ֆասթ Բանկ", "en": "Fast Bank", "ru": "Фаст Банк" },
+  "fullName": { "hy": "«Ֆասթ Բանկ» ՓԲԸ", "en": "Fast Bank CJSC", "ru": "ЗАО «Фаст Банк»" },
+  "website": "https://fastbank.am",
+  "phones": [
+    { "label": { "hy": "Թեժ գիծ", "en": "Hotline", "ru": "Горячая линия" }, "number": "+374 10 510000" }
+  ],
+  "swift": "FCAOAM22",
+  "cbaRegistryUrl": "http://old.cba.am/en/SitePages/fscfobanks.aspx",
+  "socials": {
+    "facebook": "https://www.facebook.com/fastbank.am",
+    "instagram": "https://www.instagram.com/fast_bank_official/"
+  },
+  "apps": {},
+  "headOffice": {
+    "hy": "Երևան 0047, Նորք-Մարաշ, Գ. Հովսեփյան 32/6",
+    "en": "32/6 G. Hovsepyan St, Nork-Marash, Yerevan 0047",
+    "ru": "Ереван 0047, Норк-Мараш, ул. Г. Овсепяна 32/6"
+  },
+  "verified": true,
+  "sources": ["https://fastbank.am/en", "http://old.cba.am/en/SitePages/fscfobanks.aspx"],
+  "updatedAt": "2026-07-12"
+}

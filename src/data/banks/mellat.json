@@ -1,0 +1,21 @@
+{
+  "id": "mellat",
+  "name": { "hy": "Մելլաթ Բանկ", "en": "Mellat Bank", "ru": "Меллат Банк" },
+  "fullName": { "hy": "«Մելլաթ Բանկ» ՓԲԸ", "en": "Mellat Bank CJSC", "ru": "ЗАО «Меллат Банк»" },
+  "website": "https://www.mellatbank.am",
+  "phones": [
+    { "label": { "hy": "Հեռախոս", "en": "Phone", "ru": "Телефон" }, "number": "+374 10 581791" }
+  ],
+  "swift": "BKMTAM22",
+  "cbaRegistryUrl": "http://old.cba.am/en/SitePages/fscfobanks.aspx",
+  "socials": {},
+  "apps": {},
+  "headOffice": {
+    "hy": "Երևան, Չարենցի 19",
+    "en": "19 Charents St, Yerevan",
+    "ru": "Ереван, ул. Чаренца 19"
+  },
+  "verified": false,
+  "sources": ["http://old.cba.am/en/SitePages/fscfobanks.aspx"],
+  "updatedAt": "2026-07-12"
+}

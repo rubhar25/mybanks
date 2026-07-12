@@ -1,0 +1,21 @@
+{
+  "id": "ardshinbank",
+  "name": { "hy": "Արդշինբանկ", "en": "Ardshinbank", "ru": "Ардшинбанк" },
+  "fullName": { "hy": "«Արդշինբանկ» ԲԲԸ", "en": "Ardshinbank OJSC", "ru": "ОАО «Ардшинбанк»" },
+  "website": "https://www.ardshinbank.am",
+  "phones": [
+    { "label": { "hy": "Հեռախոս", "en": "Phone", "ru": "Телефон" }, "number": "+374 10 528513" }
+  ],
+  "swift": "ASHBAM22",
+  "cbaRegistryUrl": "http://old.cba.am/en/SitePages/fscfobanks.aspx",
+  "socials": {},
+  "apps": {},
+  "headOffice": {
+    "hy": "Երևան, Գրիգոր Լուսավորչի 13/1",
+    "en": "13/1 Grigor Lusavorich St, Yerevan",
+    "ru": "Ереван, ул. Григора Лусаворича 13/1"
+  },
+  "verified": false,
+  "sources": ["http://old.cba.am/en/SitePages/fscfobanks.aspx"],
+  "updatedAt": "2026-07-12"
+}

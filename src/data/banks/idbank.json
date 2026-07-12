@@ -1,0 +1,25 @@
+{
+  "id": "idbank",
+  "name": { "hy": "ԱյԴի Բանկ", "en": "IDBank", "ru": "АйДи Банк" },
+  "fullName": { "hy": "«ԱյԴի Բանկ» ՓԲԸ", "en": "ID Bank CJSC", "ru": "ЗАО «АйДи Банк»" },
+  "website": "https://idbank.am",
+  "phones": [
+    { "label": { "hy": "Թեժ գիծ", "en": "Hotline", "ru": "Горячая линия" }, "number": "+374 10 593333" },
+    { "label": { "hy": "Թեժ գիծ", "en": "Hotline", "ru": "Горячая линия" }, "number": "+374 60 273333" }
+  ],
+  "swift": "ANIKAM22",
+  "cbaRegistryUrl": "http://old.cba.am/en/SitePages/fscfobanks.aspx",
+  "socials": {
+    "facebook": "https://www.facebook.com/IDBankArmenia/",
+    "instagram": "https://www.instagram.com/idbankcjsc/"
+  },
+  "apps": {},
+  "headOffice": {
+    "hy": "Երևան, Վարդանանց 13",
+    "en": "13 Vardanants St, Yerevan",
+    "ru": "Ереван, ул. Варданянц 13"
+  },
+  "verified": true,
+  "sources": ["https://idbank.am/en/", "http://old.cba.am/en/SitePages/fscfobanks.aspx"],
+  "updatedAt": "2026-07-12"
+}

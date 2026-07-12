@@ -1,0 +1,21 @@
+{
+  "id": "armeconombank",
+  "name": { "hy": "Հայէկոնոմբանկ", "en": "Armeconombank", "ru": "Армэкономбанк" },
+  "fullName": { "hy": "«ՀԱՅԷԿՈՆՈՄԲԱՆԿ» ԲԲԸ", "en": "ARMECONOMBANK OJSC", "ru": "ОАО «АРМЭКОНОМБАНК»" },
+  "website": "https://www.aeb.am",
+  "phones": [
+    { "label": { "hy": "Հեռախոս", "en": "Phone", "ru": "Телефон" }, "number": "+374 10 563332" }
+  ],
+  "swift": "ARECAM22",
+  "cbaRegistryUrl": "http://old.cba.am/en/SitePages/fscfobanks.aspx",
+  "socials": {},
+  "apps": {},
+  "headOffice": {
+    "hy": "Երևան, Ամիրյան 23/1",
+    "en": "23/1 Amiryan St, Yerevan",
+    "ru": "Ереван, ул. Амиряна 23/1"
+  },
+  "verified": false,
+  "sources": ["http://old.cba.am/en/SitePages/fscfobanks.aspx"],
+  "updatedAt": "2026-07-12"
+}

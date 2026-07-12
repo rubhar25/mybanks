@@ -1,0 +1,21 @@
+{
+  "id": "inecobank",
+  "name": { "hy": "Ինեկոբանկ", "en": "Inecobank", "ru": "Инекобанк" },
+  "fullName": { "hy": "«Ինեկոբանկ» ՓԲԸ", "en": "Inecobank CJSC", "ru": "ЗАО «Инекобанк»" },
+  "website": "https://www.inecobank.am",
+  "phones": [
+    { "label": { "hy": "Հեռախոս", "en": "Phone", "ru": "Телефон" }, "number": "+374 10 510510" }
+  ],
+  "swift": "INJSAM22",
+  "cbaRegistryUrl": "http://old.cba.am/en/SitePages/fscfobanks.aspx",
+  "socials": {},
+  "apps": {},
+  "headOffice": {
+    "hy": "Երևան, Թումանյան 17",
+    "en": "17 Tumanyan St, Yerevan 0001",
+    "ru": "Ереван, ул. Туманяна 17"
+  },
+  "verified": false,
+  "sources": ["http://old.cba.am/en/SitePages/fscfobanks.aspx"],
+  "updatedAt": "2026-07-12"
+}

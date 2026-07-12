@@ -1,0 +1,28 @@
+{
+  "id": "evocabank",
+  "name": { "hy": "Էվոկաբանկ", "en": "Evocabank", "ru": "Эвокабанк" },
+  "fullName": { "hy": "«Էվոկաբանկ» ԲԲԸ", "en": "EVOCABANK OJSC", "ru": "ОАО «Эвокабанк»" },
+  "website": "https://www.evoca.am",
+  "phones": [
+    { "label": { "hy": "Թեժ գիծ", "en": "Hotline", "ru": "Горячая линия" }, "number": "+374 10 605555" },
+    { "label": { "hy": "Կարճ համար", "en": "Short number", "ru": "Короткий номер" }, "number": "8444" }
+  ],
+  "swift": "PRMLAM22",
+  "cbaRegistryUrl": "http://old.cba.am/en/SitePages/fscfobanks.aspx",
+  "socials": {
+    "facebook": "https://www.facebook.com/evocabank",
+    "instagram": "https://www.instagram.com/evocabank"
+  },
+  "apps": {
+    "ios": "https://apps.apple.com/am/app/evocatouch/id970309076",
+    "android": "https://play.google.com/store/apps/details?id=am.prometeybank.mobilebank"
+  },
+  "headOffice": {
+    "hy": "Երևան 0010, Հանրապետության 44/2",
+    "en": "44/2 Hanrapetutyan St, Yerevan 0010",
+    "ru": "Ереван 0010, ул. Анрапетутян 44/2"
+  },
+  "verified": true,
+  "sources": ["https://www.evoca.am/", "http://old.cba.am/en/SitePages/fscfobanks.aspx"],
+  "updatedAt": "2026-07-12"
+}

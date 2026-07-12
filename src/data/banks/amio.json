@@ -1,0 +1,24 @@
+{
+  "id": "amio",
+  "name": { "hy": "ԱՄԻՕ Բանկ", "en": "AMIO Bank", "ru": "АМИО Банк" },
+  "fullName": { "hy": "«ԱՄԻՕ ԲԱՆԿ» ՓԲԸ", "en": "AMIO BANK CJSC", "ru": "ЗАО «АМИО БАНК»" },
+  "website": "https://www.amiobank.am",
+  "phones": [
+    { "label": { "hy": "Թեժ գիծ", "en": "Hotline", "ru": "Горячая линия" }, "number": "+374 10 592020" }
+  ],
+  "swift": "ARMNAM22",
+  "cbaRegistryUrl": "http://old.cba.am/en/SitePages/fscfobanks.aspx",
+  "socials": {
+    "facebook": "https://www.facebook.com/amiobankcjsc",
+    "instagram": "https://www.instagram.com/amio.bank"
+  },
+  "apps": {},
+  "headOffice": {
+    "hy": "Երևան, Նալբանդյան 48",
+    "en": "48 Nalbandyan St, Yerevan 0010",
+    "ru": "Ереван, ул. Налбандяна 48"
+  },
+  "verified": true,
+  "sources": ["https://www.amiobank.am/en", "http://old.cba.am/en/SitePages/fscfobanks.aspx"],
+  "updatedAt": "2026-07-12"
+}
