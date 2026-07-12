@@ -1,0 +1,26 @@
+{
+  "id": "ameriabank",
+  "name": { "hy": "Ամերիաբանկ", "en": "Ameriabank", "ru": "Америабанк" },
+  "fullName": { "hy": "«Ամերիաբանկ» ՓԲԸ", "en": "Ameriabank CJSC", "ru": "ЗАО «Америабанк»" },
+  "website": "https://ameriabank.am",
+  "phones": [
+    { "label": { "hy": "Թեժ գիծ", "en": "Hotline", "ru": "Горячая линия" }, "number": "+374 10 561111" }
+  ],
+  "swift": "ARMIAM22",
+  "cbaRegistryUrl": "https://www.cba.am",
+  "socials": {
+    "facebook": "https://www.facebook.com/ameriabank",
+    "instagram": "https://www.instagram.com/ameriabank"
+  },
+  "apps": {
+    "ios": "https://apps.apple.com/am/app/myameria/id1621129387",
+    "android": "https://play.google.com/store/apps/details?id=am.ameriabank.myameria"
+  },
+  "headOffice": {
+    "hy": "Երևան, Վազգեն Սարգսյան 2",
+    "en": "2 Vazgen Sargsyan St, Yerevan",
+    "ru": "Ереван, ул. Вазгена Саргсяна 2"
+  },
+  "verified": false,
+  "updatedAt": "2026-07-12"
+}

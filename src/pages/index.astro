@@ -1,0 +1,22 @@
+---
+import { banks } from '../lib/data.js';
+import { t } from '../lib/data.js';
+---
+
+<html lang="hy">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Հայաստանի ֆինանսական պորտալ</title>
+  </head>
+  <body>
+    <h1>Հայաստանի բանկերը</h1>
+    <ul>
+      {banks.map((bank) => (
+        <li>
+          <a href={`/banks/${bank.id}/`}>{t(bank.name)}</a>
+        </li>
+      ))}
+    </ul>
+  </body>
+</html>

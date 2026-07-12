@@ -1,0 +1,49 @@
+---
+import { banks, getProductsOfBank, t } from '../../lib/data.js';
+
+export function getStaticPaths() {
+  return banks.map((bank) => ({ params: { id: bank.id }, props: { bank } }));
+}
+
+const { bank } = Astro.props;
+const bankProducts = getProductsOfBank(bank.id);
+---
+
+<html lang="hy">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{t(bank.name)} — պրոֆիլ</title>
+  </head>
+  <body>
+    <nav><a href="/">← Բոլոր բանկերը</a></nav>
+
+    <h1>{t(bank.name)}</h1>
+    <p>{t(bank.fullName)}</p>
+
+    <h2>Կոնտակտներ</h2>
+    <ul>
+      {bank.phones.map((p) => (
+        <li>{t(p.label)}: <a href={`tel:${p.number.replace(/\s/g, '')}`}>{p.number}</a></li>
+      ))}
+      <li>Կայք՝ <a href={bank.website}>{bank.website}</a></li>
+      <li>Հասցե՝ {t(bank.headOffice)}</li>
+    </ul>
+
+    <h2>SWIFT / BIC</h2>
+    <p><code>{bank.swift}</code></p>
+
+    <h2>Պրոդուկտներ</h2>
+    <ul>
+      {bankProducts.map((p) => (
+        <li>
+          {t(p.name)} — անվանական {p.nominalRate}%, <strong>փաստացի {p.effectiveRate}%</strong>
+        </li>
+      ))}
+    </ul>
+
+    <footer>
+      <small>Թարմացվել է՝ {bank.updatedAt}</small>
+    </footer>
+  </body>
+</html>

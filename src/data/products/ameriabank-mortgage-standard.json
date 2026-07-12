@@ -1,0 +1,20 @@
+{
+  "id": "ameriabank-mortgage-standard",
+  "bankId": "ameriabank",
+  "type": "mortgage",
+  "name": { "hy": "Հիփոթեքային վարկ", "en": "Standard mortgage", "ru": "Ипотечный кредит" },
+  "currency": "AMD",
+  "nominalRate": 12.5,
+  "effectiveRate": 13.2,
+  "termMonthsMin": 12,
+  "termMonthsMax": 240,
+  "amountMin": 5000000,
+  "amountMax": 100000000,
+  "downPaymentMinPct": 10,
+  "govPrograms": ["mortgage-income-tax-refund"],
+  "documents": {
+    "hy": ["Անձնագիր և սոց. քարտ", "Եկամուտների մասին տեղեկանք", "Գնվող գույքի փաստաթղթեր"]
+  },
+  "verified": false,
+  "updatedAt": "2026-07-12"
+}
