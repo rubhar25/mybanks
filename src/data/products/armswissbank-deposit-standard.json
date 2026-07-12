@@ -1,0 +1,38 @@
+{
+  "id": "armswissbank-deposit-standard",
+  "bankId": "armswissbank",
+  "type": "deposit",
+  "name": { "hy": "«Ստանդարտ» ժամկետային ավանդ", "en": "\"Standard\" term deposit", "ru": "Срочный вклад «Стандарт»" },
+  "rates": [
+    { "currency": "AMD", "termMonths": 3, "rate": 6.5 },
+    { "currency": "AMD", "termMonths": 6, "rate": 7.5 },
+    { "currency": "AMD", "termMonths": 12, "rate": 8.25 },
+    { "currency": "AMD", "termMonths": 24, "rate": 9.5 },
+    { "currency": "AMD", "termMonths": 36, "rate": 10.0 },
+    { "currency": "USD", "termMonths": 3, "rate": 2.0 },
+    { "currency": "USD", "termMonths": 6, "rate": 2.75 },
+    { "currency": "USD", "termMonths": 12, "rate": 3.25 },
+    { "currency": "USD", "termMonths": 24, "rate": 4.0 },
+    { "currency": "USD", "termMonths": 36, "rate": 4.25 },
+    { "currency": "EUR", "termMonths": 3, "rate": 0.75 },
+    { "currency": "EUR", "termMonths": 6, "rate": 1.25 },
+    { "currency": "EUR", "termMonths": 12, "rate": 1.5 },
+    { "currency": "EUR", "termMonths": 24, "rate": 2.25 },
+    { "currency": "EUR", "termMonths": 36, "rate": 2.75 },
+    { "currency": "RUB", "termMonths": 3, "rate": 5.5 },
+    { "currency": "RUB", "termMonths": 6, "rate": 6.0 },
+    { "currency": "RUB", "termMonths": 12, "rate": 6.5 },
+    { "currency": "RUB", "termMonths": 24, "rate": 6.5 },
+    { "currency": "RUB", "termMonths": 36, "rate": 6.5 }
+  ],
+  "amountMin": 10000000,
+  "notes": {
+    "hy": "termMonths-ը ժամկետային միջակայքի վերին սահմանն է (33-92, 93-182, 183-367, 368-732, 733-1095 օր): Բերված են «ժամկետի վերջում» վճարման դրույքները (ամսական վճարման դրույքները մի փոքր ցածր են): ՈՒՇԱԴՐՈՒԹՅՈՒՆ՝ մուտքի շեմը շատ բարձր է. 10,000,000 AMD / 20,000 USD / 20,000 EUR / 1,000,000 RUB: 30 մլն AMD-ից ավելի գումարների դրույքները պայմանագրային են: Համալրում/նվազեցում չի թույլատրվում. վաղաժամկետ պահանջի դեպքում վերահաշվարկ ցպահանջ ավանդի դրույքով: Սակագների PDF-ն ուժի մեջ է 23.09.2024-ից (կայքում հրապարակված գործող տարբերակը):"
+  },
+  "sources": [
+    "https://www.armswissbank.am/en/individuals/fiz-deposits/",
+    "https://www.armswissbank.am/upload/individual_deposit_standard_eng_23.09.2024.pdf"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-12"
+}

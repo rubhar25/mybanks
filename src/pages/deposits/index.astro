@@ -1,0 +1,150 @@
+---
+import Base from '../../layouts/Base.astro';
+import { products, getBank, t } from '../../lib/data.js';
+
+const TERMS = [3, 6, 12, 24];
+const CURRENCIES = ['AMD', 'USD', 'EUR', 'RUB'];
+
+const deposits = products.filter((p) => p.type === 'deposit');
+
+const rateFor = (p, currency, term) =>
+  p.rates.find((r) => r.currency === currency && r.termMonths === term)?.rate ?? null;
+
+// Initial server-rendered view: AMD, sorted by 12-month rate (banks without one go last)
+const sorted = [...deposits].sort(
+  (a, b) => (rateFor(b, 'AMD', 12) ?? -1) - (rateFor(a, 'AMD', 12) ?? -1)
+);
+
+// Market context from the 12-month AMD column
+const amd12 = deposits.map((p) => rateFor(p, 'AMD', 12)).filter((r) => r != null);
+const rMin = Math.min(...amd12);
+const rMax = Math.max(...amd12);
+const rAvg = amd12.reduce((s, r) => s + r, 0) / amd12.length;
+const lastUpdated = deposits.map((p) => p.updatedAt).sort().at(-1);
+
+const fmtAmount = (n) =>
+  n == null ? '—' : n >= 1000000 ? `${(n / 1000000).toLocaleString('hy-AM')} մլն` : n.toLocaleString('hy-AM');
+---
+
+<Base title="Ավանդների տոկոսադրույքների համեմատություն — Հայաստանի բանկեր">
+  <nav class="breadcrumb"><a href="/">← Գլխավոր</a></nav>
+  <h1>Ժամկետային ավանդներ. համեմատություն</h1>
+
+  <div class="context">
+    <strong>Շուկան այս պահին (AMD, 12 ամիս).</strong> {amd12.length} բանկ ·
+    {rMin}%-ից {rMax}% · միջինը՝ {rAvg.toFixed(2)}% ·
+    <span class="updated-stamp">թարմացվել է՝ {lastUpdated}</span>
+  </div>
+
+  <div class="filters" id="cur-tabs" role="group" aria-label="Արժույթ">
+    {CURRENCIES.map((c, i) => (
+      <button type="button" class={`tab-btn${i === 0 ? ' active' : ''}`} data-currency={c}>{c}</button>
+    ))}
+  </div>
+
+  <div class="table-wrap">
+    <table id="dep">
+      <thead>
+        <tr>
+          <th scope="col">Բանկ / ավանդ</th>
+          {TERMS.map((tm) => <th scope="col" class="num">{tm} ամիս</th>)}
+          <th scope="col" class="num">Նվազ. գումար</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        {sorted.map((p) => {
+          const bank = getBank(p.bankId);
+          return (
+            <tr data-rates={JSON.stringify(p.rates)}>
+              <td>
+                <a href={`/banks/${bank.id}/`}>{t(bank.name)}</a>
+                <br /><small class="muted">{t(p.name)}</small>
+              </td>
+              {TERMS.map((tm) => {
+                const r = rateFor(p, 'AMD', tm);
+                return <td class={`num${tm === 12 ? ' eff' : ''}`} data-term={tm}>{r == null ? '—' : `${r}%`}</td>;
+              })}
+              <td class="num">{fmtAmount(p.amountMin)} ֏</td>
+              <td><button class="calc-btn" type="button" data-rate12={rateFor(p, 'AMD', 12) ?? ''}>Հաշվել</button></td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  </div>
+  <p><small>Դրույքները տարեկան են, «ժամկետի վերջում» վճարման տարբերակի համար (բացառությունները նշված են բանկի էջում)։ Աղբյուրը՝ բանկերի պաշտոնական էջերը։ «—» = բանկը այդ պայմանով դրույք չի հրապարակել։</small></p>
+
+  <div class="calc" id="calc">
+    <h2>Ավանդի եկամտաբերության հաշվիչ</h2>
+    <div class="filters">
+      <label>Գումար <input type="number" id="c-amount" value="1000000" step="100000" /></label>
+      <label>Ժամկետ (ամիս) <input type="number" id="c-months" value="12" min="1" max="60" /></label>
+      <label>Տոկոսադրույք (%) <input type="number" id="c-rate" value="8" step="0.05" /></label>
+    </div>
+    <p>Տոկոսային եկամուտ՝ <span class="calc-result" id="c-interest">—</span></p>
+    <p><small>Ընդամենը ժամկետի վերջում՝ <span id="c-total">—</span> · Պարզ տոկոսով մոտավոր հաշվարկ է՝ առանց եկամտահարկի (10%)։</small></p>
+  </div>
+
+  <script>
+    const TERMS = [3, 6, 12, 24];
+    const rows = [...document.querySelectorAll('#dep tbody tr')];
+    const tbody = document.querySelector('#dep tbody');
+
+    function show(currency) {
+      for (const row of rows) {
+        const rates = JSON.parse(row.dataset.rates);
+        let has = false;
+        for (const cell of row.querySelectorAll('td[data-term]')) {
+          const term = Number(cell.dataset.term);
+          const r = rates.find((x) => x.currency === currency && x.termMonths === term);
+          cell.textContent = r ? `${r.rate}%` : '—';
+          if (r) has = true;
+        }
+        const r12 = rates.find((x) => x.currency === currency && x.termMonths === 12);
+        row.dataset.sort = r12 ? r12.rate : -1;
+        row.querySelector('.calc-btn').dataset.rate12 = r12 ? r12.rate : '';
+        row.classList.toggle('hidden', !has);
+      }
+      rows
+        .slice()
+        .sort((a, b) => Number(b.dataset.sort) - Number(a.dataset.sort))
+        .forEach((row) => tbody.appendChild(row));
+    }
+
+    document.querySelectorAll('#cur-tabs .tab-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('#cur-tabs .tab-btn').forEach((b) => b.classList.remove('active'));
+        btn.classList.add('active');
+        show(btn.dataset.currency);
+      });
+    });
+
+    // Yield calculator: simple interest, pre-tax
+    const cAmount = document.getElementById('c-amount');
+    const cMonths = document.getElementById('c-months');
+    const cRate = document.getElementById('c-rate');
+    const cInterest = document.getElementById('c-interest');
+    const cTotal = document.getElementById('c-total');
+
+    function recalc() {
+      const A = Number(cAmount.value);
+      const m = Number(cMonths.value);
+      const r = Number(cRate.value);
+      if (!A || !m || !r) { cInterest.textContent = '—'; cTotal.textContent = '—'; return; }
+      const interest = (A * (r / 100) * m) / 12;
+      cInterest.textContent = Math.round(interest).toLocaleString('hy-AM');
+      cTotal.textContent = Math.round(A + interest).toLocaleString('hy-AM');
+    }
+    [cAmount, cMonths, cRate].forEach((el) => el.addEventListener('input', recalc));
+    recalc();
+
+    document.querySelectorAll('.calc-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        if (btn.dataset.rate12) { cRate.value = btn.dataset.rate12; }
+        recalc();
+        document.getElementById('calc').scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</Base>

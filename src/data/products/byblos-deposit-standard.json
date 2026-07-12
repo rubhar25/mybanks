@@ -1,0 +1,35 @@
+{
+  "id": "byblos-deposit-standard",
+  "bankId": "byblos",
+  "type": "deposit",
+  "name": { "hy": "Ժամկետային ավանդ", "en": "Term deposit", "ru": "Срочный вклад" },
+  "rates": [
+    { "currency": "AMD", "termMonths": 1, "rate": 5.5 },
+    { "currency": "AMD", "termMonths": 3, "rate": 6.75 },
+    { "currency": "AMD", "termMonths": 6, "rate": 8.5 },
+    { "currency": "AMD", "termMonths": 12, "rate": 9.25 },
+    { "currency": "AMD", "termMonths": 18, "rate": 9.5 },
+    { "currency": "AMD", "termMonths": 24, "rate": 9.75 },
+    { "currency": "USD", "termMonths": 1, "rate": 1.0 },
+    { "currency": "USD", "termMonths": 3, "rate": 2.0 },
+    { "currency": "USD", "termMonths": 6, "rate": 3.25 },
+    { "currency": "USD", "termMonths": 12, "rate": 4.75 },
+    { "currency": "USD", "termMonths": 18, "rate": 4.75 },
+    { "currency": "USD", "termMonths": 24, "rate": 5.0 },
+    { "currency": "EUR", "termMonths": 1, "rate": 0.25 },
+    { "currency": "EUR", "termMonths": 3, "rate": 0.5 },
+    { "currency": "EUR", "termMonths": 6, "rate": 1.25 },
+    { "currency": "EUR", "termMonths": 12, "rate": 1.75 },
+    { "currency": "EUR", "termMonths": 18, "rate": 2.0 },
+    { "currency": "EUR", "termMonths": 24, "rate": 2.75 }
+  ],
+  "amountMin": 1000000,
+  "notes": {
+    "hy": "Բերված են «ժամկետի վերջում» վճարման դրույքները. պարբերական (ամսական/եռամսյակային/կիսամյակային/տարեկան) վճարման դեպքում դրույքը նվազում է 0.25 տոկոսային կետով (AMD 18-24 ամիս՝ 0.5 կետով): RUB դրույքներ էջում չկան: Նվազագույն գումարը բարձր է՝ 1,000,000 AMD / 3,000 USD / 2,000 EUR: Վաղաժամկետ վերադարձի դեպքում տոկոսը հաշվարկվում է Easy Save հաշվի դրույքով (AMD 3.75%, USD 0.5%, EUR 0.1%): 6+ ամիս ավանդի դեպքում՝ անվճար Mastercard Gold/World/Elite քարտ: Դրույքները կայքի տվյալներով թարմացված են 10.07.2026 դրությամբ:"
+  },
+  "sources": [
+    "https://www.byblosbankarmenia.am/en/deposit/term-deposit"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-12"
+}

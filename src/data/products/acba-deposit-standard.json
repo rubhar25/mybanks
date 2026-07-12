@@ -1,0 +1,41 @@
+{
+  "id": "acba-deposit-standard",
+  "bankId": "acba",
+  "type": "deposit",
+  "name": { "hy": "Ավանդ «Դասական»", "en": "Classical deposit", "ru": "Вклад «Классический»" },
+  "rates": [
+    { "currency": "AMD", "termMonths": 3, "rate": 4.6 },
+    { "currency": "AMD", "termMonths": 6, "rate": 6.1 },
+    { "currency": "AMD", "termMonths": 9, "rate": 7.1 },
+    { "currency": "AMD", "termMonths": 12, "rate": 8.1 },
+    { "currency": "AMD", "termMonths": 24, "rate": 9.1 },
+    { "currency": "AMD", "termMonths": 36, "rate": 9.6 },
+    { "currency": "USD", "termMonths": 3, "rate": 0.6 },
+    { "currency": "USD", "termMonths": 6, "rate": 1.6 },
+    { "currency": "USD", "termMonths": 9, "rate": 2.6 },
+    { "currency": "USD", "termMonths": 12, "rate": 3.35 },
+    { "currency": "USD", "termMonths": 24, "rate": 4.1 },
+    { "currency": "USD", "termMonths": 36, "rate": 4.35 },
+    { "currency": "EUR", "termMonths": 3, "rate": 0.35 },
+    { "currency": "EUR", "termMonths": 6, "rate": 0.6 },
+    { "currency": "EUR", "termMonths": 9, "rate": 1.35 },
+    { "currency": "EUR", "termMonths": 12, "rate": 1.6 },
+    { "currency": "EUR", "termMonths": 24, "rate": 2.1 },
+    { "currency": "EUR", "termMonths": 36, "rate": 2.35 },
+    { "currency": "RUB", "termMonths": 3, "rate": 1.1 },
+    { "currency": "RUB", "termMonths": 6, "rate": 2.1 },
+    { "currency": "RUB", "termMonths": 9, "rate": 3.1 },
+    { "currency": "RUB", "termMonths": 12, "rate": 3.6 },
+    { "currency": "RUB", "termMonths": 24, "rate": 4.1 }
+  ],
+  "amountMin": 50000,
+  "notes": {
+    "hy": "termMonths-ը ժամկետային միջակայքի վերին սահմանն է (1-3, 3-6, 6-9, 9-12, 12-24, 24-36 ամիս): Տոկոսները վճարվում են միայն ժամկետի վերջում՝ հաճախորդի ընթացիկ հաշվին (չեն կապիտալացվում): RUB-ով 24-36 ամիս ժամկետ չկա: Նվազագույն գումար՝ 50,000 AMD / 200 USD / 200 EUR / 5,000 RUB: Վաղաժամկետ պահանջի դեպքում վերահաշվարկ 0.1% տարեկան դրույքով:"
+  },
+  "sources": [
+    "https://www.acba.am/hy/individual/deposits/classic",
+    "https://www.acba.am/files/avandner-tariffs.pdf"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-12"
+}

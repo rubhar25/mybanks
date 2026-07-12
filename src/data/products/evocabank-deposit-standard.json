@@ -1,0 +1,44 @@
+{
+  "id": "evocabank-deposit-standard",
+  "bankId": "evocabank",
+  "type": "deposit",
+  "name": { "hy": "Դասական ավանդ", "en": "Classical deposit", "ru": "Классический вклад" },
+  "rates": [
+    { "currency": "AMD", "termMonths": 3, "rate": 4.5 },
+    { "currency": "AMD", "termMonths": 6, "rate": 6.0 },
+    { "currency": "AMD", "termMonths": 9, "rate": 7.0 },
+    { "currency": "AMD", "termMonths": 12, "rate": 8.0 },
+    { "currency": "AMD", "termMonths": 18, "rate": 9.5 },
+    { "currency": "AMD", "termMonths": 24, "rate": 10.0 },
+    { "currency": "AMD", "termMonths": 60, "rate": 10.5 },
+    { "currency": "USD", "termMonths": 3, "rate": 0.75 },
+    { "currency": "USD", "termMonths": 6, "rate": 2.0 },
+    { "currency": "USD", "termMonths": 9, "rate": 2.5 },
+    { "currency": "USD", "termMonths": 12, "rate": 3.0 },
+    { "currency": "USD", "termMonths": 18, "rate": 4.0 },
+    { "currency": "USD", "termMonths": 24, "rate": 4.5 },
+    { "currency": "USD", "termMonths": 60, "rate": 5.0 },
+    { "currency": "EUR", "termMonths": 3, "rate": 0.35 },
+    { "currency": "EUR", "termMonths": 6, "rate": 1.0 },
+    { "currency": "EUR", "termMonths": 9, "rate": 1.5 },
+    { "currency": "EUR", "termMonths": 12, "rate": 1.75 },
+    { "currency": "EUR", "termMonths": 18, "rate": 2.0 },
+    { "currency": "EUR", "termMonths": 24, "rate": 2.5 },
+    { "currency": "EUR", "termMonths": 60, "rate": 3.0 },
+    { "currency": "RUB", "termMonths": 3, "rate": 4.0 },
+    { "currency": "RUB", "termMonths": 6, "rate": 5.0 },
+    { "currency": "RUB", "termMonths": 9, "rate": 5.25 },
+    { "currency": "RUB", "termMonths": 12, "rate": 5.5 },
+    { "currency": "RUB", "termMonths": 18, "rate": 6.0 }
+  ],
+  "amountMin": 100000,
+  "notes": {
+    "hy": "termMonths-ը ժամկետային միջակայքի վերին սահմանն է (31-90, 91-180, 181-270, 271-365, 366-549, 550-730, 731-1825 օր): Բերված են «ժամկետի վերջում» վճարման դրույքները. ամսական վճարման դեպքում AMD դրույքները 0.5 կետով ցածր են: RUB-ով 550+ օր ժամկետ չկա: Նվազագույն գումար՝ 100,000 AMD / 200 USD / 200 EUR / 30,000 RUB: Մասնակի ելք չի թույլատրվում. վաղաժամկետ լուծման դեպքում խիստ իջեցված դրույքով վերահաշվարկ (օր.՝ AMD մինչև 365 օր՝ 0.5%): Evoca Online ավանդի դրույքներն ավելի բարձր են (մինչև 10.75% AMD):"
+  },
+  "sources": [
+    "https://www.evoca.am/en/deposits/classical-deposit",
+    "https://www.evoca.am/en/deposits/classical-deposit/classical-deposit-terms-and-conditions"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-12"
+}

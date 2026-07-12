@@ -1,0 +1,42 @@
+{
+  "id": "artsakhbank-deposit-standard",
+  "bankId": "artsakhbank",
+  "type": "deposit",
+  "name": { "hy": "Ավանդ «Ժամկետային»", "en": "Time deposit", "ru": "Срочный вклад" },
+  "rates": [
+    { "currency": "AMD", "termMonths": 3, "rate": 6.0 },
+    { "currency": "AMD", "termMonths": 6, "rate": 8.0 },
+    { "currency": "AMD", "termMonths": 9, "rate": 8.75 },
+    { "currency": "AMD", "termMonths": 12, "rate": 9.5 },
+    { "currency": "AMD", "termMonths": 18, "rate": 10.0 },
+    { "currency": "AMD", "termMonths": 36, "rate": 10.0 },
+    { "currency": "USD", "termMonths": 3, "rate": 1.0 },
+    { "currency": "USD", "termMonths": 6, "rate": 1.75 },
+    { "currency": "USD", "termMonths": 9, "rate": 3.0 },
+    { "currency": "USD", "termMonths": 12, "rate": 3.5 },
+    { "currency": "USD", "termMonths": 18, "rate": 4.5 },
+    { "currency": "USD", "termMonths": 24, "rate": 4.75 },
+    { "currency": "USD", "termMonths": 36, "rate": 5.0 },
+    { "currency": "EUR", "termMonths": 3, "rate": 0.25 },
+    { "currency": "EUR", "termMonths": 6, "rate": 0.5 },
+    { "currency": "EUR", "termMonths": 9, "rate": 1.0 },
+    { "currency": "EUR", "termMonths": 12, "rate": 1.3 },
+    { "currency": "EUR", "termMonths": 18, "rate": 1.5 },
+    { "currency": "EUR", "termMonths": 24, "rate": 1.75 },
+    { "currency": "EUR", "termMonths": 36, "rate": 1.75 },
+    { "currency": "RUB", "termMonths": 6, "rate": 2.5 },
+    { "currency": "RUB", "termMonths": 9, "rate": 4.5 },
+    { "currency": "RUB", "termMonths": 12, "rate": 6.0 },
+    { "currency": "RUB", "termMonths": 18, "rate": 7.0 }
+  ],
+  "amountMin": 50000,
+  "notes": {
+    "hy": "termMonths-ը ժամկետային միջակայքի վերին սահմանն է (31-90, 91-180, 181-270, 271-365, 366-550, 551-1095 օր): Մինչև 365 օր ժամկետների համար հրապարակված է միայն ամսական վճարման դրույք (ժամկետի վերջում վճարման տարբերակ չկա). AMD 18 և 36 ամիս տողերում բերված է «ժամկետի վերջում» դրույքը (10.00%), ամսականը՝ 9.75%: Դրույքները մինչև 50 մլն AMD ավանդների համար են. ավելի մեծ գումարների դեպքում՝ ցածր: Նվազագույն գումար՝ 50,000 AMD / 150 USD / 150 EUR / 10,000 RUB: 90-րդ օրվանից թույլատրվում է նվազեցում մինչև սկզբնական գումարի 20%-ը: Վաղաժամկետ լուծման դեպքում վերահաշվարկ ցպահանջ դրույքով: Աղբյուրը՝ պաշտոնական տեղեկատվական ամփոփագիր, ուժի մեջ է 21.04.2025-ից: Ուշադրություն. RUB ավանդների ընդունումը ժամանակավորապես դադարեցված է 30.06-01.08.2026:"
+  },
+  "sources": [
+    "https://www.artsakhbank.am/deposit/time",
+    "https://www.artsakhbank.am/storage/files/information-brochure-on-deposits-individuals-21-04-2025.pdf"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-12"
+}

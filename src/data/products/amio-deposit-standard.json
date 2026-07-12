@@ -1,0 +1,40 @@
+{
+  "id": "amio-deposit-standard",
+  "bankId": "amio",
+  "type": "deposit",
+  "name": { "hy": "Ավանդ «Շահավետ»", "en": "Deposit \"Profitable\"", "ru": "Вклад «Выгодный»" },
+  "rates": [
+    { "currency": "AMD", "termMonths": 3, "rate": 6.5 },
+    { "currency": "AMD", "termMonths": 6, "rate": 8.0 },
+    { "currency": "AMD", "termMonths": 12, "rate": 9.5 },
+    { "currency": "AMD", "termMonths": 18, "rate": 9.5 },
+    { "currency": "AMD", "termMonths": 24, "rate": 9.75 },
+    { "currency": "AMD", "termMonths": 36, "rate": 10.0 },
+    { "currency": "USD", "termMonths": 3, "rate": 1.6 },
+    { "currency": "USD", "termMonths": 6, "rate": 2.35 },
+    { "currency": "USD", "termMonths": 12, "rate": 4.35 },
+    { "currency": "USD", "termMonths": 18, "rate": 4.6 },
+    { "currency": "USD", "termMonths": 24, "rate": 4.85 },
+    { "currency": "USD", "termMonths": 36, "rate": 5.1 },
+    { "currency": "EUR", "termMonths": 3, "rate": 0.65 },
+    { "currency": "EUR", "termMonths": 6, "rate": 0.9 },
+    { "currency": "EUR", "termMonths": 12, "rate": 1.9 },
+    { "currency": "EUR", "termMonths": 18, "rate": 2.15 },
+    { "currency": "EUR", "termMonths": 24, "rate": 2.15 },
+    { "currency": "RUB", "termMonths": 3, "rate": 3.9 },
+    { "currency": "RUB", "termMonths": 6, "rate": 5.1 },
+    { "currency": "RUB", "termMonths": 12, "rate": 5.6 },
+    { "currency": "RUB", "termMonths": 18, "rate": 4.0 },
+    { "currency": "RUB", "termMonths": 24, "rate": 4.2 }
+  ],
+  "amountMin": 30000,
+  "notes": {
+    "hy": "termMonths-ը ժամկետային միջակայքի վերին սահմանն է (31-90, 91-180, 181-365, 366-550, 551-730, 731-1095 օր): Բերված են «ժամկետի վերջում» վճարման, առանց համալրման/նվազեցման տարբերակի դրույքները՝ մասնաճյուղում ներդնելիս. AMIO Mobile-ով դրույքներն ավելի բարձր են (օր.՝ AMD 731-1095 օր՝ 10.25%): Ամսական վճարման դրույքներն ավելի ցածր են: EUR՝ մինչև 730 օր, RUB՝ մինչև 730 օր: Նվազագույն գումարը՝ 30,000 AMD (ավանդի միջակայք՝ 30,000 - 250,000,000 AMD):"
+  },
+  "sources": [
+    "https://www.amiobank.am/en/deposits",
+    "https://static.amiobank.am/files/cms/Shahavyet_avand_English_37855f77dd.pdf"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-12"
+}

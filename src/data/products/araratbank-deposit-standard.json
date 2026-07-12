@@ -1,0 +1,38 @@
+{
+  "id": "araratbank-deposit-standard",
+  "bankId": "araratbank",
+  "type": "deposit",
+  "name": { "hy": "«Ժամկետային» ավանդ", "en": "\"Term\" deposit", "ru": "Срочный вклад" },
+  "rates": [
+    { "currency": "AMD", "termMonths": 3, "rate": 4.5 },
+    { "currency": "AMD", "termMonths": 6, "rate": 5.5 },
+    { "currency": "AMD", "termMonths": 9, "rate": 6.5 },
+    { "currency": "AMD", "termMonths": 12, "rate": 7.5 },
+    { "currency": "AMD", "termMonths": 18, "rate": 9.0 },
+    { "currency": "AMD", "termMonths": 24, "rate": 9.5 },
+    { "currency": "AMD", "termMonths": 36, "rate": 9.5 },
+    { "currency": "USD", "termMonths": 3, "rate": 0.5 },
+    { "currency": "USD", "termMonths": 6, "rate": 1.5 },
+    { "currency": "USD", "termMonths": 9, "rate": 2.25 },
+    { "currency": "USD", "termMonths": 12, "rate": 3.25 },
+    { "currency": "USD", "termMonths": 18, "rate": 4.5 },
+    { "currency": "USD", "termMonths": 24, "rate": 4.6 },
+    { "currency": "USD", "termMonths": 36, "rate": 4.75 },
+    { "currency": "EUR", "termMonths": 3, "rate": 0.25 },
+    { "currency": "EUR", "termMonths": 6, "rate": 0.75 },
+    { "currency": "EUR", "termMonths": 9, "rate": 1.25 },
+    { "currency": "EUR", "termMonths": 12, "rate": 1.75 },
+    { "currency": "EUR", "termMonths": 18, "rate": 2.5 },
+    { "currency": "EUR", "termMonths": 24, "rate": 2.6 },
+    { "currency": "EUR", "termMonths": 36, "rate": 2.75 }
+  ],
+  "amountMin": 100000,
+  "notes": {
+    "hy": "termMonths-ը ժամկետային միջակայքի վերին սահմանն է (45-90, 91-180, 181-270, 271-365, 366-545, 546-730, 731-1095 օր): Էջում հրապարակված է մեկ միասնական դրույքացանց. տոկոսավճարման պարբերականությունը (ամսական/եռամսյակային/ժամկետի վերջում) ընտրում է հաճախորդը՝ առանց էջում նշված դրույքի տարբերակման: RUB դրույքներ էջում չկան: Նվազագույն գումար՝ 100,000 AMD / 250 USD / 250 EUR: Վաղաժամկետ պահանջի դեպքում վերահաշվարկ 0.1% տարեկան դրույքով:"
+  },
+  "sources": [
+    "https://www.araratbank.am/en/deposits/46/"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-12"
+}

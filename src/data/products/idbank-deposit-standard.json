@@ -1,0 +1,37 @@
+{
+  "id": "idbank-deposit-standard",
+  "bankId": "idbank",
+  "type": "deposit",
+  "name": { "hy": "Ավանդ «Ապահով» (առանց համալրման)", "en": "\"Safe\" deposit (without replenishment)", "ru": "Вклад «Надёжный» (без пополнения)" },
+  "rates": [
+    { "currency": "AMD", "termMonths": 3, "rate": 5.0 },
+    { "currency": "AMD", "termMonths": 6, "rate": 6.0 },
+    { "currency": "AMD", "termMonths": 9, "rate": 8.0 },
+    { "currency": "AMD", "termMonths": 12, "rate": 8.2 },
+    { "currency": "AMD", "termMonths": 24, "rate": 8.95 },
+    { "currency": "AMD", "termMonths": 36, "rate": 9.2 },
+    { "currency": "USD", "termMonths": 3, "rate": 0.85 },
+    { "currency": "USD", "termMonths": 6, "rate": 1.35 },
+    { "currency": "USD", "termMonths": 9, "rate": 2.85 },
+    { "currency": "USD", "termMonths": 12, "rate": 3.05 },
+    { "currency": "USD", "termMonths": 24, "rate": 4.1 },
+    { "currency": "USD", "termMonths": 36, "rate": 4.35 },
+    { "currency": "EUR", "termMonths": 6, "rate": 0.75 },
+    { "currency": "EUR", "termMonths": 9, "rate": 1.5 },
+    { "currency": "EUR", "termMonths": 12, "rate": 1.75 },
+    { "currency": "EUR", "termMonths": 24, "rate": 2.0 },
+    { "currency": "RUB", "termMonths": 6, "rate": 3.5 },
+    { "currency": "RUB", "termMonths": 9, "rate": 4.0 },
+    { "currency": "RUB", "termMonths": 12, "rate": 4.75 },
+    { "currency": "RUB", "termMonths": 24, "rate": 6.0 }
+  ],
+  "amountMin": 100000,
+  "notes": {
+    "hy": "termMonths-ը ժամկետային միջակայքի վերին սահմանն է (31-90, 91-180, 181-270, 271-365, 366-730, 731-1096 օր): Բերված են «ժամկետի վերջում» վճարման բազային (մասնաճյուղային) դրույքները. ամսական վճարման դրույքներն ավելի ցածր են: Օնլայն (IDBanking) ներդնելիս բոնուս՝ +0.3% AMD, +0.15% USD, +0.5% RUB, և նվազագույնը 10,000 AMD է (մասնաճյուղում՝ 100,000 AMD): EUR/RUB 3 և 36 ամիս դրույքները էջից միանշանակ չընթերցվեցին՝ բաց են թողնված: Վաղաժամկետ ելքի դեպքում վերահաշվարկ ցպահանջ դրույքով, միայն մասնաճյուղում:"
+  },
+  "sources": [
+    "https://idbank.am/en/deposits/deposit_safe/noreplenish/"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-12"
+}

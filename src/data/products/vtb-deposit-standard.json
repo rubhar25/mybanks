@@ -1,0 +1,28 @@
+{
+  "id": "vtb-deposit-standard",
+  "bankId": "vtb",
+  "type": "deposit",
+  "name": { "hy": "Ավանդ «Կայուն»", "en": "\"Stable\" deposit", "ru": "Вклад «Стабильный»" },
+  "rates": [
+    { "currency": "AMD", "termMonths": 1, "rate": 5.35 },
+    { "currency": "AMD", "termMonths": 3, "rate": 6.15 },
+    { "currency": "AMD", "termMonths": 6, "rate": 7.75 },
+    { "currency": "AMD", "termMonths": 12, "rate": 9.75 },
+    { "currency": "EUR", "termMonths": 3, "rate": 0.4 },
+    { "currency": "EUR", "termMonths": 6, "rate": 0.8 },
+    { "currency": "EUR", "termMonths": 12, "rate": 1.5 },
+    { "currency": "RUB", "termMonths": 1, "rate": 3.0 },
+    { "currency": "RUB", "termMonths": 3, "rate": 3.75 },
+    { "currency": "RUB", "termMonths": 6, "rate": 4.5 },
+    { "currency": "RUB", "termMonths": 12, "rate": 5.0 }
+  ],
+  "amountMin": 50000,
+  "notes": {
+    "hy": "Ժամկետները ճշգրիտ են (30, 90, 180, 365 օր): Բերված են «ժամկետի վերջում» վճարման դրույքները մինչև 4,000,000 AMD ավանդների համար. ամսական վճարման/կապիտալացման դրույքներն ավելի ցածր են, իսկ 4 մլն AMD և ավելի գումարների դեպքում՝ բարձր (օր.՝ 365 օր՝ 10.00%): USD-ով ավանդ չի առաջարկվում: Ընդհանուր ժամկետային միջակայքը 30-1460 օր է, սակայն էջում հրապարակված դրույքացանցը մինչև 365 օր է: Նվազագույն գումար՝ 50,000 AMD / 100 EUR / 10,000 RUB: Համալրում/մասնակի ելք չի թույլատրվում. վաղաժամկետ ելքի տույժային դրույքներ՝ 0.01-4%՝ ըստ ժամկետի:"
+  },
+  "sources": [
+    "https://www.vtb.am/am/deposit/stable"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-12"
+}

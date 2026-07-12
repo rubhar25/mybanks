@@ -1,0 +1,32 @@
+{
+  "id": "unibank-deposit-standard",
+  "bankId": "unibank",
+  "type": "deposit",
+  "name": { "hy": "Ավանդ «Դասական»", "en": "\"Classic\" deposit", "ru": "Вклад «Классический»" },
+  "rates": [
+    { "currency": "AMD", "termMonths": 3, "rate": 5.5 },
+    { "currency": "AMD", "termMonths": 6, "rate": 6.5 },
+    { "currency": "AMD", "termMonths": 12, "rate": 7.5 },
+    { "currency": "AMD", "termMonths": 18, "rate": 9.5 },
+    { "currency": "AMD", "termMonths": 24, "rate": 9.7 },
+    { "currency": "USD", "termMonths": 6, "rate": 0.25 },
+    { "currency": "USD", "termMonths": 12, "rate": 2.75 },
+    { "currency": "USD", "termMonths": 18, "rate": 3.75 },
+    { "currency": "USD", "termMonths": 24, "rate": 4.25 },
+    { "currency": "EUR", "termMonths": 18, "rate": 2.0 },
+    { "currency": "EUR", "termMonths": 24, "rate": 2.5 },
+    { "currency": "RUB", "termMonths": 6, "rate": 1.5 },
+    { "currency": "RUB", "termMonths": 12, "rate": 1.5 },
+    { "currency": "RUB", "termMonths": 18, "rate": 4.0 },
+    { "currency": "RUB", "termMonths": 24, "rate": 5.0 }
+  ],
+  "amountMin": 100000,
+  "notes": {
+    "hy": "termMonths-ը ժամկետային միջակայքի վերին սահմանն է (30-90, 91-180, 181-365, 366-549, 550-730 օր): Բերված են «ժամկետի վերջում» վճարման դրույքները. ամսական վճարման դրույքներն ավելի ցածր են (օր.՝ AMD 550-730 օր՝ 9.4%): USD մինչև 90 օր և EUR մինչև 365 օր դրույքներ չեն հրապարակված: Նվազագույն գումար՝ 100,000 AMD / 1,000 USD / 1,000 EUR / 20,000 RUB: Վաղաժամկետ պահանջի դեպքում վերահաշվարկ 0.1% տարեկան դրույքով:"
+  },
+  "sources": [
+    "https://www.unibank.am/hy/deposit/5979/"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-12"
+}
