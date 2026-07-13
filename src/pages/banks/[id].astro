@@ -104,9 +104,17 @@ const mapQuery = encodeURIComponent(`${t(bank.fullName)} ${t(bank.headOffice)}`)
   {bankProducts.map((p) => (
     <article class="card product-card">
       <div>
-        <h3>{t(p.name)}</h3>
+        <h3>
+          {isLoanType(p.type)
+            ? <a href={url(`/banks/${bank.id}/${p.type}/`)}>{t(p.name)}</a>
+            : t(p.name)}
+        </h3>
         {isLoanType(p.type) && (
-          <a href={url(`/loans/${p.type}/`)}>Համեմատել բոլոր բանկերի հետ</a>
+          <>
+            <a href={url(`/banks/${bank.id}/${p.type}/`)}>Մանրամասն պայմանները</a>
+            {' · '}
+            <a href={url(`/loans/${p.type}/`)}>Համեմատել բոլոր բանկերի հետ</a>
+          </>
         )}
         {p.type === 'deposit' && (
           <a href={url('/deposits/')}>Համեմատել բոլոր բանկերի հետ</a>
@@ -115,11 +123,11 @@ const mapQuery = encodeURIComponent(`${t(bank.fullName)} ${t(bank.headOffice)}`)
       {isLoanType(p.type) && (
         <div class="rates">
           <div class="rate-block">
-            <span class="value">{p.nominalRate}%</span>
+            <span class="value">{p.nominalRate != null ? `${p.nominalRate}%` : '—'}</span>
             <span class="label">անվանական</span>
           </div>
           <div class="rate-block effective">
-            <span class="value">{p.effectiveRate}%</span>
+            <span class="value">{p.effectiveRate != null ? `${p.effectiveRate}%` : '—'}</span>
             <span class="label">փաստացի</span>
           </div>
         </div>

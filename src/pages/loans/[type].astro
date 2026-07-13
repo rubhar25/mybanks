@@ -92,7 +92,7 @@ const fmtRate = (min, max) =>
               data-term-max={p.termMonthsMax ?? ''}
               data-rate={p.nominalRate}
             >
-              <td><a href={url(`/banks/${bank.id}/`)}>{t(bank.name)}</a></td>
+              <td><a href={url(`/banks/${bank.id}/${type}/`)}>{t(bank.name)}</a></td>
               <td class="num">{fmtRate(p.nominalRate, p.nominalRateMax)}</td>
               <td class="num eff">{fmtRate(p.effectiveRate, p.effectiveRateMax)}</td>
               <td class="num">{fmtTerm(p.termMonthsMin, p.termMonthsMax)}</td>
