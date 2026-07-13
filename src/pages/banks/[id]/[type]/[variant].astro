@@ -1,0 +1,39 @@
+---
+import Base from '../../../../layouts/Base.astro';
+import ProductDetail from '../../../../components/ProductDetail.astro';
+import { products, getBank, t } from '../../../../lib/data.js';
+import { loanTypeName, isLoanType } from '../../../../lib/loanTypes.js';
+import { variantSlug } from '../../../../lib/products.js';
+import { url } from '../../../../lib/url.js';
+
+export function getStaticPaths() {
+  return products
+    .filter((p) => isLoanType(p.type))
+    .map((p) => ({
+      params: { id: p.bankId, type: p.type, variant: variantSlug(p) },
+      props: { product: p },
+    }));
+}
+
+const { product } = Astro.props;
+const bank = getBank(product.bankId);
+const typeName = t(loanTypeName(product.type));
+---
+
+<Base
+  title={`${t(bank.name)} — ${t(product.name)}. պայմաններ, տոկոսադրույք`}
+  description={`${t(bank.name)} ${t(product.name)}. փաստացի տոկոսադրույք, պայմաններ, փաստաթղթեր, պաշտոնական PDF և ամսական վճարի հաշվիչ։`}
+>
+  <nav class="breadcrumb">
+    <a href={url(`/banks/${bank.id}/`)}>← {t(bank.name)}</a> ·
+    <a href={url(`/banks/${bank.id}/${product.type}/`)}>{typeName}</a> ·
+    <a href={url(`/loans/${product.type}/`)}>բոլոր բանկերը</a>
+  </nav>
+
+  <div class="profile-header">
+    <h1>{t(bank.name)} — {t(product.name)}</h1>
+    <span class="badge">{typeName}</span>
+  </div>
+
+  <ProductDetail product={product} />
+</Base>

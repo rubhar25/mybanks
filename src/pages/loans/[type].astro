@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import { products, getBank, t } from '../../lib/data.js';
 import { loanTypes, loanTypeName } from '../../lib/loanTypes.js';
+import { variantSlug } from '../../lib/products.js';
 import { url } from '../../lib/url.js';
 
 export function getStaticPaths() {
@@ -92,7 +93,10 @@ const fmtRate = (min, max) =>
               data-term-max={p.termMonthsMax ?? ''}
               data-rate={p.nominalRate}
             >
-              <td><a href={url(`/banks/${bank.id}/${type}/`)}>{t(bank.name)}</a></td>
+              <td>
+                <a href={url(`/banks/${bank.id}/${type}/${variantSlug(p)}/`)}>{t(bank.name)}</a>
+                <br /><small class="muted">{t(p.name)}</small>
+              </td>
               <td class="num">{fmtRate(p.nominalRate, p.nominalRateMax)}</td>
               <td class="num eff">{fmtRate(p.effectiveRate, p.effectiveRateMax)}</td>
               <td class="num">{fmtTerm(p.termMonthsMin, p.termMonthsMax)}</td>

@@ -18,8 +18,8 @@
     "hy": []
   },
   "notes": {
-    "hy": "Կայքում նշված է «տոկոսադրույքը՝ սկսած 13%-ից», փաստացի (ԷՏ) տոկոսադրույքը այս էջում հրապարակված չէր: Կիրառելի է և՛ առաջնային, և՛ երկրորդային շուկայի համար (առանձին սանդղակներ նշված չեն): Կայքի «Ավտովարկեր, պայմաններ» հատուկ էջը (car-loans-terms-and-conditions) 404 էր, տվյալները վերցված են ընդհանուր ապրանքի էջից (car-loans/car-loans): Պահանջվող փաստաթղթերի ցանկը հասանելի է առանձին PDF-ով, չմշակվեց:",
-    "en": "Site shows 'starting from 13%' nominal rate only; effective rate not published on the general product page. Dedicated terms page returned 404."
+    "hy": "Ավտովարկ՝ տոկոսադրույքը սկսած 13%-ից, կիրառելի է և՛ առաջնային, և՛ երկրորդային շուկայի մեքենաների ձեռքբերման համար։",
+    "en": "Car loan with a rate starting from 13%, applicable to both primary- and secondary-market vehicle purchases."
   },
   "sources": [
     "https://www.evoca.am/hy/loans/car-loans/car-loans"

@@ -1,154 +1,71 @@
 ---
 import Base from '../../../layouts/Base.astro';
+import ProductDetail from '../../../components/ProductDetail.astro';
 import { products, getBank, t } from '../../../lib/data.js';
 import { loanTypeName, isLoanType } from '../../../lib/loanTypes.js';
+import { variantSlug } from '../../../lib/products.js';
 import { url } from '../../../lib/url.js';
 
 export function getStaticPaths() {
-  // One detail page per (bank, loan-type) product that actually exists.
-  return products
-    .filter((p) => isLoanType(p.type))
-    .map((p) => ({ params: { id: p.bankId, type: p.type }, props: { product: p } }));
+  // One hub per (bank, loan-type) that has at least one product.
+  const seen = new Set();
+  const paths = [];
+  for (const p of products) {
+    if (!isLoanType(p.type)) continue;
+    const key = `${p.bankId}/${p.type}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    paths.push({ params: { id: p.bankId, type: p.type }, props: { bankId: p.bankId, type: p.type } });
+  }
+  return paths;
 }
 
-const { product } = Astro.props;
-const bank = getBank(product.bankId);
-const typeName = t(loanTypeName(product.type));
+const { bankId, type } = Astro.props;
+const bank = getBank(bankId);
+const typeName = t(loanTypeName(type));
+const items = products
+  .filter((p) => p.bankId === bankId && p.type === type)
+  .sort((a, b) => (a.effectiveRate ?? Infinity) - (b.effectiveRate ?? Infinity));
 
-const pdfUrl = (product.sources ?? []).find((s) => /\.pdf(\?|$)/i.test(s)) ?? null;
-const pageUrl = (product.sources ?? []).find((s) => s !== pdfUrl) ?? null;
-const docs = t(product.documents) ?? [];
+const single = items.length === 1;
 
-const fmtAmount = (n) =>
-  n == null ? '—' : n >= 1000000 ? `${(n / 1000000).toLocaleString('hy-AM')} մլն ֏` : `${n.toLocaleString('hy-AM')} ֏`;
-const fmtTermRange = (min, max) => {
-  const y = (m) => (m % 12 === 0 ? `${m / 12} տարի` : `${m} ամիս`);
-  if (min == null && max == null) return '—';
-  if (min == null) return `մինչև ${y(max)}`;
-  if (max == null) return `${y(min)}-ից`;
-  return `${y(min)} – ${y(max)}`;
-};
 const fmtRate = (min, max) =>
   min == null ? '—' : max != null && max !== min ? `${min}–${max}%` : `${min}%`;
-
-// Calculator seed values
-const seedAmount = product.amountMin ?? 3000000;
-const seedYears = product.termMonthsMax ? Math.round(product.termMonthsMax / 12) : 10;
-const seedRate = product.effectiveRate ?? product.nominalRate ?? 14;
 ---
 
 <Base
   title={`${t(bank.name)} — ${typeName}. պայմաններ, տոկոսադրույք, փաստաթղթեր`}
-  description={`${t(bank.name)} ${typeName}. փաստացի տոկոսադրույք ${fmtRate(product.effectiveRate, product.effectiveRateMax)}, ${fmtAmount(product.amountMin)}–${fmtAmount(product.amountMax)}, ամսական վճարի հաշվիչ և պաշտոնական պայմանները։`}
+  description={`${t(bank.name)} ${typeName}. ${items.length > 1 ? `${items.length} տեսակ, ` : ''}փաստացի տոկոսադրույք, պայմաններ, փաստաթղթեր և ամսական վճարի հաշվիչ։`}
 >
   <nav class="breadcrumb">
     <a href={url(`/banks/${bank.id}/`)}>← {t(bank.name)}</a> ·
-    <a href={url(`/loans/${product.type}/`)}>{typeName}՝ բոլոր բանկերը</a>
+    <a href={url(`/loans/${type}/`)}>{typeName}՝ բոլոր բանկերը</a>
   </nav>
 
   <div class="profile-header">
-    <h1>{t(bank.name)} — {t(product.name)}</h1>
-    <span class="badge">{typeName}</span>
+    <h1>{t(bank.name)} — {typeName}</h1>
+    {single && <span class="badge">{typeName}</span>}
   </div>
 
-  <div class="rates" style="display:flex;gap:var(--sp-6);flex-wrap:wrap;margin-bottom:var(--sp-5);font-variant-numeric:tabular-nums">
-    <div class="rate-block">
-      <span class="value">{fmtRate(product.nominalRate, product.nominalRateMax)}</span>
-      <span class="label">անվանական տոկոսադրույք</span>
-    </div>
-    <div class="rate-block effective">
-      <span class="value">{fmtRate(product.effectiveRate, product.effectiveRateMax)}</span>
-      <span class="label">փաստացի (ՓՏԴ)</span>
-    </div>
-  </div>
-
-  <section class="card">
-    <h2>Վարկի պայմանները</h2>
-    <ul class="contact-list">
-      <li><span class="label">Արժույթ</span><span>{product.currency ?? 'ՀՀ դրամ'}</span></li>
-      <li><span class="label">Գումարը</span><span>{fmtAmount(product.amountMin)} – {fmtAmount(product.amountMax)}</span></li>
-      <li><span class="label">Ժամկետը</span><span>{fmtTermRange(product.termMonthsMin, product.termMonthsMax)}</span></li>
-      {product.downPaymentMinPct != null && (
-        <li><span class="label">Կանխավճար</span><span>{product.downPaymentMinPct}%-ից</span></li>
-      )}
-      <li><span class="label">Անվանական տոկոսադրույք</span><span>{fmtRate(product.nominalRate, product.nominalRateMax)}</span></li>
-      <li><span class="label">Փաստացի տոկոսադրույք</span><span>{fmtRate(product.effectiveRate, product.effectiveRateMax)}</span></li>
-      {product.govPrograms?.length > 0 && (
-        <li><span class="label">Պետական ծրագրեր</span><span>{product.govPrograms.join(', ')}</span></li>
-      )}
-      <li><span class="label">Թարմացվել է</span><span>{product.updatedAt}</span></li>
-    </ul>
-  </section>
-
-  {product.notes && t(product.notes) && (
-    <section class="card">
-      <h2>Մանրամասներ</h2>
-      <p>{t(product.notes)}</p>
-    </section>
-  )}
-
-  {docs.length > 0 && (
-    <section class="card">
-      <h2>Անհրաժեշտ փաստաթղթեր</h2>
-      <ul>
-        {docs.map((d) => <li>{d}</li>)}
-      </ul>
-    </section>
-  )}
-
-  {(pdfUrl || pageUrl) && (
-    <section class="card">
-      <h2>Պաշտոնական աղբյուրներ</h2>
-      <ul class="contact-list">
-        {pdfUrl && (
+  {single ? (
+    <ProductDetail product={items[0]} />
+  ) : (
+    <>
+      <p class="muted">{t(bank.name)}ն առաջարկում է {typeName.toLowerCase()}ի {items.length} տեսակ։ Ընտրեք տեսակը՝ լրիվ պայմանները տեսնելու համար։</p>
+      <ul class="card-grid">
+        {items.map((p) => (
           <li>
-            <span class="label">Պայմանների PDF</span>
-            <a href={pdfUrl} target="_blank" rel="noopener">📄 Ներբեռնել բանկի պաշտոնական պայմանները (PDF)</a>
+            <a class="card-link" href={url(`/banks/${bank.id}/${type}/${variantSlug(p)}/`)} style="flex-direction:column;align-items:flex-start;gap:var(--sp-2)">
+              <strong>{t(p.name)}</strong>
+              <span class="muted">
+                Փաստացի՝ {fmtRate(p.effectiveRate, p.effectiveRateMax)}
+                {p.amountMax != null && ` · մինչև ${(p.amountMax / 1000000).toLocaleString('hy-AM')} մլն ֏`}
+              </span>
+            </a>
           </li>
-        )}
-        {pageUrl && (
-          <li>
-            <span class="label">Բանկի էջ</span>
-            <a href={pageUrl} target="_blank" rel="noopener">{pageUrl}</a>
-          </li>
-        )}
+        ))}
       </ul>
-    </section>
+      <p><a href={url(`/loans/${type}/`)}>→ Համեմատել {typeName}ը բոլոր բանկերի հետ</a></p>
+    </>
   )}
-
-  <div class="calc" id="calc">
-    <h2>Ամսական վճարի հաշվիչ</h2>
-    <div class="filters">
-      <label>Գումար (AMD) <input type="number" id="c-amount" value={seedAmount} step="500000" /></label>
-      <label>Ժամկետ (տարի) <input type="number" id="c-years" value={seedYears} min="1" max="30" /></label>
-      <label>Տոկոսադրույք (%) <input type="number" id="c-rate" value={seedRate} step="0.05" /></label>
-    </div>
-    <p>Ամսական վճար՝ <span class="calc-result" id="c-monthly">—</span></p>
-    <p><small>Ընդհանուր վճարվելիք՝ <span id="c-total">—</span> · Անուիտետային մոտավոր հաշվարկ է, ոչ առաջարկ։ Դաշտերը լրացված են այս վարկի պայմաններով։</small></p>
-  </div>
-
-  <p style="margin-top:var(--sp-6)">
-    <a href={url(`/loans/${product.type}/`)}>→ Համեմատել {typeName}ը բոլոր բանկերի հետ</a><br />
-    <a href={url(`/banks/${bank.id}/`)}>→ {t(bank.name)}ի ամբողջ պրոֆիլը</a>
-  </p>
-
-  <script>
-    const cAmount = document.getElementById('c-amount');
-    const cYears = document.getElementById('c-years');
-    const cRate = document.getElementById('c-rate');
-    const cMonthly = document.getElementById('c-monthly');
-    const cTotal = document.getElementById('c-total');
-
-    function recalc() {
-      const A = Number(cAmount.value);
-      const n = Number(cYears.value) * 12;
-      const r = Number(cRate.value) / 100 / 12;
-      if (!A || !n || !r) { cMonthly.textContent = '—'; cTotal.textContent = '—'; return; }
-      const m = (A * r) / (1 - Math.pow(1 + r, -n));
-      cMonthly.textContent = Math.round(m).toLocaleString('hy-AM') + ' ֏';
-      cTotal.textContent = Math.round(m * n).toLocaleString('hy-AM') + ' ֏';
-    }
-    [cAmount, cYears, cRate].forEach((el) => el.addEventListener('input', recalc));
-    recalc();
-  </script>
 </Base>
