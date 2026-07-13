@@ -15,7 +15,17 @@
     "en": "26/1 Vazgen Sargsyan St, Yerevan",
     "ru": "Ереван, ул. Вазгена Саргсяна 26/1"
   },
+  "founded": 1993,
+  "licenseNo": "57",
+  "ceo": { "hy": "Գրանտ Հակոբյան" },
+  "about": {
+    "hy": "Կոնվերս Բանկը հիմնադրվել է 1993 թվականին և գործում է ՀՀ Կենտրոնական բանկի թիվ 57 լիցենզիայի հիման վրա։ Բանկը դինամիկ զարգացող ֆինանսական հաստատություն է, որը մատուցում է համալիր բանկային ծառայություններ ինչպես ֆիզիկական, այնպես էլ իրավաբանական անձանց, հատուկ ուշադրություն դարձնելով մանրածախ բանկային ծառայությունների զարգացմանը։ Գործադիր տնօրենն է Գրանտ Հակոբյանը։"
+  },
   "verified": false,
-  "sources": ["http://old.cba.am/en/SitePages/fscfobanks.aspx"],
-  "updatedAt": "2026-07-12"
+  "sources": [
+    "http://old.cba.am/en/SitePages/fscfobanks.aspx",
+    "https://www.conversebank.am/en/general-information/",
+    "https://www.conversebank.am/en/history/"
+  ],
+  "updatedAt": "2026-07-13"
 }

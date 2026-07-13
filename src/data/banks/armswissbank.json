@@ -18,7 +18,21 @@
     "en": "10 Vazgen Sargsyan St, Yerevan 0010",
     "ru": "Ереван, ул. Вазгена Саргсяна 10"
   },
+  "founded": 2004,
+  "licenseNo": "84",
+  "ceo": { "hy": "Գևորգ Մաճանյան (Կառավարման խորհրդի նախագահ և գործադիր տնօրեն)" },
+  "shareholders": [
+    { "name": { "hy": "Վարդան Սիրմաքես (Franck Muller Watchland-ի հիմնադիր, սեփականատեր և գործադիր տնօրեն)" }, "sharePct": 80 }
+  ],
+  "about": {
+    "hy": "ԱրմՍվիսԲանկը հիմնադրվել է 2004 թվականի հոկտեմբերի 7-ին և ՀՀ Կենտրոնական բանկից բանկային լիցենզիա (թիվ 84) ստացել 2005 թվականի փետրվարի 25-ին։ Բանկը մասնավոր ներդրումային բանկ է, հիմնադրված շվեյցարական կապիտալով։ Հիմնադիրը և հիմնական բաժնետերն է (80%) Վարդան Սիրմաքեսը՝ Franck Muller Watchland շվեյցարական ժամացույցների ընկերության հիմնադիր, սեփականատեր և գործադիր տնօրենը։ Կառավարման խորհրդի նախագահ և գործադիր տնօրենն է Գևորգ Մաճանյանը։"
+  },
   "verified": true,
-  "sources": ["http://www.armswissbank.am/en/", "http://old.cba.am/en/SitePages/fscfobanks.aspx"],
-  "updatedAt": "2026-07-12"
+  "sources": [
+    "http://www.armswissbank.am/en/",
+    "https://www.armswissbank.am/en/about/gov-bodies/",
+    "https://en.wikipedia.org/wiki/ArmSwissBank",
+    "http://old.cba.am/en/SitePages/fscfobanks.aspx"
+  ],
+  "updatedAt": "2026-07-13"
 }

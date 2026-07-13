@@ -19,7 +19,13 @@
     "en": "13 Vardanants St, Yerevan",
     "ru": "Ереван, ул. Варданянц 13"
   },
-  "verified": true,
-  "sources": ["https://idbank.am/en/", "http://old.cba.am/en/SitePages/fscfobanks.aspx"],
-  "updatedAt": "2026-07-12"
+  "founded": 1990,
+  "licenseNo": "9",
+  "about": {
+    "hy": "ԱյԴի Բանկը հիմնադրվել է 1990 թվականի օգոստոսի 1-ին՝ որպես թեթև արդյունաբերության ձեռնարկությունների բաժնետիրական առևտրային բանկ։ ՀՀ Կենտրոնական բանկից ունի թիվ 9 բանկային լիցենզիա։ Բանկը հանդիսանում է Հայաստանի խոշոր բանկերից մեկը՝ լայն մասնաճյուղային ցանցով։ Խորհրդի նախագահն է Արթուր Ջավադյանը, իսկ Վարչության նախագահն է Մհեր Աբրահամյանը։"
+  },
+  "ceo": { "hy": "Մհեր Աբրահամյան (Վարչության նախագահ)" },
+  "verified": false,
+  "sources": ["https://idbank.am/en/", "https://idbank.am/en/information/about/", "https://idbank.am/en/information/about/management/", "http://old.cba.am/en/SitePages/fscfobanks.aspx"],
+  "updatedAt": "2026-07-13"
 }

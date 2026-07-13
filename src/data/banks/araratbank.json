@@ -21,7 +21,19 @@
     "en": "87/85 Byuzand St, Yerevan",
     "ru": "Ереван, ул. Бюзанда 87/85"
   },
+  "founded": 1991,
+  "licenseNo": "4",
+  "branchesCount": 49,
+  "atmsCount": 132,
+  "ceo": { "hy": "Վախթանգ Աբրահամյան (Կառավարման խորհրդի նախագահ և գործադիր տնօրեն, 2026 թ. մայիսի 5-ից)" },
+  "about": {
+    "hy": "Արարատբանկը հիմնադրվել է 1991 թվականին և գործում է ՀՀ Կենտրոնական բանկի թիվ 4 լիցենզիայի հիման վրա։ Բանկն ունի 49 մասնաճյուղ և 132 բանկոմատ, սպասարկում է շուրջ 260,000 հաճախորդի և ունի մոտ 1,081 աշխատակից։ 2026 թվականի մայիսի 5-ից Վախթանգ Աբրահամյանը՝ շուրջ 30-ամյա փորձ ունեցող բանկային և ֆինանսական ոլորտի ղեկավար, նշանակվել է Կառավարման խորհրդի նախագահ և գործադիր տնօրեն՝ փոխարինելով Մհեր Անանյանին, ով վեց տարի ղեկավարել է բանկը։"
+  },
   "verified": true,
-  "sources": ["https://www.araratbank.am/en", "http://old.cba.am/en/SitePages/fscfobanks.aspx"],
-  "updatedAt": "2026-07-12"
+  "sources": [
+    "https://www.araratbank.am/en",
+    "https://www.araratbank.am/en/news/2026/05/05/araratbank-announces-change-in-executive-leadership/813/",
+    "http://old.cba.am/en/SitePages/fscfobanks.aspx"
+  ],
+  "updatedAt": "2026-07-13"
 }

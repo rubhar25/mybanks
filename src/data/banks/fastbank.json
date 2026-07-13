@@ -18,7 +18,18 @@
     "en": "32/6 G. Hovsepyan St, Nork-Marash, Yerevan 0047",
     "ru": "Ереван 0047, Норк-Мараш, ул. Г. Овсепяна 32/6"
   },
-  "verified": true,
-  "sources": ["https://fastbank.am/en", "http://old.cba.am/en/SitePages/fscfobanks.aspx"],
-  "updatedAt": "2026-07-12"
+  "founded": 2022,
+  "licenseNo": "87",
+  "about": {
+    "hy": "Ֆասթ Բանկը Հայաստանի ամենանոր բանկն է. ՀՀ Կենտրոնական բանկից բանկային լիցենզիա (թիվ 87) ստացել է 2022 թվականի նոյեմբերի 9-ին՝ 1994 թվականից գործող «Ֆասթ Քրեդիտ» վարկային կազմակերպության հիմքի վրա։ Բանկի բաժնետերերն են Վահե Բադալյանը և Վիգեն Բադալյանը՝ հավասար՝ 50%-ական բաժնեմասերով, առանց անուղղակի նշանակալից մասնակիցների։ Բանկը հայտնում է շուրջ 213,000 ակտիվ հաճախորդի և ավելի քան 70 մլրդ դրամ ակտիվների մասին։ Բանկն ունի ընդարձակ մասնաճյուղային ցանց Երևանում և մարզերում։"
+  },
+  "ceo": { "hy": "Վահե Բադալյան (Խորհրդի նախագահ)" },
+  "shareholders": [
+    { "name": { "hy": "Վահե Բադալյան" }, "sharePct": 50 },
+    { "name": { "hy": "Վիգեն Բադալյան" }, "sharePct": 50 }
+  ],
+  "branchesCount": 45,
+  "verified": false,
+  "sources": ["https://fastbank.am/en", "https://fastbank.am/en/about", "https://www.fastbank.am/en/executives", "https://fastbank.am/hy/stockholders", "https://fastbank.am/hy/branches", "http://old.cba.am/en/SitePages/fscfobanks.aspx"],
+  "updatedAt": "2026-07-13"
 }

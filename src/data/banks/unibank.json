@@ -22,7 +22,18 @@
     "en": "12 Charents St, bldg 53, areas 1-5, Yerevan 0025",
     "ru": "Ереван 0025, ул. Чаренца 12, зд. 53, пом. 1-5"
   },
-  "verified": true,
-  "sources": ["https://www.unibank.am/en/", "http://old.cba.am/en/SitePages/fscfobanks.aspx"],
-  "updatedAt": "2026-07-12"
+  "founded": 2001,
+  "licenseNo": "81",
+  "email": "unibank@unibank.am",
+  "about": {
+    "hy": "Յունիբանկը հիմնադրվել է 2001 թվականին և ՀՀ Կենտրոնական բանկից ունի թիվ 81 բանկային լիցենզիա (տրված 2001 թ. հոկտեմբերի 10-ին)։ Բանկի հիմնական բաժնետերը «Յունիհոլդինգ ԳԳ Լիմիթեդ» ընկերությունն է՝ 75.2% բաժնեմասով, որի փաստացի շահառուներից են Գագիկ Զաքարյանը և Ջորջ Պիսկովը։ Բանկն ունի ավելի քան 50 մասնաճյուղ ողջ Հայաստանում՝ դառնալով երկրում ամենամեծ մասնաճյուղային ցանցերից մեկը։ Վարչության նախագահն է Մեսրոպ Հակոբյանը։"
+  },
+  "ceo": { "hy": "Մեսրոպ Հակոբյան (Վարչության նախագահ)" },
+  "shareholders": [
+    { "name": { "hy": "Յունիհոլդինգ ԳԳ Լիմիթեդ (Uniholding GG Limited)" }, "sharePct": 75.2 }
+  ],
+  "branchesCount": 50,
+  "verified": false,
+  "sources": ["https://www.unibank.am/en/", "https://www.unibank.am/en/about", "http://old.cba.am/en/SitePages/fscfobanks.aspx"],
+  "updatedAt": "2026-07-13"
 }

@@ -22,7 +22,16 @@
     "en": "44/2 Hanrapetutyan St, Yerevan 0010",
     "ru": "Ереван 0010, ул. Анрапетутян 44/2"
   },
+  "founded": 1990,
+  "licenseNo": "27",
+  "about": {
+    "hy": "Էվոկաբանկը (նախկինում՝ Պրոմեթևս/Պրոմեթեյ Բանկ) հիմնադրվել է 1990 թվականին և ՀՀ կենտրոնական բանկից ունի թիվ 27 ընդհանուր բանկային լիցենզիա։ 2017 թվականին բանկը վերաբրենդավորվեց Evocabank անվանմամբ և անցավ մոբայլ-առաջին (mobile-first) բիզնես մոդելի, միանալով նաև VISA վճարային համակարգին։ Բանկի միակ բաժնետերը Մարետա Գևորգյանն է (100%)։ Էվոկաբանկը դիրքավորվում է որպես Հայաստանի առաջատար թվային բանկերից մեկը՝ առաջարկելով EvocaTOUCH և EvocaINVEST թվային ծառայությունները։"
+  },
+  "ceo": { "hy": "Կարեն Եղիազարյան (Վարչության նախագահ)" },
+  "shareholders": [
+    { "name": { "hy": "Մարետա Գևորգյան" }, "sharePct": 100 }
+  ],
   "verified": true,
-  "sources": ["https://www.evoca.am/", "http://old.cba.am/en/SitePages/fscfobanks.aspx"],
-  "updatedAt": "2026-07-12"
+  "sources": ["https://www.evoca.am/", "https://www.evoca.am/hy/general-information-history-key-values", "https://www.evoca.am/hy/bank-management", "https://www.evoca.am/hy/shareholders", "http://old.cba.am/en/SitePages/fscfobanks.aspx"],
+  "updatedAt": "2026-07-13"
 }

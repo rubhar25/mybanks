@@ -15,7 +15,18 @@
     "en": "17 Tumanyan St, Yerevan 0001",
     "ru": "Ереван, ул. Туманяна 17"
   },
+  "founded": 1996,
+  "branchesCount": 26,
+  "ceo": { "hy": "Արտեմ Չիչյան (ժամանակավոր գործադիր տնօրեն և Խորհրդի ժամանակավոր նախագահ, 2026 թ. հունիսի 15-ից)" },
+  "about": {
+    "hy": "Ինեկոբանկը հիմնադրվել է 1996 թվականի փետրվարի 7-ին և Հայաստանի թվային բանկային ծառայությունների ոլորտի առաջատարներից է՝ սպասարկելով ավելի քան 600,000 հաճախորդի։ Բանկն ունի 26 մասնաճյուղ՝ Երևանում, Աբովյանում, Արտաշատում, Աշտարակում, Արմավիրում, Գյումրիում և Վանաձորում։ 2026 թվականի հունիսի 15-ից Արտեմ Չիչյանը նշանակվել է ժամանակավոր գործադիր տնօրեն և Խորհրդի ժամանակավոր նախագահ։"
+  },
   "verified": false,
-  "sources": ["http://old.cba.am/en/SitePages/fscfobanks.aspx"],
-  "updatedAt": "2026-07-12"
+  "sources": [
+    "http://old.cba.am/en/SitePages/fscfobanks.aspx",
+    "https://www.inecobank.am/en/corporate-governance/bank-leadership",
+    "https://www.inecobank.am/en/map",
+    "https://en.wikipedia.org/wiki/InecoBank"
+  ],
+  "updatedAt": "2026-07-13"
 }

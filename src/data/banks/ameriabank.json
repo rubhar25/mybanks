@@ -21,7 +21,23 @@
     "en": "2 Vazgen Sargsyan St, Yerevan",
     "ru": "Ереван, ул. Вазгена Саргсяна 2"
   },
+  "founded": 1992,
+  "licenseNo": "50",
+  "ceo": { "hy": "Արտակ Հանեսյան (Կառավարման խորհրդի նախագահ և գործադիր տնօրեն)" },
+  "shareholders": [
+    { "name": { "hy": "Bank of Georgia Group PLC" }, "sharePct": 60 },
+    { "name": { "hy": "JSC Bank of Georgia" }, "sharePct": 30 },
+    { "name": { "hy": "Եվրոպական վերակառուցման և զարգացման բանկ (ԵՎՐԲ)" }, "sharePct": 10 }
+  ],
+  "about": {
+    "hy": "Ամերիաբանկը հիմնադրվել է 1992 թվականին և գործում է ՀՀ Կենտրոնական բանկի կողմից 1992 թվականի սեպտեմբերի 8-ին տրված թիվ 50 լիցենզիայի հիման վրա։ 2024 թվականին բանկը ձեռք է բերվել Bank of Georgia Group PLC-ի կողմից, որը ներկայումս հանդիսանում է հիմնական բաժնետեր (60%)՝ միասին JSC Bank of Georgia-ի (30%) և Եվրոպական վերակառուցման և զարգացման բանկի (ԵՎՐԲ, 10%) հետ։ Ամերիաբանկը համարվում է Հայաստանի խոշորագույն և առաջատար բանկերից մեկը՝ ակտիվների ծավալով։ Բանկը մասնագիտացած է կորպորատիվ և կորպորատիվ ներդրումային բանկային ծառայությունների, ինչպես նաև կենտրոնացած է ֆիզիկական անձանց թվային բանկային ծառայությունների վրա (MyAmeria հավելված)։ Կառավարման խորհրդի նախագահ և գործադիր տնօրենն է Արտակ Հանեսյանը, ով այս պաշտոնում է 2008 թվականից։"
+  },
   "verified": false,
-  "sources": ["http://old.cba.am/en/SitePages/fscfobanks.aspx"],
-  "updatedAt": "2026-07-12"
+  "sources": [
+    "http://old.cba.am/en/SitePages/fscfobanks.aspx",
+    "https://ameriabank.am/investors/ESG/Governance/BoardofDirectors",
+    "https://ameriabank.am/investors/ESG/Governance/Management-board/Artak-Hanesyan",
+    "https://oc-media.org/bank-of-georgia-to-acquire-armenias-ameriabank-for-304-million/"
+  ],
+  "updatedAt": "2026-07-13"
 }

@@ -21,7 +21,17 @@
     "en": "18/3 Amiryan St, Yerevan",
     "ru": "Ереван, ул. Амиряна 18/3"
   },
-  "verified": true,
-  "sources": ["https://www.byblosbankarmenia.am/", "http://old.cba.am/en/SitePages/fscfobanks.aspx"],
-  "updatedAt": "2026-07-12"
+  "founded": 2007,
+  "licenseNo": "72",
+  "about": {
+    "hy": "Բիբլոս Բանկ Արմենիան ՀՀ կենտրոնական բանկից ունի թիվ 72 բանկային լիցենզիա (տրված 1996 թ.)։ 2007 թվականին բանկը վերաբրենդավորվեց և սկսեց գործել որպես Լիբանանի Byblos Bank S.A.L.-ի դուստր բանկ Հայաստանում։ 2016 թվականի հուլիսի 26-ին Byblos Bank S.A.L.-ը ձեռք բերեց մասնակիցների մնացած բաժնեմասը՝ դառնալով բանկի միակ (100%) բաժնետերը։ Բանկը մասնագիտացած է կորպորատիվ և առևտրային բանկային ծառայությունների ոլորտում՝ օգտվելով մայր բանկի միջազգային ցանցից։"
+  },
+  "ceo": { "hy": "Հայկ Ստեփանյան (Գլխավոր գործադիր տնօրեն)" },
+  "shareholders": [
+    { "name": { "hy": "Byblos Bank S.A.L. (Լիբանան)" }, "sharePct": 100 }
+  ],
+  "branchesCount": 4,
+  "verified": false,
+  "sources": ["https://www.byblosbankarmenia.am/", "https://www.byblosbankarmenia.am/hy/about", "http://old.cba.am/en/SitePages/fscfobanks.aspx"],
+  "updatedAt": "2026-07-13"
 }

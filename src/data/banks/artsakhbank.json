@@ -22,7 +22,15 @@
     "en": "1b Charents St, Yerevan 0025",
     "ru": "Ереван, ул. Чаренца 1б"
   },
+  "founded": 1996,
+  "licenseNo": "75",
+  "about": {
+    "hy": "Արցախբանկը հիմնադրվել է 1996 թվականին և ՀՀ կենտրոնական բանկից ստացել է թիվ 75 բանկային լիցենզիան։ 2001 թվականին բանկը վերագրանցվել է որպես փակ բաժնետիրական ընկերություն։ Բանկը «Արմենիան Քարդ» ազգային վճարային համակարգի հիմնադիր անդամներից է և ունի Mastercard միջազգային վճարային համակարգի անդամակցություն։ Բանկն ունի Երևանում և Կոտայքի մարզում գործող մասնաճյուղերի ու բանկոմատների ցանց։"
+  },
+  "ceo": { "hy": "Արտակ Բալայան (Գործադիր տնօրեն, Վարչության նախագահ)" },
+  "branchesCount": 9,
+  "atmsCount": 14,
   "verified": true,
-  "sources": ["https://www.artsakhbank.am/en/", "http://old.cba.am/en/SitePages/fscfobanks.aspx"],
-  "updatedAt": "2026-07-12"
+  "sources": ["https://www.artsakhbank.am/en/", "https://www.artsakhbank.am/history", "https://www.artsakhbank.am/bank-management", "https://www.artsakhbank.am/map-and-branches", "http://old.cba.am/en/SitePages/fscfobanks.aspx"],
+  "updatedAt": "2026-07-13"
 }

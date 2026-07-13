@@ -19,7 +19,16 @@
     "en": "33/3 Manandyan St, Yerevan 0006",
     "ru": "Ереван 0006, ул. Манандяна 33/3"
   },
-  "verified": true,
-  "sources": ["https://www.vtb.am/", "http://old.cba.am/en/SitePages/fscfobanks.aspx"],
-  "updatedAt": "2026-07-12"
+  "licenseNo": "64",
+  "email": "headoffice@vtb.am",
+  "about": {
+    "hy": "ՎՏԲ-Հայաստան Բանկը ՀՀ Կենտրոնական բանկից ունի թիվ 64 բանկային լիցենզիա (տրված 1996 թ. հոկտեմբերի 31-ին)։ 2007 թվականի հուլիսի 25-ին ռուսական ՎՏԲ խումբը ձեռք բերեց բանկի բաժնետոմսերի մնացած մասնաբաժինը՝ դառնալով բանկի միակ (100%) բաժնետերը։ Բանկը հանդիսանում է ռուսական ՎՏԲ բանկային խմբի դուստր ընկերությունը Հայաստանում։ Գործադիր տնօրենն ու Խորհրդի նախագահն է Արա Ավագյանը։"
+  },
+  "ceo": { "hy": "Արա Ավագյան (Գլխավոր տնօրեն, Տնօրինության նախագահ)" },
+  "shareholders": [
+    { "name": { "hy": "ՎՏԲ Բանկ (Ռուսաստան)" }, "sharePct": 100 }
+  ],
+  "verified": false,
+  "sources": ["https://www.vtb.am/", "https://www.vtb.am/en/about-bank/ceo", "https://arka.am/en/news/business/3577/", "http://old.cba.am/en/SitePages/fscfobanks.aspx"],
+  "updatedAt": "2026-07-13"
 }
