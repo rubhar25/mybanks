@@ -1,0 +1,29 @@
+{
+  "id": "amio-car-standard",
+  "bankId": "amio",
+  "type": "car",
+  "name": { "hy": "Ավտովարկ (առաջնային շուկա)", "en": "Car loan (primary market)", "ru": "Автокредит (первичный рынок)" },
+  "currency": "AMD",
+  "nominalRate": 13.7,
+  "nominalRateMax": 15.0,
+  "effectiveRate": 14.6,
+  "effectiveRateMax": 17.1,
+  "termMonthsMin": null,
+  "termMonthsMax": 84,
+  "amountMin": null,
+  "amountMax": 75000000,
+  "downPaymentMinPct": 10,
+  "govPrograms": [],
+  "documents": {
+    "hy": []
+  },
+  "notes": {
+    "hy": "Առաջնային շուկայի (նոր մեքենա) պայմաններ. անվանական տոկոսադրույք 13.7%-15%, փաստացի՝ 14.6%-17.1%: Երկրորդային շուկայի (օգտագործված մեքենա) համար՝ անվանական 14.9%-16%, փաստացի 15.9%-18.4% (ֆիքսված չէ այս ֆայլում, տես unibank-car-used, եթե ստեղծվի): Կանխավճարի 50% և ավելի դեպքում եկամուտը փաստաթղթավորելու պահանջ չկա: Հաստատում՝ մինչև 1 աշխատանքային օր: Նվազագույն վարկի գումարը և ժամկետը էջում հստակ նշված չէին:",
+    "en": "Primary market (new car) figures. Secondary market (used car): nominal 14.9-16%, effective 15.9-18.4% (not separately filed here)."
+  },
+  "sources": [
+    "https://amiobank.am/loans/car-loans"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

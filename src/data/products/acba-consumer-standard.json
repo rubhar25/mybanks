@@ -1,0 +1,32 @@
+{
+  "id": "acba-consumer-standard",
+  "bankId": "acba",
+  "type": "consumer",
+  "name": { "hy": "Առանց գրավի սպառողական վարկ", "en": "Unsecured consumer loan", "ru": "Потребительский кредит без залога" },
+  "currency": "AMD",
+  "nominalRate": 18.9,
+  "nominalRateMax": 19.9,
+  "effectiveRate": 20.64,
+  "effectiveRateMax": 21.83,
+  "termMonthsMin": 48,
+  "termMonthsMax": 60,
+  "amountMin": 50000,
+  "amountMax": 10000000,
+  "documents": {
+    "hy": [
+      "Անձը հաստատող փաստաթուղթ",
+      "Հանրային ծառայությունների համարանիշ կամ տեղեկանք դրա բացակայության մասին (ցանկության դեպքում)",
+      "Աշխատավայրից տեղեկանք և/կամ եկամուտը հավաստող այլ փաստաթղթեր",
+      "Տեղեկություններ ընտանիքի այլ անդամների զբաղվածության մասին (անհրաժեշտության դեպքում)"
+    ]
+  },
+  "notes": {
+    "hy": "18.9-19.9% տոկոսադրույքը գործում է աշխատավարձը բանկի միջոցով ստանալու դեպքում. ACBA digital հավելվածով հայտով վարկ ստանալիս եկամուտը հավաստող փաստաթղթեր չեն պահանջվում։ Ժամկետը՝ 48 կամ 60 ամիս (digital հայտի դեպքում)։ Ֆիլիալում ներկայացվող այլ պայմաններ կարող են տարբերվել։"
+  },
+  "sources": [
+    "https://www.acba.am/hy/individuals/loans/consumer-credits/up-to-5-million",
+    "https://www.acba.am/hy/individuals/loans/acba-digital-loans"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

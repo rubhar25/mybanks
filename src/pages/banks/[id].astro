@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { banks, getProductsOfBank, t } from '../../lib/data.js';
+import { isLoanType } from '../../lib/loanTypes.js';
 import { url } from '../../lib/url.js';
 
 export function getStaticPaths() {
@@ -102,14 +103,14 @@ const mapQuery = encodeURIComponent(`${t(bank.fullName)} ${t(bank.headOffice)}`)
     <article class="card product-card">
       <div>
         <h3>{t(p.name)}</h3>
-        {p.type === 'mortgage' && (
-          <a href={url('/loans/mortgage/')}>Համեմատել բոլոր բանկերի հետ</a>
+        {isLoanType(p.type) && (
+          <a href={url(`/loans/${p.type}/`)}>Համեմատել բոլոր բանկերի հետ</a>
         )}
         {p.type === 'deposit' && (
           <a href={url('/deposits/')}>Համեմատել բոլոր բանկերի հետ</a>
         )}
       </div>
-      {p.type === 'mortgage' && (
+      {isLoanType(p.type) && (
         <div class="rates">
           <div class="rate-block">
             <span class="value">{p.nominalRate}%</span>

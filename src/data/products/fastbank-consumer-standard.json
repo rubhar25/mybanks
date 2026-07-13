@@ -1,0 +1,26 @@
+{
+  "id": "fastbank-consumer-standard",
+  "bankId": "fastbank",
+  "type": "consumer",
+  "name": { "hy": "Անգրավ սպառողական վարկ", "en": "Unsecured consumer loan", "ru": "Потребительский кредит без залога" },
+  "currency": "AMD",
+  "nominalRate": 13.0,
+  "nominalRateMax": null,
+  "effectiveRate": null,
+  "effectiveRateMax": null,
+  "termMonthsMin": null,
+  "termMonthsMax": 60,
+  "amountMin": null,
+  "amountMax": 20000000,
+  "documents": {
+    "hy": []
+  },
+  "notes": {
+    "hy": "Կայքում հրապարակված է միայն 13% անվանական տոկոսադրույքը, առավելագույն ժամկետը (60 ամիս) և առավելագույն գումարը (20,000,000 ՀՀ դրամ)։ Փաստացի (ԷՏ) տոկոսադրույքը, նվազագույն գումարը/ժամկետը և փաստաթղթերի ցանկը էջում չեն հրապարակված. գրանցված են որպես null։ Վաղաժամկետ մարման տույժ չի կիրառվում։"
+  },
+  "sources": [
+    "https://www.fastbank.am/hy/individual/loans/non-collateral"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

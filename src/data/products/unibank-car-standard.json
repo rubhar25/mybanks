@@ -1,0 +1,29 @@
+{
+  "id": "unibank-car-standard",
+  "bankId": "unibank",
+  "type": "car",
+  "name": { "hy": "Ավտովարկ", "en": "Car loan", "ru": "Автокредит" },
+  "currency": "AMD",
+  "nominalRate": 16.5,
+  "nominalRateMax": null,
+  "effectiveRate": null,
+  "effectiveRateMax": null,
+  "termMonthsMin": null,
+  "termMonthsMax": 48,
+  "amountMin": null,
+  "amountMax": 12000000,
+  "downPaymentMinPct": 30,
+  "govPrograms": [],
+  "documents": {
+    "hy": []
+  },
+  "notes": {
+    "hy": "Կայքում նշված է միայն «տարեկան տոկոսադրույքը` սկսած 16.5%-ից», փաստացի (ԷՏ) տոկոսադրույքը էջում հրապարակված չէր այս այցելության պահին: Առավելագույն վարկի գումարը՝ 12 մլն դրամ, առավելագույն ժամկետը՝ 48 ամիս, նվազագույն կանխավճարը՝ 30%: Պահանջվող փաստաթղթերի ցանկը հասանելի է առանձին PDF-ով, որը այս ֆեթչի ընթացքում ամբողջությամբ չմշակվեց:",
+    "en": "Site only shows nominal rate 'starting from 16.5%'; effective rate not published on this page at time of collection."
+  },
+  "sources": [
+    "https://www.unibank.am/hy/service/car/"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

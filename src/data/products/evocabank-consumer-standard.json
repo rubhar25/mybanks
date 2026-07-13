@@ -1,0 +1,26 @@
+{
+  "id": "evocabank-consumer-standard",
+  "bankId": "evocabank",
+  "type": "consumer",
+  "name": { "hy": "Անգրավ սպառողական վարկ", "en": "Unsecured consumer loan", "ru": "Потребительский кредит без залога" },
+  "currency": "AMD",
+  "nominalRate": 19.0,
+  "nominalRateMax": null,
+  "effectiveRate": null,
+  "effectiveRateMax": null,
+  "termMonthsMin": null,
+  "termMonthsMax": 60,
+  "amountMin": null,
+  "amountMax": 10000000,
+  "documents": {
+    "hy": []
+  },
+  "notes": {
+    "hy": "Կայքում նշված է միայն «սկսած 19%-ից» նվազագույն անվանական տոկոսադրույքը՝ առանց առավելագույն արժեքի, փաստացի (ԷՏ) տոկոսադրույքի և փաստաթղթերի ցանկի։ Այս դաշտերը գրանցված են որպես null՝ պաշտոնական էջում չհրապարակված լինելու պատճառով։"
+  },
+  "sources": [
+    "https://www.evoca.am/hy/loans/unsecured-consumer-loans"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

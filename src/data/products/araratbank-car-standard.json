@@ -1,0 +1,29 @@
+{
+  "id": "araratbank-car-standard",
+  "bankId": "araratbank",
+  "type": "car",
+  "name": { "hy": "Ավտովարկ (առաջնային/երկրորդային շուկա)", "en": "Car loan (primary/secondary market)", "ru": "Автокредит (первичный/вторичный рынок)" },
+  "currency": "AMD",
+  "nominalRate": 15.0,
+  "nominalRateMax": 15.0,
+  "effectiveRate": 19.21,
+  "effectiveRateMax": 22.71,
+  "termMonthsMin": 24,
+  "termMonthsMax": 84,
+  "amountMin": 2000000,
+  "amountMax": 50000000,
+  "downPaymentMinPct": 10,
+  "govPrograms": [],
+  "documents": {
+    "hy": []
+  },
+  "notes": {
+    "hy": "Կանխավճարը կախված է մեքենայի տարեթվից՝ մինչև 1 տարեկան (այդ թվում առաջնային շուկայից) մեքենաների համար վարկ/գրավ հարաբերակցությունը կարող է հասնել մինչև 70%-ի (այսինքն նվազագույն կանխավճարը 30%-ից), 2-6 տարեկան մեքենաների համար՝ մինչև 30% վարկ/գրավ հարաբերակցություն, 7-10 տարեկանի համար՝ մինչև 50%: Կայքի հակիրճ նկարագրության հիման վրա ճշգրիտ նվազագույն կանխավճարի տոկոսը (10%) նշված է ընդհանուր առմամբ, սակայն մանրամասն սանդղակը կախված է մեքենայի տարիքից և շուկայի տեսակից (առաջնային/երկրորդային). պահանջվող փաստաթղթերի ցանկը հրապարակված է առանձին PDF-ով, որը այս այցելության ժամանակ չհաջողվեց մուտք գործել առցանց ֆեթչով: Փաստաթղթերի ցանկը դատարկ է թողնված, քանի որ հստակ ցանկ չհաջողվեց քաղել էջից:",
+    "en": "Down payment scales with vehicle age (as low as 30% collateral ratio for cars up to 1 year old, up to 70% for older cars 7-10 years). Documents list PDF not accessible during this fetch."
+  },
+  "sources": [
+    "https://www.araratbank.am/hy/sparoxakan-varker/39/"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

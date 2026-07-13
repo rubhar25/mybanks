@@ -1,0 +1,29 @@
+{
+  "id": "araratbank-consumer-standard",
+  "bankId": "araratbank",
+  "type": "consumer",
+  "name": { "hy": "Արագ վարկ", "en": "Quick loan (unsecured consumer loan)", "ru": "Быстрый кредит (потребительский без залога)" },
+  "currency": "AMD",
+  "nominalRate": 20.0,
+  "nominalRateMax": 20.0,
+  "effectiveRate": 21.95,
+  "effectiveRateMax": 23.86,
+  "termMonthsMin": 24,
+  "termMonthsMax": 24,
+  "amountMin": 100000,
+  "amountMax": 1000000,
+  "documents": {
+    "hy": [
+      "Անձնագիր (անձը հաստատող փաստաթուղթ)",
+      "Հանրային ծառայությունների համարանիշ (սոցիալական քարտ)"
+    ]
+  },
+  "notes": {
+    "hy": "Ժամկետը ֆիքսված է՝ 24 ամիս։ Հայտի սպասարկման վճար՝ 1500 ՀՀ դրամ (զրոյացվում է AraratMobile-ով դիմելիս)։ Վաղաժամկետ մարման տույժ չի կիրառվում։ Հասանելի է միայն ամբողջական սպասարկման մասնաճյուղերում կամ AraratMobile հավելվածով։"
+  },
+  "sources": [
+    "https://www.araratbank.am/hy/sparoxakan-varker/42/"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

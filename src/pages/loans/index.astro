@@ -1,0 +1,32 @@
+---
+import Base from '../../layouts/Base.astro';
+import { products, t } from '../../lib/data.js';
+import { loanTypes, loanTypeName } from '../../lib/loanTypes.js';
+import { url } from '../../lib/url.js';
+
+// List only loan types that have data (a real comparison page exists)
+const available = loanTypes
+  .map((l) => l.type)
+  .filter((type) => products.some((p) => p.type === type))
+  .map((type) => {
+    const items = products.filter((p) => p.type === type);
+    const bestEff = Math.min(...items.map((p) => p.effectiveRate));
+    return { type, name: t(loanTypeName(type)), count: items.length, bestEff };
+  });
+---
+
+<Base title="Վարկերի համեմատություն — Հայաստանի բանկեր">
+  <h1>Վարկեր</h1>
+  <p class="muted">Համեմատեք Հայաստանի բանկերի վարկային առաջարկները՝ փաստացի տոկոսադրույքով (ՓՏԴ), ներկառուցված հաշվիչով։</p>
+
+  <ul class="card-grid">
+    {available.map((l) => (
+      <li>
+        <a class="card-link" href={url(`/loans/${l.type}/`)}>
+          <strong>{l.name}</strong>
+          <span class="muted">{l.count} բանկ · ՓՏԴ-ն սկսած {l.bestEff}%-ից</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+</Base>

@@ -1,0 +1,26 @@
+{
+  "id": "unibank-consumer-standard",
+  "bankId": "unibank",
+  "type": "consumer",
+  "name": { "hy": "Սպառողական վարկ", "en": "Consumer loan", "ru": "Потребительский кредит" },
+  "currency": "AMD",
+  "nominalRate": 12.0,
+  "nominalRateMax": 22.0,
+  "effectiveRate": null,
+  "effectiveRateMax": null,
+  "termMonthsMin": 60,
+  "termMonthsMax": 360,
+  "amountMin": 50000,
+  "amountMax": 100000000,
+  "documents": {
+    "hy": []
+  },
+  "notes": {
+    "hy": "Տոկոսադրույքի (12-22%) և ժամկետի/գումարի սահմանները վերցված են կայքի հաշվիչի բաժնից։ Փաստացի (ԷՏ) տոկոսադրույքը և պահանջվող փաստաթղթերի ցանկը կայքում հրապարակված չեն հայտնաբերվել. գրանցված են որպես null։ Ուշադրություն. 60-360 ամսվա ժամկետ ու 100 մլն դրամ առավելագույն գումարը սովորական սպառողական վարկի համար անսովոր բարձր են (հնարավոր է հաշվիչը ընդհանուր է մի քանի վարկային ապրանքների համար) — պահանջվում է լրացուցիչ ստուգում։"
+  },
+  "sources": [
+    "https://www.unibank.am/hy/individuals/loans/consumer-loans"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

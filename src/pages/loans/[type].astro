@@ -1,21 +1,37 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { banks, products, getBank, t } from '../../lib/data.js';
+import { products, getBank, t } from '../../lib/data.js';
+import { loanTypes, loanTypeName } from '../../lib/loanTypes.js';
 import { url } from '../../lib/url.js';
 
-const mortgages = products
-  .filter((p) => p.type === 'mortgage')
-  .sort((a, b) => a.effectiveRate - b.effectiveRate);
+export function getStaticPaths() {
+  // One page per loan type that actually has product data.
+  const typesWithData = loanTypes
+    .map((l) => l.type)
+    .filter((type) => products.some((p) => p.type === type));
+  return typesWithData.map((type) => ({ params: { type }, props: { type } }));
+}
 
-// Market context, computed from the same data the table shows
-const effMin = Math.min(...mortgages.map((p) => p.effectiveRate));
-const effMax = Math.max(...mortgages.map((p) => p.effectiveRateMax ?? p.effectiveRate));
-const effAvg =
-  mortgages.reduce((s, p) => s + p.effectiveRate, 0) / mortgages.length;
-const lastUpdated = mortgages
-  .map((p) => p.updatedAt)
-  .sort()
-  .at(-1);
+const { type } = Astro.props;
+const name = t(loanTypeName(type));
+
+const loans = products
+  .filter((p) => p.type === type)
+  // Sort by effective rate; products without one (rate not published) go last.
+  .sort((a, b) => (a.effectiveRate ?? Infinity) - (b.effectiveRate ?? Infinity));
+
+// Show the down-payment column only when it's meaningful for this loan type
+const showDownPayment = loans.some((p) => p.downPaymentMinPct != null);
+
+// Market context is computed only over products that actually publish an effective rate
+const effRates = loans.map((p) => p.effectiveRate).filter((r) => r != null);
+const hasContext = effRates.length > 0;
+const effMin = hasContext ? Math.min(...effRates) : null;
+const effMax = hasContext
+  ? Math.max(...loans.map((p) => p.effectiveRateMax ?? p.effectiveRate).filter((r) => r != null))
+  : null;
+const effAvg = hasContext ? effRates.reduce((s, r) => s + r, 0) / effRates.length : null;
+const lastUpdated = loans.map((p) => p.updatedAt).sort().at(-1);
 
 const fmtAmount = (n) =>
   n == null ? '—' : n >= 1000000 ? `${(n / 1000000).toLocaleString('hy-AM')} մլն` : n.toLocaleString('hy-AM');
@@ -25,27 +41,30 @@ const fmtTerm = (min, max) => {
   if (min == null) return `մինչև ${y(max)}`;
   return `${y(min)} – ${y(max)}`;
 };
-const fmtRate = (min, max) => (max != null && max !== min ? `${min}–${max}%` : `${min}%`);
+const fmtRate = (min, max) =>
+  min == null ? '—' : max != null && max !== min ? `${min}–${max}%` : `${min}%`;
 ---
 
-<Base title="Հիփոթեքային վարկերի համեմատություն — Հայաստանի բոլոր բանկերը">
-  <nav class="breadcrumb"><a href={url('/')}>← Գլխավոր</a></nav>
-  <h1>Հիփոթեքային վարկեր. համեմատություն</h1>
+<Base title={`${name}. համեմատություն — Հայաստանի բոլոր բանկերը`}>
+  <nav class="breadcrumb"><a href={url('/loans/')}>← Վարկեր</a></nav>
+  <h1>{name}. համեմատություն</h1>
 
   <div class="context">
-    <strong>Շուկան այս պահին.</strong> {mortgages.length} բանկի պայմաններ ·
-    փաստացի տոկոսադրույք՝ {effMin}%-ից {effMax}% · միջին նվազագույն ՓՏԴ՝ {effAvg.toFixed(2)}% ·
+    <strong>Շուկան այս պահին.</strong> {loans.length} բանկի պայմաններ
+    {hasContext && (
+      <> · փաստացի տոկոսադրույք՝ {effMin}%-ից {effMax}% · միջին նվազագույն ՓՏԴ՝ {effAvg.toFixed(2)}%</>
+    )} ·
     <span class="updated-stamp">թարմացվել է՝ {lastUpdated}</span>
   </div>
 
   <div class="filters">
     <label>
       Վարկի գումարը (AMD)
-      <input type="number" id="f-amount" placeholder="օր.՝ 25000000" step="1000000" min="0" />
+      <input type="number" id="f-amount" placeholder="օր.՝ 3000000" step="500000" min="0" />
     </label>
     <label>
       Ժամկետը (տարի)
-      <input type="number" id="f-term" placeholder="օր.՝ 15" min="1" max="30" />
+      <input type="number" id="f-term" placeholder="օր.՝ 5" min="1" max="30" />
     </label>
   </div>
 
@@ -58,12 +77,12 @@ const fmtRate = (min, max) => (max != null && max !== min ? `${min}–${max}%` :
           <th scope="col" class="num">Փաստացի (ՓՏԴ) ↑</th>
           <th scope="col" class="num">Ժամկետ</th>
           <th scope="col" class="num">Գումար (AMD)</th>
-          <th scope="col" class="num">Կանխավճար</th>
+          {showDownPayment && <th scope="col" class="num">Կանխավճար</th>}
           <th scope="col"></th>
         </tr>
       </thead>
       <tbody>
-        {mortgages.map((p) => {
+        {loans.map((p) => {
           const bank = getBank(p.bankId);
           return (
             <tr
@@ -72,14 +91,15 @@ const fmtRate = (min, max) => (max != null && max !== min ? `${min}–${max}%` :
               data-term-min={p.termMonthsMin ?? ''}
               data-term-max={p.termMonthsMax ?? ''}
               data-rate={p.nominalRate}
-              data-bank={t(bank.name)}
             >
               <td><a href={url(`/banks/${bank.id}/`)}>{t(bank.name)}</a></td>
               <td class="num">{fmtRate(p.nominalRate, p.nominalRateMax)}</td>
               <td class="num eff">{fmtRate(p.effectiveRate, p.effectiveRateMax)}</td>
               <td class="num">{fmtTerm(p.termMonthsMin, p.termMonthsMax)}</td>
               <td class="num">{fmtAmount(p.amountMin)} – {fmtAmount(p.amountMax)}</td>
-              <td class="num">{p.downPaymentMinPct == null ? '—' : `${p.downPaymentMinPct}%-ից`}</td>
+              {showDownPayment && (
+                <td class="num">{p.downPaymentMinPct == null ? '—' : `${p.downPaymentMinPct}%-ից`}</td>
+              )}
               <td><button class="calc-btn" type="button">Հաշվել</button></td>
             </tr>
           );
@@ -92,17 +112,15 @@ const fmtRate = (min, max) => (max != null && max !== min ? `${min}–${max}%` :
   <div class="calc" id="calc">
     <h2>Ամսական վճարի հաշվիչ</h2>
     <div class="filters">
-      <label>Գումար (AMD) <input type="number" id="c-amount" value="25000000" step="1000000" /></label>
-      <label>Ժամկետ (տարի) <input type="number" id="c-years" value="15" min="1" max="30" /></label>
-      <label>Տոկոսադրույք (%) <input type="number" id="c-rate" value="13" step="0.05" /></label>
+      <label>Գումար (AMD) <input type="number" id="c-amount" value="3000000" step="500000" /></label>
+      <label>Ժամկետ (տարի) <input type="number" id="c-years" value="5" min="1" max="30" /></label>
+      <label>Տոկոսադրույք (%) <input type="number" id="c-rate" value="14" step="0.05" /></label>
     </div>
     <p>Ամսական վճար՝ <span class="calc-result" id="c-monthly">—</span></p>
     <p><small>Ընդհանուր վճարվելիք՝ <span id="c-total">—</span> · Անուիտետային մոտավոր հաշվարկ է, ոչ առաջարկ։</small></p>
   </div>
 
   <script>
-    // Filters: hide rows that can't serve the requested amount/term.
-    // Missing (null) bounds are treated as "no limit" so the row stays visible.
     const rows = [...document.querySelectorAll('#cmp tbody tr')];
     const fAmount = document.getElementById('f-amount');
     const fTerm = document.getElementById('f-term');
@@ -130,7 +148,6 @@ const fmtRate = (min, max) => (max != null && max !== min ? `${min}–${max}%` :
     fAmount.addEventListener('input', applyFilters);
     fTerm.addEventListener('input', applyFilters);
 
-    // Annuity calculator
     const cAmount = document.getElementById('c-amount');
     const cYears = document.getElementById('c-years');
     const cRate = document.getElementById('c-rate');
@@ -149,7 +166,6 @@ const fmtRate = (min, max) => (max != null && max !== min ? `${min}–${max}%` :
     [cAmount, cYears, cRate].forEach((el) => el.addEventListener('input', recalc));
     recalc();
 
-    // "Հաշվել" on a row prefills the calculator with that bank's nominal rate
     document.querySelectorAll('.calc-btn').forEach((btn) => {
       btn.addEventListener('click', () => {
         const row = btn.closest('tr');

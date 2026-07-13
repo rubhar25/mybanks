@@ -1,0 +1,36 @@
+{
+  "id": "ameriabank-car-standard",
+  "bankId": "ameriabank",
+  "type": "car",
+  "name": { "hy": "Ավտովարկ առաջնային շուկայից (նոր մեքենա)", "en": "Car loan (primary market, new car)", "ru": "Автокредит (первичный рынок, новый автомобиль)" },
+  "currency": "AMD",
+  "nominalRate": 6.9,
+  "nominalRateMax": null,
+  "effectiveRate": 15.95,
+  "effectiveRateMax": 15.98,
+  "termMonthsMin": null,
+  "termMonthsMax": 84,
+  "amountMin": 3000000,
+  "amountMax": 100000000,
+  "downPaymentMinPct": 5,
+  "govPrograms": [],
+  "documents": {
+    "hy": [
+      "Վարկի հայտ-դիմում",
+      "Անձը հաստատող փաստաթղթեր (բնօրինակը)",
+      "Ավտոսրահի կողմից հաճախորդին տրված տեղեկանք ձեռքբերվող գույքի վերաբերյալ",
+      "Տեղեկանք աշխատավարձի վերաբերյալ և/կամ եկամուտը հավաստող այլ փաստաթղթեր (նախնական հաստատումից հետո)",
+      "Ամուսնության/ամուսնալուծության/ծննդյան վկայական (նախնական հաստատումից հետո)"
+    ]
+  },
+  "notes": {
+    "hy": "Առաջնային շուկայից նոր (չօգտագործված) մեքենայի գնման վարկ, միայն Բանկի հետ համագործակցող ավտոսրահներից: Անվանական տոկոսադրույքը ճշգրտվող հաստատուն է՝ հաստատուն բաղադրիչ 6.9% + փոփոխուն բազային տոկոսադրույք, կարող է փոփոխվել 37-րդ ամսից: Առանց վճարունակության ցուցանիշների հաշվարկի տարբերակով գումարը սահմանափակվում է 3-50 մլն դրամով, կանխավճարը՝ 30%/40% և վարկ/գրավ հարաբերակցությունը՝ 70%/60% (ըստ գումարի): Երկրորդային շուկայի (օգտագործված մեքենա) վարկի պայմաններն այլ են՝ ժամկետ մինչև 60 ամիս, փաստացի տոկոսադրույք 17.11-17.19%, կանխավճար 10% (մինչև 7 տարեկան մեքենա) կամ 30% (7-10 տարեկան), գումար 3-50 մլն / 5-50 մլն դրամ: Ուժի մեջ է 11.06.2026-ից:",
+    "en": "Primary market (dealership) loan for new cars only. Nominal rate is adjustable-fixed: 6.9% fixed component + variable base rate, adjustable from month 37. Used-car (secondary market) terms differ: up to 60 months, effective rate 17.11-17.19%, down payment 10-30%."
+  },
+  "sources": [
+    "https://ameriabank.am/Portals/0/files/Personal/Loans/car-loan/Car_Loans_primary_arm.pdf",
+    "https://ameriabank.am/personal/loans/car-loan/primary"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}
