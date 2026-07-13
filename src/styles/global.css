@@ -435,6 +435,20 @@ table button {
   font-size: var(--fs-sm);
 }
 
+/* Comparison-row action cell: calculate button + "more" link */
+td.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--sp-1);
+  white-space: nowrap;
+}
+
+.more-link {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
 /* ---------- Calculator card ---------- */
 .calc {
   background: var(--c-accent-soft);

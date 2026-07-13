@@ -94,7 +94,7 @@ const fmtRate = (min, max) =>
               data-rate={p.nominalRate}
             >
               <td>
-                <a href={url(`/banks/${bank.id}/${type}/${variantSlug(p)}/`)}>{t(bank.name)}</a>
+                <a href={url(`/banks/${bank.id}/`)}>{t(bank.name)}</a>
                 <br /><small class="muted">{t(p.name)}</small>
               </td>
               <td class="num">{fmtRate(p.nominalRate, p.nominalRateMax)}</td>
@@ -104,7 +104,10 @@ const fmtRate = (min, max) =>
               {showDownPayment && (
                 <td class="num">{p.downPaymentMinPct == null ? '—' : `${p.downPaymentMinPct}%-ից`}</td>
               )}
-              <td><button class="calc-btn" type="button">Հաշվել</button></td>
+              <td class="actions">
+                <button class="calc-btn" type="button">Հաշվել</button>
+                <a class="more-link" href={url(`/banks/${bank.id}/${type}/${variantSlug(p)}/`)}>Ավելին →</a>
+              </td>
             </tr>
           );
         })}
