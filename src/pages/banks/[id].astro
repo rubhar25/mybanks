@@ -9,9 +9,14 @@ export function getStaticPaths() {
 
 const { bank } = Astro.props;
 const bankProducts = getProductsOfBank(bank.id);
+
+const depositRate12 = (p) =>
+  p.rates?.find((r) => r.currency === 'AMD' && r.termMonths === 12)?.rate ?? null;
+
+const mapQuery = encodeURIComponent(`${t(bank.fullName)} ${t(bank.headOffice)}`);
 ---
 
-<Base title={`${t(bank.name)} — պրոֆիլ`}>
+<Base title={`${t(bank.name)} — պրոֆիլ, SWIFT, մասնաճյուղեր, պրոդուկտներ`} description={bank.about ? t(bank.about).slice(0, 155) : undefined}>
   <nav class="breadcrumb"><a href={url('/')}>← Բոլոր բանկերը</a></nav>
 
   <div class="profile-header">
@@ -19,6 +24,38 @@ const bankProducts = getProductsOfBank(bank.id);
     <span class="badge" title="SWIFT / BIC">SWIFT՝ {bank.swift}</span>
   </div>
   <p class="muted">{t(bank.fullName)}</p>
+
+  {bank.about && (
+    <section class="card">
+      <h2>Բանկի մասին</h2>
+      <p>{t(bank.about)}</p>
+    </section>
+  )}
+
+  <section class="card">
+    <h2>Հիմնական տվյալներ</h2>
+    <ul class="contact-list">
+      {bank.founded && (
+        <li><span class="label">Հիմնադրվել է</span><span>{bank.founded} թ.</span></li>
+      )}
+      {bank.licenseNo && (
+        <li><span class="label">ԿԲ լիցենզիա</span><span>№ {bank.licenseNo}</span></li>
+      )}
+      <li><span class="label">SWIFT / BIC</span><code>{bank.swift}</code></li>
+      {bank.ceo && (
+        <li><span class="label">Գործադիր տնօրեն</span><span>{t(bank.ceo)}</span></li>
+      )}
+      {bank.branchesCount && (
+        <li><span class="label">Մասնաճյուղեր</span><span>{bank.branchesCount}</span></li>
+      )}
+      {bank.atmsCount && (
+        <li><span class="label">Բանկոմատներ</span><span>{bank.atmsCount}</span></li>
+      )}
+      {bank.workingHours && (
+        <li><span class="label">Աշխատանքային ժամեր</span><span>{t(bank.workingHours)}</span></li>
+      )}
+    </ul>
+  </section>
 
   <section class="card">
     <h2>Կոնտակտներ</h2>
@@ -29,16 +66,36 @@ const bankProducts = getProductsOfBank(bank.id);
           <a href={`tel:${p.number.replace(/\s/g, '')}`}>{p.number}</a>
         </li>
       ))}
+      {bank.email && (
+        <li>
+          <span class="label">Էլ. փոստ</span>
+          <a href={`mailto:${bank.email}`}>{bank.email}</a>
+        </li>
+      )}
       <li>
         <span class="label">Կայք</span>
         <a href={bank.website}>{bank.website}</a>
       </li>
       <li>
-        <span class="label">Հասցե</span>
+        <span class="label">Գլխամասի հասցե</span>
         <span>{t(bank.headOffice)}</span>
       </li>
     </ul>
   </section>
+
+  {bank.shareholders?.length > 0 && (
+    <section class="card">
+      <h2>Բաժնետերեր</h2>
+      <ul class="contact-list">
+        {bank.shareholders.map((s) => (
+          <li>
+            <span class="label">{t(s.name)}</span>
+            <span>{s.sharePct != null ? `${s.sharePct}%` : ''}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
 
   <h2>Պրոդուկտներ</h2>
   {bankProducts.map((p) => (
@@ -52,18 +109,69 @@ const bankProducts = getProductsOfBank(bank.id);
           <a href={url('/deposits/')}>Համեմատել բոլոր բանկերի հետ</a>
         )}
       </div>
-      <div class="rates">
-        <div class="rate-block">
-          <span class="value">{p.nominalRate}%</span>
-          <span class="label">անվանական</span>
+      {p.type === 'mortgage' && (
+        <div class="rates">
+          <div class="rate-block">
+            <span class="value">{p.nominalRate}%</span>
+            <span class="label">անվանական</span>
+          </div>
+          <div class="rate-block effective">
+            <span class="value">{p.effectiveRate}%</span>
+            <span class="label">փաստացի</span>
+          </div>
         </div>
-        <div class="rate-block effective">
-          <span class="value">{p.effectiveRate}%</span>
-          <span class="label">փաստացի</span>
+      )}
+      {p.type === 'deposit' && depositRate12(p) != null && (
+        <div class="rates">
+          <div class="rate-block effective">
+            <span class="value">{depositRate12(p)}%</span>
+            <span class="label">AMD, 12 ամիս</span>
+          </div>
         </div>
-      </div>
+      )}
     </article>
   ))}
+
+  {bank.branches?.length > 0 && (
+    <section>
+      <h2>Մասնաճյուղեր{bank.branchesCount ? ` (${bank.branchesCount})` : ''}</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Մասնաճյուղ</th>
+              <th scope="col">Քաղաք</th>
+              <th scope="col">Հասցե</th>
+            </tr>
+          </thead>
+          <tbody>
+            {bank.branches.map((b) => (
+              <tr>
+                <td>{t(b.name)}</td>
+                <td>{t(b.city)}</td>
+                <td>{t(b.address)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  )}
+
+  <section>
+    <h2>Գլխամասը քարտեզի վրա</h2>
+    <div class="map-wrap">
+      <iframe
+        src={`https://maps.google.com/maps?q=${mapQuery}&output=embed`}
+        width="100%"
+        height="360"
+        style="border:0; border-radius: 12px;"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title={`${t(bank.name)} — գլխամասի քարտեզ`}
+      ></iframe>
+    </div>
+  </section>
 
   <p class="updated-stamp">Թարմացվել է՝ {bank.updatedAt}</p>
 </Base>
