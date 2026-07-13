@@ -1,0 +1,33 @@
+{
+  "id": "armeconombank-car-standard",
+  "bankId": "armeconombank",
+  "type": "car",
+  "name": { "hy": "Ավտովարկ (առաջնային շուկա, նոր մեքենա)", "en": "Car loan (primary market, new car)", "ru": "Автокредит (первичный рынок, новый автомобиль)" },
+  "currency": "AMD",
+  "nominalRate": null,
+  "nominalRateMax": null,
+  "effectiveRate": 14.37,
+  "effectiveRateMax": 17.45,
+  "termMonthsMin": null,
+  "termMonthsMax": null,
+  "amountMin": 2000000,
+  "amountMax": 20000000,
+  "downPaymentMinPct": null,
+  "govPrograms": [],
+  "documents": {
+    "hy": [
+      "Անձը հաստատող փաստաթուղթ",
+      "Հանրային ծառայությունների համարանիշ (սոց. քարտ)",
+      "Ավտոսրահի կողմից տրված տեղեկանք ձեռքբերվող մեքենայի վերաբերյալ",
+      "Եկամուտը հավաստող փաստաթղթեր"
+    ]
+  },
+  "notes": {
+    "hy": "Առաջնային շուկայից (ավտոսրահ) նոր մեքենայի ձեռքբերման վարկ՝ 2,000,000-20,000,000 դրամ, փաստացի տոկոսադրույք 14.37-17.45%։ Տրամադրման ժամկետը՝ մինչև 30 օրացուցային օր։ Անվանական տոկոսադրույքն ու մարման ժամկետը էջի ամփոփ բաժնում հրապարակված չեն, ճշտվում են սակագների ամբողջական աղյուսակում։ Բանկն ունի նաև երկրորդային շուկայի ավտովարկ առանձին պայմաններով։"
+  },
+  "sources": [
+    "https://www.aeb.am/hy/individual/loans/car-loan-primary-market"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

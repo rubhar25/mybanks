@@ -1,0 +1,30 @@
+{
+  "id": "inecobank-gold-standard",
+  "bankId": "inecobank",
+  "type": "gold",
+  "name": { "hy": "Ոսկյա իրերի գրավով վարկ", "en": "Gold-pledge loan", "ru": "Кредит под залог золота" },
+  "currency": "AMD",
+  "nominalRate": 14.0,
+  "nominalRateMax": 17.0,
+  "effectiveRate": 14.7,
+  "effectiveRateMax": 18.3,
+  "termMonthsMin": 12,
+  "termMonthsMax": 60,
+  "amountMin": 100000,
+  "amountMax": 12000000,
+  "documents": {
+    "hy": [
+      "Անձը հաստատող փաստաթուղթ",
+      "Հանրային ծառայությունների համարանիշ (սոց. քարտ)",
+      "Գրավադրվող ոսկյա իրեր"
+    ]
+  },
+  "notes": {
+    "hy": "Ոսկու գնահատված արժեքի մինչև 150%-ի չափով վարկ, ձևակերպվում է մասնաճյուղում րոպեների ընթացքում։ Անվանական՝ 14-17% (կախված վարկունակությունից), փաստացի՝ 14.7-18.3% (հավասարաչափ մարման, 24-60 ամիս) կամ 14.8-18.2% (ոչ հավասարաչափ, 12 ամիս)։ Գումարը՝ 100,000-12,000,000 դրամ։"
+  },
+  "sources": [
+    "https://www.inecobank.am/hy/Individual/consumer-loans/gold-pledge-secured/terms"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

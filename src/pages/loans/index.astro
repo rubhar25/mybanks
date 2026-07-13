@@ -10,7 +10,8 @@ const available = loanTypes
   .filter((type) => products.some((p) => p.type === type))
   .map((type) => {
     const items = products.filter((p) => p.type === type);
-    const bestEff = Math.min(...items.map((p) => p.effectiveRate));
+    const effRates = items.map((p) => p.effectiveRate).filter((r) => r != null);
+    const bestEff = effRates.length ? Math.min(...effRates) : null;
     return { type, name: t(loanTypeName(type)), count: items.length, bestEff };
   });
 ---
@@ -24,7 +25,7 @@ const available = loanTypes
       <li>
         <a class="card-link" href={url(`/loans/${l.type}/`)}>
           <strong>{l.name}</strong>
-          <span class="muted">{l.count} բանկ · ՓՏԴ-ն սկսած {l.bestEff}%-ից</span>
+          <span class="muted">{l.count} բանկ{l.bestEff != null ? ` · ՓՏԴ-ն սկսած ${l.bestEff}%-ից` : ''}</span>
         </a>
       </li>
     ))}

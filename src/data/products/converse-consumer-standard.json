@@ -1,0 +1,30 @@
+{
+  "id": "converse-consumer-standard",
+  "bankId": "converse",
+  "type": "consumer",
+  "name": { "hy": "SNAP սպառողական վարկ (անգրավ)", "en": "SNAP consumer loan (unsecured)", "ru": "Потребительский кредит SNAP (без залога)" },
+  "currency": "AMD",
+  "nominalRate": 13.0,
+  "nominalRateMax": 24.0,
+  "effectiveRate": 13.53,
+  "effectiveRateMax": 24.0,
+  "termMonthsMin": null,
+  "termMonthsMax": 60,
+  "amountMin": 30000,
+  "amountMax": 10000000,
+  "documents": {
+    "hy": [
+      "Անձը հաստատող փաստաթուղթ",
+      "Հանրային ծառայությունների համարանիշ (սոց. քարտ)",
+      "Առանց գրավի, առանց տրամադրման/սպասարկման վճարների"
+    ]
+  },
+  "notes": {
+    "hy": "Որոշումների կայացման ավտոմատացված համակարգով (SNAP) տրամադրվող անգրավ վարկ։ Անվանական տոկոսադրույքը՝ 13-24%՝ կախված սքոր գնահատականից, փաստացին՝ 13.53-24%։ Ժամկետը՝ մինչև 60 ամիս, գումարը՝ 30,000-10,000,000 դրամ, անկանխիկ։ Տրամադրման և սպասարկման վճար՝ 0 դրամ։"
+  },
+  "sources": [
+    "https://www.conversebank.am/hy/consumer-loan/"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

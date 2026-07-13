@@ -1,0 +1,30 @@
+{
+  "id": "armeconombank-consumer-standard",
+  "bankId": "armeconombank",
+  "type": "consumer",
+  "name": { "hy": "Առանց գրավի վարկ", "en": "Unsecured loan", "ru": "Кредит без залога" },
+  "currency": "AMD",
+  "nominalRate": null,
+  "nominalRateMax": null,
+  "effectiveRate": 21.54,
+  "effectiveRateMax": 23.9,
+  "termMonthsMin": 12,
+  "termMonthsMax": 36,
+  "amountMin": 30000,
+  "amountMax": 2000000,
+  "documents": {
+    "hy": [
+      "Անձը հաստատող փաստաթուղթ",
+      "Հանրային ծառայությունների համարանիշ (սոց. քարտ)",
+      "Եկամուտը հավաստող փաստաթղթեր"
+    ]
+  },
+  "notes": {
+    "hy": "Առանց գրավի սպառողական վարկ՝ 30,000-2,000,000 դրամ, ժամկետը՝ 365-1109 օր (~12-36 ամիս)։ Փաստացի տոկոսադրույքը՝ 21.54-23.9%։ Անվանական տոկոսադրույքը էջի ամփոփ բաժնում հրապարակված չէ, ճշտվում է սակագների ամբողջական աղյուսակում/մասնաճյուղում։ Տրամադրման ժամկետը՝ 3 աշխատանքային օր։ Բանկն ունի նաև առցանց վարկ և աշխատավարձային վարկային գիծ առանձին պայմաններով։ Թարմացվել է 19.03.2026։"
+  },
+  "sources": [
+    "https://www.aeb.am/hy/individual/loans/loan-without-a-pledge"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

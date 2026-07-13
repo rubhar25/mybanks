@@ -1,0 +1,30 @@
+{
+  "id": "inecobank-consumer-standard",
+  "bankId": "inecobank",
+  "type": "consumer",
+  "name": { "hy": "1 CLICK օնլայն վարկ (անգրավ)", "en": "1 CLICK online loan (unsecured)", "ru": "Онлайн-кредит 1 CLICK (без залога)" },
+  "currency": "AMD",
+  "nominalRate": 15.0,
+  "nominalRateMax": 21.0,
+  "effectiveRate": 15.8,
+  "effectiveRateMax": 23.0,
+  "termMonthsMin": 24,
+  "termMonthsMax": 60,
+  "amountMin": 100000,
+  "amountMax": 18000000,
+  "documents": {
+    "hy": [
+      "Անձը հաստատող փաստաթուղթ",
+      "Հանրային ծառայությունների համարանիշ (սոց. քարտ)",
+      "Առցանց ձևակերպման դեպքում՝ առանց հավելյալ թղթաբանության և երաշխավորի"
+    ]
+  },
+  "notes": {
+    "hy": "Անգրավ առցանց վարկ՝ ձևակերպվում է InecoOnline/InecoMobile/Ineco հավելվածով կամ sprintonline.am հարթակով 24/7 ռեժիմով, առանց երաշխավորի։ Ժամկետը՝ 24-60 ամիս (հավելվածով) կամ 48-60 ամիս (sprintonline)։ Անվանական՝ 15-21%, փաստացի՝ 15.8-23%։ Ինեկոբանկն ունի նաև գրավով, ավանդի գրավով և ոսկու գրավով սպառողական վարկեր առանձին պայմաններով։"
+  },
+  "sources": [
+    "https://www.inecobank.am/hy/Individual/consumer-loans/1-click/terms"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

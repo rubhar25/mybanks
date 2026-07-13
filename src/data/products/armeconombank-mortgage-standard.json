@@ -1,0 +1,25 @@
+{
+  "id": "armeconombank-mortgage-standard",
+  "bankId": "armeconombank",
+  "type": "mortgage",
+  "name": { "hy": "Հիփոթեքային վարկ (ձեռքբերում)", "en": "Mortgage loan (acquisition)", "ru": "Ипотечный кредит (приобретение)" },
+  "currency": "AMD",
+  "nominalRate": null,
+  "nominalRateMax": null,
+  "effectiveRate": 12.87,
+  "effectiveRateMax": 15.76,
+  "termMonthsMin": 120,
+  "termMonthsMax": 240,
+  "amountMin": 1000000,
+  "amountMax": 60000000,
+  "downPaymentMinPct": null,
+  "govPrograms": [],
+  "notes": {
+    "hy": "Անշարժ գույքի ձեռքբերման հիփոթեքային վարկ՝ 1,000,000-60,000,000 դրամ, մարման ժամկետ 120-240 ամիս, փաստացի տոկոսադրույք 12.87-15.76%։ Անվանական տոկոսադրույքն ու կանխավճարի նվազագույն շեմը էջի ամփոփ բաժնում հրապարակված չեն, ճշտվում են սակագների ամբողջական աղյուսակում։ Հասանելի են նաև պետական աջակցությամբ ծրագրեր (երիտասարդ ընտանիք, զինծառայող) առանձին էջերով։"
+  },
+  "sources": [
+    "https://www.aeb.am/hy/individual/loans/mortgage-loan-acquisition"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

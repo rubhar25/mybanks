@@ -169,7 +169,7 @@ const fmtRate = (min, max) =>
     document.querySelectorAll('.calc-btn').forEach((btn) => {
       btn.addEventListener('click', () => {
         const row = btn.closest('tr');
-        cRate.value = row.dataset.rate;
+        if (row.dataset.rate) cRate.value = row.dataset.rate;
         if (fAmount.value) cAmount.value = fAmount.value;
         if (fTerm.value) cYears.value = fTerm.value;
         recalc();
