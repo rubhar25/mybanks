@@ -1,0 +1,26 @@
+{
+  "id": "unibank-card-visa-infinite",
+  "bankId": "unibank",
+  "type": "card",
+  "cardType": "premium",
+  "network": "visa",
+  "tier": "Infinite",
+  "name": { "hy": "Visa Infinite", "en": "Visa Infinite", "ru": "Visa Infinite" },
+  "currency": ["AMD", "USD", "EUR"],
+  "annualFee": 100000,
+  "annualFeeNote": { "hy": "Գանձվում է 2-րդ տարուց սկսած" },
+  "cashbackPct": null,
+  "creditLimitMax": null,
+  "creditRate": null,
+  "features": {
+    "hy": [
+      "Բանկի ամենաբարձր կարգի պրեմիում քարտը",
+      "Visa Signature (50,000 դրամ) և Visa Infinite (100,000 դրամ) միջև ամենաբարձր մակարդակը"
+    ]
+  },
+  "sources": [
+    "https://www.unibank.am/hy/service/rates/6279/"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

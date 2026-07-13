@@ -12,6 +12,23 @@ Every page on the site is generated from the JSON files in this folder. Never ha
 
 - `banks/<id>.json` — one file per bank (~18 expected)
 - `products/<id>.json` — one file per product; `id` convention: `<bankId>-<type>-<variant>`
+- `cards/<id>.json` — one file per payment card; `id` convention: `<bankId>-card-<slug>`
+
+## Card file schema (`cards/`)
+
+- `id`, `bankId`, `type: "card"`
+- `cardType` — `"debit"` | `"credit"` | `"premium"`
+- `network` — `"visa"` | `"mastercard"` | `"arca"`
+- `tier` (string, optional) — e.g. `Classic`, `Gold`, `Platinum`, `World`, `Infinite`
+- `name` (i18n)
+- `currency` — array of account currencies, e.g. `["AMD","USD","EUR"]`
+- `annualFee` (number, AMD) — standard annual/service fee; `0` for free; `null` if unpublished
+- `annualFeeNote` (i18n, optional) — e.g. "first year free"
+- `cashbackPct` (number, optional) / `cashbackNote` (i18n, optional)
+- `creditLimitMax` (number, optional) — credit cards only
+- `creditRate` (number, optional) — credit-card nominal annual %
+- `features` (i18n → array of short strings) — Apple/Google Pay, 3D Secure, contactless, etc.
+- `sources`, `verified`, `updatedAt`
 
 ## Bank file — extended profile fields (all optional, render only when present)
 

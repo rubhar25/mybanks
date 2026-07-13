@@ -1,0 +1,25 @@
+{
+  "id": "artsakhbank-card-arca-classic",
+  "bankId": "artsakhbank",
+  "type": "card",
+  "cardType": "debit",
+  "network": "arca",
+  "tier": "Classic",
+  "name": { "hy": "ArCa Classic", "en": "ArCa Classic", "ru": "ArCa Classic" },
+  "currency": null,
+  "annualFee": null,
+  "annualFeeNote": { "hy": "Բանկի կայքի առանձին քարտի էջերը հասանելի չեղան ավտոմատացված ստուգման համար (404); ստույգ սակագինը հրապարակային աղբյուրից չհաստատվեց։" },
+  "cashbackPct": null,
+  "creditLimitMax": null,
+  "creditRate": null,
+  "features": {
+    "hy": [
+      "Տեղական ArCa համակարգի հիմնական քարտ"
+    ]
+  },
+  "sources": [
+    "https://www.artsakhbank.am/en/cards"
+  ],
+  "verified": false,
+  "updatedAt": "2026-07-13"
+}

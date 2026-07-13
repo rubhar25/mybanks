@@ -1,0 +1,25 @@
+{
+  "id": "evocabank-card-visa-classic",
+  "bankId": "evocabank",
+  "type": "card",
+  "cardType": "debit",
+  "network": "visa",
+  "tier": "Classic",
+  "name": { "hy": "Visa Classic", "en": "Visa Classic", "ru": "Visa Classic" },
+  "currency": ["AMD", "USD", "EUR"],
+  "annualFee": 5000,
+  "cashbackPct": null,
+  "creditLimitMax": null,
+  "creditRate": null,
+  "features": {
+    "hy": [
+      "Անհպում գործարքներ մինչև 20,000 դրամ՝ առանց PIN կոդի",
+      "Կանխիկացում ArCa համակարգի բոլոր բանկերի ԱՏՄ-ներում"
+    ]
+  },
+  "sources": [
+    "https://www.evoca.am/hy/cards/visa/"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

@@ -1,0 +1,241 @@
+---
+import Base from '../../layouts/Base.astro';
+import { cards, getBank, t } from '../../lib/data.js';
+import { networkName, cardTypeName, cardTypeOrder, fmtFee } from '../../lib/cards.js';
+import { url } from '../../lib/url.js';
+
+// debit → credit → premium, then cheapest annual fee first (nulls last)
+const sorted = [...cards].sort((a, b) => {
+  const ct = (cardTypeOrder[a.cardType] ?? 9) - (cardTypeOrder[b.cardType] ?? 9);
+  if (ct !== 0) return ct;
+  return (a.annualFee ?? Infinity) - (b.annualFee ?? Infinity);
+});
+
+const banksCount = new Set(cards.map((c) => c.bankId)).size;
+const networks = ['visa', 'mastercard', 'arca'].filter((n) => cards.some((c) => c.network === n));
+const types = ['debit', 'credit', 'premium'].filter((tp) => cards.some((c) => c.cardType === tp));
+const lastUpdated = cards.map((c) => c.updatedAt).sort().at(-1);
+---
+
+<Base title="Քարտեր. համեմատություն — Հայաստանի բանկերի վճարային քարտերը">
+  <nav class="breadcrumb"><a href={url('/')}>← Գլխավոր</a></nav>
+  <h1>Վճարային քարտեր</h1>
+  <p class="muted">
+    Համեմատեք Հայաստանի բանկերի դեբետային, վարկային և պրեմիում քարտերը՝ ցանցով (Visa / Mastercard / ArCa),
+    տարեկան սպասարկման վճարով և հնարավորություններով։ Ընտրեք մինչև 3 քարտ՝ կողք-կողքի համեմատելու համար։
+  </p>
+
+  <div class="context">
+    <strong>{cards.length}</strong> քարտ · <strong>{banksCount}</strong> բանկ ·
+    <span class="updated-stamp">թարմացվել է՝ {lastUpdated}</span>
+  </div>
+
+  <div class="filters-block">
+    <div class="chip-group" id="net-filter">
+      <span class="chip-label">Ցանց</span>
+      <button class="chip active" type="button" data-net="all">Բոլորը</button>
+      {networks.map((n) => (
+        <button class="chip" type="button" data-net={n}>{networkName[n]}</button>
+      ))}
+    </div>
+    <div class="chip-group" id="type-filter">
+      <span class="chip-label">Տեսակ</span>
+      <button class="chip active" type="button" data-type="all">Բոլորը</button>
+      {types.map((tp) => (
+        <button class="chip" type="button" data-type={tp}>{t(cardTypeName[tp])}</button>
+      ))}
+    </div>
+  </div>
+
+  <ul class="cards-grid" id="cards-grid">
+    {sorted.map((c) => {
+      const bank = getBank(c.bankId);
+      const feats = t(c.features) ?? [];
+      return (
+        <li
+          class="card-tile"
+          data-net={c.network}
+          data-type={c.cardType}
+          data-id={c.id}
+          data-name={`${t(bank.name)} ${t(c.name)}`}
+        >
+          <div class="tile-top">
+            <div>
+              <span class="bank-name">
+                <a href={url(`/banks/${bank.id}/`)}>{t(bank.name)}</a>
+              </span>
+              <h3>{t(c.name)}</h3>
+            </div>
+            <span class={`net-badge net-${c.network}`}>{networkName[c.network]}</span>
+          </div>
+
+          <span class="tile-type">{t(cardTypeName[c.cardType])}{c.tier ? ` · ${c.tier}` : ''}</span>
+
+          <div class="tile-facts">
+            <div class="fact">
+              <span class={`value${c.annualFee === 0 ? ' free' : ''}`}>{fmtFee(c.annualFee)}</span>
+              <span class="label">տարեկան վճար</span>
+            </div>
+            {c.cashbackPct != null && (
+              <div class="fact">
+                <span class="value">{c.cashbackPct}%</span>
+                <span class="label">cashback</span>
+              </div>
+            )}
+            {c.cardType === 'credit' && c.creditRate != null && (
+              <div class="fact">
+                <span class="value">{c.creditRate}%</span>
+                <span class="label">վարկի տոկոս</span>
+              </div>
+            )}
+            {c.currency?.length > 0 && (
+              <div class="fact">
+                <span class="value" style="font-size:var(--fs-base);font-weight:600">{c.currency.join(' · ')}</span>
+                <span class="label">արժույթ</span>
+              </div>
+            )}
+          </div>
+
+          {feats.length > 0 && (
+            <ul class="feat">
+              {feats.slice(0, 4).map((f) => <li>{f}</li>)}
+            </ul>
+          )}
+
+          <label class="compare-toggle">
+            <input type="checkbox" class="cmp-check" value={c.id} />
+            Համեմատել
+          </label>
+        </li>
+      );
+    })}
+  </ul>
+
+  <p class="no-results hidden" id="no-results">Այս զտիչներով քարտ չկա։ Փոխեք ընտրությունը։</p>
+
+  <div class="compare-bar" id="compare-bar" hidden>
+    <span class="count" id="cmp-count">0 ընտրված</span>
+    <button type="button" id="cmp-open">Համեմատել կողք-կողքի</button>
+    <button type="button" class="ghost" id="cmp-clear">Մաքրել</button>
+  </div>
+
+  <div id="cmp-panel" hidden>
+    <h2>Համեմատություն</h2>
+    <div class="table-wrap">
+      <table id="cmp-table"><tbody></tbody></table>
+    </div>
+  </div>
+
+  <p><small>Աղբյուրը՝ բանկերի պաշտոնական էջերը։ «—» նշանակում է՝ բանկը այդ պայմանը հրապարակել չի։ Cashback-ի և վճարների ճշգրիտ պայմանները ստուգեք բանկի կայքում։</small></p>
+
+  <script>
+    const tiles = [...document.querySelectorAll('.card-tile')];
+    const netBtns = [...document.querySelectorAll('#net-filter .chip')];
+    const typeBtns = [...document.querySelectorAll('#type-filter .chip')];
+    const noResults = document.getElementById('no-results');
+    let net = 'all', type = 'all';
+
+    function applyFilters() {
+      let visible = 0;
+      for (const tile of tiles) {
+        const ok = (net === 'all' || tile.dataset.net === net) &&
+                   (type === 'all' || tile.dataset.type === type);
+        tile.classList.toggle('hidden', !ok);
+        if (ok) visible++;
+      }
+      noResults.classList.toggle('hidden', visible > 0);
+    }
+
+    netBtns.forEach((b) => b.addEventListener('click', () => {
+      netBtns.forEach((x) => x.classList.remove('active'));
+      b.classList.add('active');
+      net = b.dataset.net;
+      applyFilters();
+    }));
+    typeBtns.forEach((b) => b.addEventListener('click', () => {
+      typeBtns.forEach((x) => x.classList.remove('active'));
+      b.classList.add('active');
+      type = b.dataset.type;
+      applyFilters();
+    }));
+
+    // ---- Compare ----
+    const checks = [...document.querySelectorAll('.cmp-check')];
+    const bar = document.getElementById('compare-bar');
+    const countEl = document.getElementById('cmp-count');
+    const panel = document.getElementById('cmp-panel');
+    const table = document.querySelector('#cmp-table tbody');
+    const MAX = 3;
+    const selected = new Set();
+
+    function refreshBar() {
+      countEl.textContent = selected.size + ' ընտրված';
+      bar.hidden = selected.size === 0;
+      if (selected.size === 0) panel.hidden = true;
+    }
+
+    checks.forEach((chk) => chk.addEventListener('change', () => {
+      const tile = chk.closest('.card-tile');
+      if (chk.checked) {
+        if (selected.size >= MAX) { chk.checked = false; return; }
+        selected.add(chk.value);
+        tile.classList.add('selected');
+      } else {
+        selected.delete(chk.value);
+        tile.classList.remove('selected');
+      }
+      refreshBar();
+      if (!panel.hidden) buildTable();
+    }));
+
+    // Field extractor from each selected tile's DOM
+    function tileData(id) {
+      const tile = document.querySelector(`.card-tile[data-id="${id}"]`);
+      const q = (sel) => tile.querySelector(sel);
+      const facts = {};
+      tile.querySelectorAll('.tile-facts .fact').forEach((f) => {
+        facts[f.querySelector('.label').textContent.trim()] = f.querySelector('.value').textContent.trim();
+      });
+      return {
+        name: tile.dataset.name,
+        net: q('.net-badge').textContent.trim(),
+        type: q('.tile-type').textContent.trim(),
+        fee: facts['տարեկան վճար'] || '—',
+        cashback: facts['cashback'] || '—',
+        credit: facts['վարկի տոկոս'] || '—',
+        currency: facts['արժույթ'] || '—',
+        feats: [...tile.querySelectorAll('.feat li')].map((li) => li.textContent.trim()),
+      };
+    }
+
+    function buildTable() {
+      const ids = [...selected];
+      const data = ids.map(tileData);
+      const rows = [
+        ['Քարտ', data.map((d) => `<strong>${d.name}</strong>`)],
+        ['Ցանց', data.map((d) => d.net)],
+        ['Տեսակ', data.map((d) => d.type)],
+        ['Տարեկան վճար', data.map((d) => d.fee)],
+        ['Cashback', data.map((d) => d.cashback)],
+        ['Վարկի տոկոս', data.map((d) => d.credit)],
+        ['Արժույթ', data.map((d) => d.currency)],
+        ['Հնարավորություններ', data.map((d) => d.feats.length ? '• ' + d.feats.join('<br>• ') : '—')],
+      ];
+      table.innerHTML = rows.map(([h, cells]) =>
+        `<tr><th scope="row">${h}</th>${cells.map((c) => `<td>${c}</td>`).join('')}</tr>`
+      ).join('');
+    }
+
+    document.getElementById('cmp-open').addEventListener('click', () => {
+      buildTable();
+      panel.hidden = false;
+      panel.scrollIntoView({ behavior: 'smooth' });
+    });
+    document.getElementById('cmp-clear').addEventListener('click', () => {
+      selected.clear();
+      checks.forEach((c) => { c.checked = false; });
+      tiles.forEach((t) => t.classList.remove('selected'));
+      refreshBar();
+    });
+  </script>
+</Base>

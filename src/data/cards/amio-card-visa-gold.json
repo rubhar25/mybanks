@@ -1,0 +1,28 @@
+{
+  "id": "amio-card-visa-gold",
+  "bankId": "amio",
+  "type": "card",
+  "cardType": "debit",
+  "network": "visa",
+  "tier": "Gold",
+  "name": { "hy": "Visa Gold (Amio Active փաթեթ)", "en": "Visa Gold (Amio Active package)", "ru": "Visa Gold (Amio Active)" },
+  "currency": ["AMD", "USD", "EUR"],
+  "annualFee": 0,
+  "annualFeeNote": { "hy": "Քարտի սպասարկումն ինքնին անվճար է. կցվում է Amio Active փաթեթին, որի եռամսյակային վճարը՝ 0 դրամ, եթե հաշիվների/քարտերի միջին ամսական շրջանառությունը վերջին 3 ամսում կազմել է առնվազն 150,000 դրամ, հակառակ դեպքում՝ 1,500 դրամ/եռամսյակ" },
+  "cashbackPct": null,
+  "creditLimitMax": null,
+  "creditRate": null,
+  "features": {
+    "hy": [
+      "Անվճար կանխիկացում 1,000+ ԱՏՄ-ներում",
+      "Անվճար քաղվածքներ և տեղեկանքներ",
+      "Այլընտրանք՝ Mastercard Gold"
+    ]
+  },
+  "sources": [
+    "https://amiobank.am/en/packages/amio-active",
+    "https://amiobank.am/en/packages"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "ameriabank-card-visa-classic",
+  "bankId": "ameriabank",
+  "type": "card",
+  "cardType": "debit",
+  "network": "visa",
+  "tier": "Classic",
+  "name": { "hy": "Visa Classic", "en": "Visa Classic", "ru": "Visa Classic" },
+  "currency": ["AMD", "USD", "EUR"],
+  "annualFee": null,
+  "annualFeeNote": { "hy": "Բանկի սակագնային փաստաթղթում նշվում է պայմանական զրոյացում (0 դրամ), եթե վերջին 6 ամսվա միջին ամսական շրջանառությունը կազմում է առնվազն 50,000 դրամ. հակառակ դեպքում գործում է ստանդարտ սակագին, որի ստույգ չափը հրապարակային էջերից միանշանակ չհաստատվեց։" },
+  "cashbackPct": null,
+  "creditLimitMax": null,
+  "creditRate": null,
+  "features": {
+    "hy": [
+      "Անհպում վճարումներ",
+      "Ընդունվում է աշխարհի միլիոնավոր ԱՏՄ-ներում և վաճառակետերում",
+      "PIN կոդի ինքնուրույն կառավարում ԱՏՄ-ների միջոցով",
+      "USSD ծառայություն քարտի կառավարման համար"
+    ]
+  },
+  "sources": [
+    "https://ameriabank.am/personal/cards/cards/debit-cards",
+    "https://ameriabank.am/personal/cards/banking-cards"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

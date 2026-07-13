@@ -1,0 +1,29 @@
+{
+  "id": "unibank-card-visa-credit-0percent",
+  "bankId": "unibank",
+  "type": "card",
+  "cardType": "credit",
+  "network": "visa",
+  "tier": "Standard",
+  "name": { "hy": "Վարկային քարտ VISA - 0%", "en": "Visa Credit Card - 0%", "ru": "Visa Credit Card - 0%" },
+  "currency": ["AMD", "USD", "EUR"],
+  "annualFee": null,
+  "annualFeeNote": { "hy": "1-ին տարին անվճար, 2-րդ և 3-րդ տարիների վճարը կախված է ստանդարտ սակագներից (ստույգ գումարը էջում նշված չէ)" },
+  "cashbackPct": null,
+  "creditLimitMax": 2500000,
+  "creditRate": null,
+  "features": {
+    "hy": [
+      "Մինչև 60-օրյա արտոնյալ (0% տոկոսադրույքով) ժամանակաշրջան",
+      "Վարկային գիծը՝ մինչև 2,500,000 դրամ (~4x ամսական աշխատավարձի, նվազագույնը 500,000 դրամ)",
+      "Կանխիկացում՝ 0% Յունիբանկի մասնաճյուղերում (վարկային միջոցներից՝ 0.5%), 1% ՀՀ այլ բանկերում, 1.3% արտերկրում",
+      "Տրամադրվում է մինչև 24 ամիս ժամկետով՝ երկարացման հնարավորությամբ",
+      "Տարիք՝ 21-65"
+    ]
+  },
+  "sources": [
+    "https://www.unibank.am/hy/service/cards/usell.php"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "evocabank-card-visa-infinite",
+  "bankId": "evocabank",
+  "type": "card",
+  "cardType": "premium",
+  "network": "visa",
+  "tier": "Infinite",
+  "name": { "hy": "Visa Infinite", "en": "Visa Infinite", "ru": "Visa Infinite" },
+  "currency": ["AMD", "USD", "EUR"],
+  "annualFee": 100000,
+  "cashbackPct": null,
+  "creditLimitMax": null,
+  "creditRate": null,
+  "features": {
+    "hy": [
+      "Visa համակարգի ամենաբարձր կարգի քարտ",
+      "Օդանավակայանի VIP սրահների հասանելիություն",
+      "Անհատականացված պրեմիում բանկային սպասարկում"
+    ]
+  },
+  "sources": [
+    "https://www.evoca.am/hy/cards"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

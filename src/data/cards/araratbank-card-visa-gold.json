@@ -1,0 +1,27 @@
+{
+  "id": "araratbank-card-visa-gold",
+  "bankId": "araratbank",
+  "type": "card",
+  "cardType": "premium",
+  "network": "visa",
+  "tier": "Gold",
+  "name": { "hy": "Visa Gold", "en": "Visa Gold", "ru": "Visa Gold" },
+  "currency": ["AMD", "USD", "EUR", "RUB", "GBP", "AED"],
+  "annualFee": 10000,
+  "annualFeeNote": { "hy": "Ոչ ռեզիդենտների համար՝ 35,000 դրամ/տարի" },
+  "cashbackPct": null,
+  "creditLimitMax": null,
+  "creditRate": null,
+  "features": {
+    "hy": [
+      "Վավերականություն՝ 4 տարի",
+      "Անվճար SMS ծանուցումներ",
+      "Ընդունվում է Visa ցանցի բոլոր վաճառակետերում աշխարհով մեկ"
+    ]
+  },
+  "sources": [
+    "https://www.araratbank.am/hy/visa-carder/14/"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

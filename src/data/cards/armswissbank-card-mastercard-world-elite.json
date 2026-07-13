@@ -1,0 +1,27 @@
+{
+  "id": "armswissbank-card-mastercard-world-elite",
+  "bankId": "armswissbank",
+  "type": "card",
+  "cardType": "premium",
+  "network": "mastercard",
+  "tier": "World Elite",
+  "name": { "hy": "Mastercard World Elite", "en": "Mastercard World Elite", "ru": "Mastercard World Elite" },
+  "currency": ["AMD", "USD", "EUR"],
+  "annualFee": 50000,
+  "annualFeeNote": { "hy": "Ռեզիդենտների համար" },
+  "cashbackPct": null,
+  "creditLimitMax": null,
+  "creditRate": null,
+  "features": {
+    "hy": [
+      "Վավերականություն՝ 5 տարի",
+      "Արտոնյալ ծրագրեր, ավելի բարձր սահմանաչափեր",
+      "Անհատական հաշվի կառավարիչ"
+    ]
+  },
+  "sources": [
+    "https://www.armswissbank.am/en/individuals/cards/"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

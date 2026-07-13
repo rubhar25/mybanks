@@ -1,0 +1,28 @@
+{
+  "id": "armswissbank-card-mastercard-standard",
+  "bankId": "armswissbank",
+  "type": "card",
+  "cardType": "debit",
+  "network": "mastercard",
+  "tier": "Standard",
+  "name": { "hy": "Mastercard Standard", "en": "Mastercard Standard", "ru": "Mastercard Standard" },
+  "currency": ["AMD", "USD", "EUR"],
+  "annualFee": 5000,
+  "annualFeeNote": { "hy": "Ռեզիդենտների համար; ոչ ռեզիդենտների սակագինն ավելի բարձր է և քարտը թողարկվում է միայն ՀՀ դրամով" },
+  "cashbackPct": null,
+  "creditLimitMax": null,
+  "creditRate": null,
+  "features": {
+    "hy": [
+      "Վավերականություն՝ 5 տարի",
+      "Անվճար թողարկում (ռեզիդենտների համար)",
+      "Անվճար անկանխիկ գործարքներ",
+      "Քարտից քարտ փոխանցում՝ 0.3%"
+    ]
+  },
+  "sources": [
+    "https://www.armswissbank.am/en/individuals/cards/"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

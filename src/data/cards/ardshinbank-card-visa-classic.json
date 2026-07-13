@@ -1,0 +1,25 @@
+{
+  "id": "ardshinbank-card-visa-classic",
+  "bankId": "ardshinbank",
+  "type": "card",
+  "cardType": "debit",
+  "network": "visa",
+  "tier": "Classic",
+  "name": { "hy": "Visa Classic", "en": "Visa Classic", "ru": "Visa Classic" },
+  "currency": ["AMD", "USD", "EUR", "CNY"],
+  "annualFee": 7000,
+  "annualFeeNote": { "hy": "Անվճար, եթե նախորդ ամսվա միջին օրական մնացորդը գերազանցել է 100,000 դրամը" },
+  "cashbackPct": null,
+  "features": {
+    "hy": [
+      "Քարտի տրամադրումն անվճար է",
+      "Բազմարժույթ հաշիվ՝ դրամ, դոլար, եվրո, յուան",
+      "Անհպում վճարումներ"
+    ]
+  },
+  "sources": [
+    "https://ardshinbank.am/for-you/cards/visa-classic"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

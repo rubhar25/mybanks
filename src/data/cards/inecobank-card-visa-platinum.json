@@ -1,0 +1,26 @@
+{
+  "id": "inecobank-card-visa-platinum",
+  "bankId": "inecobank",
+  "type": "card",
+  "cardType": "premium",
+  "network": "visa",
+  "tier": "Platinum",
+  "name": { "hy": "Visa Platinum", "en": "Visa Platinum", "ru": "Visa Platinum" },
+  "currency": ["AMD", "USD", "EUR", "RUB"],
+  "annualFee": 35000,
+  "cashbackPct": null,
+  "features": {
+    "hy": [
+      "Օդանավակայանների բարձրակարգ սպասասրահներ՝ տարեկան 6 անվճար մուտք",
+      "Միջազգային կոնսիերժ ծառայություն՝ անվճար",
+      "Գնումների ապահովագրություն և ճանապարհորդական ապահովագրություն",
+      "Կից քարտերի հնարավորություն (Visa Platinum / Gold)",
+      "Բազմարժույթ հաշիվ՝ դրամ, դոլար, եվրո, ռուբլի"
+    ]
+  },
+  "sources": [
+    "https://www.inecobank.am/hy/Individual/cards/visa-platinum/terms"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

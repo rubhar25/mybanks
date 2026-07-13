@@ -1,0 +1,29 @@
+{
+  "id": "byblos-card-mastercard-gold-debit",
+  "bankId": "byblos",
+  "type": "card",
+  "cardType": "premium",
+  "network": "mastercard",
+  "tier": "Gold",
+  "name": { "hy": "Mastercard Gold (դեբետային)", "en": "Mastercard Gold (Debit)", "ru": "Mastercard Gold (дебетовая)" },
+  "currency": ["AMD", "USD", "EUR"],
+  "annualFee": 12000,
+  "annualFeeNote": { "hy": "3,000 դրամ՝ աշխատավարձային փոխանցման դեպքում" },
+  "cashbackPct": null,
+  "creditLimitMax": null,
+  "creditRate": null,
+  "features": {
+    "hy": [
+      "0% կանխիկացում ցանկացած ԱՏՄ-ից ողջ Հայաստանում (աշխատավարձային հաճախորդների համար)",
+      "Անվճար հավելյալ քարտ (աշխատավարձային հաճախորդների համար)",
+      "Օվերդրաֆտի հնարավորություն՝ 17% (14.5%՝ աշխատավարձային հաշվի դեպքում)",
+      "LoungeKey օդանավակայանային սրահի հասանելիություն՝ 15,000 դրամ/մուտք",
+      "Մինչև 45-օրյա արտոնյալ ժամկետ"
+    ]
+  },
+  "sources": [
+    "https://www.byblosbankarmenia.am/en/card/debit/mastercard-gold"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

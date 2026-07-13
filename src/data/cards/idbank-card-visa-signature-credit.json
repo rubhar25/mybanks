@@ -1,0 +1,31 @@
+{
+  "id": "idbank-card-visa-signature-credit",
+  "bankId": "idbank",
+  "type": "card",
+  "cardType": "credit",
+  "network": "visa",
+  "tier": "Signature",
+  "name": { "hy": "Visa Signature կրեդիտային", "en": "Visa Signature Credit", "ru": "Visa Signature Credit" },
+  "currency": ["AMD", "USD", "EUR", "RUB"],
+  "annualFee": 69900,
+  "annualFeeNote": { "hy": "Հնարավոր է վճարել նաև ամսական՝ 6,000 դրամ/ամիս" },
+  "cashbackPct": 0.5,
+  "creditLimitMax": null,
+  "creditRate": 19,
+  "features": {
+    "hy": [
+      "Վարկային գծի չափը որոշվում է Բանկի վարկարժանության համակարգով",
+      "Առավելագույնը 19% անվանական տոկոսադրույք վարկային գծի վրա",
+      "Մինչև 45-օրյա արտոնյալ ժամկետ գործարքների համար",
+      "0.5% կանխիկացման cashback և 0.5% idcoin պարգևավճար",
+      "Անվճար մուտք 1,300+ օդանավակայանային VIP սրահներ (տարեկան 4 անգամ)",
+      "Ճամփորդական և բժշկական ապահովագրություն",
+      "Վավերականություն՝ 5 տարի"
+    ]
+  },
+  "sources": [
+    "https://idbank.am/cards/credit/visa-signature-credit/"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

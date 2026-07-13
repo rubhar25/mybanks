@@ -1,0 +1,27 @@
+{
+  "id": "idbank-card-visa-infinite-debit",
+  "bankId": "idbank",
+  "type": "card",
+  "cardType": "premium",
+  "network": "visa",
+  "tier": "Infinite",
+  "name": { "hy": "Visa Infinite դեբետային", "en": "Visa Infinite Debit", "ru": "Visa Infinite Debit" },
+  "currency": ["AMD", "USD", "EUR", "RUB"],
+  "annualFee": 99900,
+  "annualFeeNote": { "hy": "Հնարավոր է վճարել նաև ամսական՝ 10,000 դրամ/ամիս" },
+  "cashbackPct": null,
+  "creditLimitMax": null,
+  "creditRate": null,
+  "features": {
+    "hy": [
+      "Private/Privilege Banking հասանելիություն",
+      "20% զեղչ հավելվածով պատվիրելիս (առաջին տարվա սպասարկման վրա)",
+      "Բանկի ամենաբարձր կարգի դեբետային քարտը"
+    ]
+  },
+  "sources": [
+    "https://idbank.am/cards/"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "idbank-card-mastercard-standard",
+  "bankId": "idbank",
+  "type": "card",
+  "cardType": "debit",
+  "network": "mastercard",
+  "tier": "Standard",
+  "name": { "hy": "Mastercard Standard", "en": "Mastercard Standard", "ru": "Mastercard Standard" },
+  "currency": ["AMD", "USD", "EUR", "RUB"],
+  "annualFee": 3000,
+  "cashbackPct": null,
+  "creditLimitMax": null,
+  "creditRate": null,
+  "features": {
+    "hy": [
+      "Վավերականություն՝ 5 տարի",
+      "PayPass անհպում վճարումներ",
+      "Idram&IDBank հավելվածով պատվիրելիս 20% զեղչ առաջին տարվա սպասարկման վրա",
+      "Անվճար թողարկում (2-5 աշխատանքային օր), արագացված առաքում՝ 5,000 դրամ"
+    ]
+  },
+  "sources": [
+    "https://idbank.am/cards/other/mastercardstandard/"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

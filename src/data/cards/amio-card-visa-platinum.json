@@ -1,0 +1,31 @@
+{
+  "id": "amio-card-visa-platinum",
+  "bankId": "amio",
+  "type": "card",
+  "cardType": "premium",
+  "network": "visa",
+  "tier": "Platinum",
+  "name": { "hy": "Visa Platinum (Amio Pro փաթեթ)", "en": "Visa Platinum (Amio Pro package)", "ru": "Visa Platinum (Amio Pro)" },
+  "currency": ["AMD", "USD", "EUR"],
+  "annualFee": 0,
+  "annualFeeNote": { "hy": "Քարտի սպասարկումն ինքնին անվճար է. կցվում է Amio Pro փաթեթին, որի եռամսյակային վճարը՝ 0 դրամ, եթե միջին օրական մնացորդը վերջին 3 ամսում կազմել է առնվազն 15,000,000 դրամ կամ միջին ամսական շրջանառությունը՝ առնվազն 600,000 դրամ, հակառակ դեպքում՝ 5,700 դրամ/եռամսյակ" },
+  "cashbackPct": null,
+  "creditLimitMax": null,
+  "creditRate": null,
+  "features": {
+    "hy": [
+      "Անվճար մուտք 1,300+ օդանավակայանային բիզնես սրահներ",
+      "Fast Track ծառայություն",
+      "Կոնսիերժ ծառայություն",
+      "Ճամփորդական ապահովագրություն",
+      "Արտոնյալ տոկոսադրույքներ վարկերի և ավանդների համար",
+      "Այլընտրանք՝ Mastercard World"
+    ]
+  },
+  "sources": [
+    "https://amiobank.am/en/packages/amio-pro",
+    "https://amiobank.am/en/packages"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

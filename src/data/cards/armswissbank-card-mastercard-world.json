@@ -1,0 +1,27 @@
+{
+  "id": "armswissbank-card-mastercard-world",
+  "bankId": "armswissbank",
+  "type": "card",
+  "cardType": "premium",
+  "network": "mastercard",
+  "tier": "World",
+  "name": { "hy": "Mastercard World", "en": "Mastercard World", "ru": "Mastercard World" },
+  "currency": ["AMD", "USD", "EUR"],
+  "annualFee": 15000,
+  "annualFeeNote": { "hy": "Ռեզիդենտների համար" },
+  "cashbackPct": null,
+  "creditLimitMax": null,
+  "creditRate": null,
+  "features": {
+    "hy": [
+      "Վավերականություն՝ 5 տարի",
+      "Պրեմիում մակարդակի արտոնություններ",
+      "Անվճար անկանխիկ գործարքներ"
+    ]
+  },
+  "sources": [
+    "https://www.armswissbank.am/en/individuals/cards/"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

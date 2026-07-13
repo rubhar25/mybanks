@@ -1,0 +1,25 @@
+{
+  "id": "acba-card-mastercard-world-elite",
+  "bankId": "acba",
+  "type": "card",
+  "cardType": "premium",
+  "network": "mastercard",
+  "tier": "World Elite",
+  "name": { "hy": "Mastercard World Elite", "en": "Mastercard World Elite", "ru": "Mastercard World Elite" },
+  "currency": null,
+  "annualFee": null,
+  "annualFeeNote": { "hy": "ACBA-ի առանձին քարտի էջերը հասանելի չեղան ավտոմատացված ստուգման համար (404 սխալ); ստույգ սակագինը հրապարակային աղբյուրից չհաստատվեց։" },
+  "cashbackPct": null,
+  "creditLimitMax": null,
+  "creditRate": null,
+  "features": {
+    "hy": [
+      "Բանկի պրեմիում կատեգորիայի քարտերից մեկը"
+    ]
+  },
+  "sources": [
+    "https://www.acba.am/hy/individuals/choose-a-card"
+  ],
+  "verified": false,
+  "updatedAt": "2026-07-13"
+}

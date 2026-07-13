@@ -1,0 +1,30 @@
+{
+  "id": "byblos-card-mastercard-standard-credit",
+  "bankId": "byblos",
+  "type": "card",
+  "cardType": "credit",
+  "network": "mastercard",
+  "tier": "Standard",
+  "name": { "hy": "Mastercard Standard (կրեդիտային)", "en": "Mastercard Standard (Credit)", "ru": "Mastercard Standard (кредитная)" },
+  "currency": ["AMD"],
+  "annualFee": 9000,
+  "annualFeeNote": { "hy": "6,000 դրամ՝ աշխատավարձային փոխանցման դեպքում" },
+  "cashbackPct": null,
+  "creditLimitMax": 1499000,
+  "creditRate": 18,
+  "features": {
+    "hy": [
+      "Վարկային գիծ՝ 400,000-1,499,000 դրամ",
+      "18% ֆիքսված տոկոսադրույք (16%՝ աշխատավարձային հաշվի դեպքում)",
+      "Մինչև 45-օրյա արտոնյալ ժամկետ անկանխիկ գնումների համար",
+      "Նվազագույն ամսական վճար՝ մնացորդի 10%-ը",
+      "Օրական առավելագույն գործարք՝ 2,000,000 դրամ",
+      "Քարտից քարտ փոխանցում՝ 1%"
+    ]
+  },
+  "sources": [
+    "https://www.byblosbankarmenia.am/en/card/credit/mastercard_standard"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

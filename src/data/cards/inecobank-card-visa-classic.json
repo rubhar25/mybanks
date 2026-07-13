@@ -1,0 +1,25 @@
+{
+  "id": "inecobank-card-visa-classic",
+  "bankId": "inecobank",
+  "type": "card",
+  "cardType": "debit",
+  "network": "visa",
+  "tier": "Classic",
+  "name": { "hy": "Visa Classic", "en": "Visa Classic", "ru": "Visa Classic" },
+  "currency": ["AMD", "USD", "EUR", "RUB"],
+  "annualFee": 4000,
+  "cashbackPct": null,
+  "features": {
+    "hy": [
+      "Բազմարժույթ հաշիվ՝ դրամ, դոլար, եվրո, ռուբլի",
+      "Քարտի գործողության ժամկետ՝ 5 տարի",
+      "InecoOnline / InecoMobile թվային կառավարում",
+      "Անհպում վճարումներ, Apple Pay / Google Pay"
+    ]
+  },
+  "sources": [
+    "https://www.inecobank.am/hy/Individual/cards/visa-classic/terms"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

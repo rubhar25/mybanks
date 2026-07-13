@@ -1,0 +1,26 @@
+{
+  "id": "unibank-card-visa-classic",
+  "bankId": "unibank",
+  "type": "card",
+  "cardType": "debit",
+  "network": "visa",
+  "tier": "Classic",
+  "name": { "hy": "Visa Classic", "en": "Visa Classic", "ru": "Visa Classic" },
+  "currency": ["AMD", "USD", "EUR"],
+  "annualFee": 4000,
+  "annualFeeNote": { "hy": "Գանձվում է 2-րդ տարուց սկսած" },
+  "cashbackPct": null,
+  "creditLimitMax": null,
+  "creditRate": null,
+  "features": {
+    "hy": [
+      "Բազմադրամային քարտ (ՀՀ դրամ, ԱՄՆ դոլար, եվրո)",
+      "Ընդունվում է Visa ցանցի բոլոր վաճառակետերում"
+    ]
+  },
+  "sources": [
+    "https://www.unibank.am/hy/service/rates/6279/"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

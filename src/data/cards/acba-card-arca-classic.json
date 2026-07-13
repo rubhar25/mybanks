@@ -1,0 +1,25 @@
+{
+  "id": "acba-card-arca-classic",
+  "bankId": "acba",
+  "type": "card",
+  "cardType": "debit",
+  "network": "arca",
+  "tier": "Classic",
+  "name": { "hy": "ArCa Classic", "en": "ArCa Classic", "ru": "ArCa Classic" },
+  "currency": null,
+  "annualFee": null,
+  "annualFeeNote": { "hy": "ACBA-ի առանձին քարտի էջերը (choose-a-card/... ենթաէջեր) հասանելի չեղան ավտոմատացված ստուգման համար (404 սխալ); ստույգ սակագինը հրապարակային աղբյուրից չհաստատվեց։" },
+  "cashbackPct": null,
+  "creditLimitMax": null,
+  "creditRate": null,
+  "features": {
+    "hy": [
+      "Ամենապահանջված տեղական քարտերից մեկը ըստ բանկի կայքի"
+    ]
+  },
+  "sources": [
+    "https://www.acba.am/hy/individuals/choose-a-card"
+  ],
+  "verified": false,
+  "updatedAt": "2026-07-13"
+}

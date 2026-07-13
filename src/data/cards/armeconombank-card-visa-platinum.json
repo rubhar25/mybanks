@@ -1,0 +1,27 @@
+{
+  "id": "armeconombank-card-visa-platinum",
+  "bankId": "armeconombank",
+  "type": "card",
+  "cardType": "premium",
+  "network": "visa",
+  "tier": "Platinum",
+  "name": { "hy": "Visa Platinum", "en": "Visa Platinum", "ru": "Visa Platinum" },
+  "currency": ["AMD", "USD", "EUR", "RUB"],
+  "annualFee": 30000,
+  "annualFeeNote": { "hy": "30,000 կամ 100,000 դրամ՝ ըստ փաթեթի (մետաղական դիզայն)" },
+  "cashbackPct": null,
+  "features": {
+    "hy": [
+      "Մետաղական դիզայնի հնարավորություն",
+      "agoda.com-ում մինչև 12% զեղչ հյուրանոցների ամրագրման համար",
+      "DragonPass օդանավակայանների սրահներ՝ տարեկան 6 անվճար մուտք",
+      "Fast Track և ուղեբեռի անվճար փաթեթավորում",
+      "AEB Travel ճամփորդական փաթեթ՝ հատուկ սակագներով"
+    ]
+  },
+  "sources": [
+    "https://www.aeb.am/hy/individual/cards/visa-platinum-aeb"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "evocabank-card-visa-platinum",
+  "bankId": "evocabank",
+  "type": "card",
+  "cardType": "premium",
+  "network": "visa",
+  "tier": "Platinum",
+  "name": { "hy": "Evoca Visa Platinum", "en": "Evoca Visa Platinum", "ru": "Evoca Visa Platinum" },
+  "currency": ["AMD", "USD", "EUR"],
+  "annualFee": 30000,
+  "cashbackPct": null,
+  "creditLimitMax": null,
+  "creditRate": null,
+  "features": {
+    "hy": [
+      "Օդանավակայանի VIP սրահների հասանելիություն",
+      "Պրեմիում մակարդակի սպասարկում"
+    ]
+  },
+  "sources": [
+    "https://www.evoca.am/hy/cards",
+    "https://www.evoca.am/hy/cards/visa/"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

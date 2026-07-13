@@ -1,0 +1,25 @@
+{
+  "id": "artsakhbank-card-mastercard-gold",
+  "bankId": "artsakhbank",
+  "type": "card",
+  "cardType": "premium",
+  "network": "mastercard",
+  "tier": "Gold",
+  "name": { "hy": "Mastercard Gold", "en": "Mastercard Gold", "ru": "Mastercard Gold" },
+  "currency": null,
+  "annualFee": null,
+  "annualFeeNote": { "hy": "Բանկի կայքի առանձին քարտի էջերը հասանելի չեղան ավտոմատացված ստուգման համար (404); ստույգ սակագինը հրապարակային աղբյուրից չհաստատվեց։" },
+  "cashbackPct": null,
+  "creditLimitMax": null,
+  "creditRate": null,
+  "features": {
+    "hy": [
+      "Պրեմիում մակարդակի Mastercard քարտ"
+    ]
+  },
+  "sources": [
+    "https://www.artsakhbank.am/en/cards"
+  ],
+  "verified": false,
+  "updatedAt": "2026-07-13"
+}

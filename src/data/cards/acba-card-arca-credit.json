@@ -1,0 +1,25 @@
+{
+  "id": "acba-card-arca-credit",
+  "bankId": "acba",
+  "type": "card",
+  "cardType": "credit",
+  "network": "arca",
+  "tier": "Classic",
+  "name": { "hy": "ArCa Credit", "en": "ArCa Credit", "ru": "ArCa Credit" },
+  "currency": null,
+  "annualFee": null,
+  "annualFeeNote": { "hy": "ACBA-ի առանձին քարտի էջերը հասանելի չեղան ավտոմատացված ստուգման համար (404 սխալ); ստույգ սակագինը, վարկային գիծը և տոկոսադրույքը հրապարակային աղբյուրից չհաստատվեցին։" },
+  "cashbackPct": null,
+  "creditLimitMax": null,
+  "creditRate": null,
+  "features": {
+    "hy": [
+      "Հատուկ (special) կատեգորիայի վարկային ArCa քարտ ըստ բանկի կայքի"
+    ]
+  },
+  "sources": [
+    "https://www.acba.am/hy/individuals/choose-a-card"
+  ],
+  "verified": false,
+  "updatedAt": "2026-07-13"
+}

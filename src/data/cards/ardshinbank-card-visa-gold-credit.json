@@ -1,0 +1,29 @@
+{
+  "id": "ardshinbank-card-visa-gold-credit",
+  "bankId": "ardshinbank",
+  "type": "card",
+  "cardType": "credit",
+  "network": "visa",
+  "tier": "Gold",
+  "name": { "hy": "Visa Gold (վարկային)", "en": "Visa Gold (credit)", "ru": "Visa Gold (кредитная)" },
+  "currency": ["AMD", "USD", "EUR"],
+  "annualFee": 24000,
+  "annualFeeNote": { "hy": "2,000 դրամ ամսական սպասարկման վճար" },
+  "cashbackPct": null,
+  "cashbackNote": { "hy": "Cashback ծրագիր՝ ըստ գործարքի կատեգորիայի" },
+  "creditLimitMax": null,
+  "creditRate": 20,
+  "features": {
+    "hy": [
+      "Վարկային միջոցների տարեկան տոկոսադրույք՝ 20%",
+      "Cashback ծրագիր գնումների դիմաց",
+      "Բազմարժույթ հաշիվ՝ դրամ, դոլար, եվրո",
+      "Անհպում վճարումներ"
+    ]
+  },
+  "sources": [
+    "https://ardshinbank.am/for-you/visa-gold-credit"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

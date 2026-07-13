@@ -1,0 +1,25 @@
+{
+  "id": "artsakhbank-card-mastercard-standard",
+  "bankId": "artsakhbank",
+  "type": "card",
+  "cardType": "debit",
+  "network": "mastercard",
+  "tier": "Standard",
+  "name": { "hy": "Mastercard Standard", "en": "Mastercard Standard", "ru": "Mastercard Standard" },
+  "currency": null,
+  "annualFee": null,
+  "annualFeeNote": { "hy": "Բանկի կայքի առանձին քարտի էջերը հասանելի չեղան ավտոմատացված ստուգման համար (404); ստույգ սակագինը հրապարակային աղբյուրից չհաստատվեց։" },
+  "cashbackPct": null,
+  "creditLimitMax": null,
+  "creditRate": null,
+  "features": {
+    "hy": [
+      "Ընդունվում է Mastercard ցանցի բոլոր վաճառակետերում"
+    ]
+  },
+  "sources": [
+    "https://www.artsakhbank.am/en/cards"
+  ],
+  "verified": false,
+  "updatedAt": "2026-07-13"
+}

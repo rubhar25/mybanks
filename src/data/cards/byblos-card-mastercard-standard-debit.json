@@ -1,0 +1,29 @@
+{
+  "id": "byblos-card-mastercard-standard-debit",
+  "bankId": "byblos",
+  "type": "card",
+  "cardType": "debit",
+  "network": "mastercard",
+  "tier": "Standard",
+  "name": { "hy": "Mastercard Standard (դեբետային)", "en": "Mastercard Standard (Debit)", "ru": "Mastercard Standard (дебетовая)" },
+  "currency": ["AMD", "USD", "EUR"],
+  "annualFee": 4000,
+  "annualFeeNote": { "hy": "3,000 դրամ՝ աշխատավարձային փոխանցման դեպքում" },
+  "cashbackPct": null,
+  "creditLimitMax": null,
+  "creditRate": null,
+  "features": {
+    "hy": [
+      "0% կանխիկացում ցանկացած ԱՏՄ-ից ողջ Հայաստանում",
+      "Անվճար հավելյալ քարտ (աշխատավարձային փոխանցման դեպքում)",
+      "Հասանելի է վարկային գիծ 45-օրյա արտոնյալ ժամկետով",
+      "Օվերդրաֆտի հնարավորություն՝ ֆիքսված 17% (կամ 15.5% աշխատավարձային հաշվի դեպքում)",
+      "Առաքում՝ 3 աշխատանքային օրում"
+    ]
+  },
+  "sources": [
+    "https://www.byblosbankarmenia.am/en/card/debit/mastercard-standard"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

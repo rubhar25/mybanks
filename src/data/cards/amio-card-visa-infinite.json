@@ -1,0 +1,28 @@
+{
+  "id": "amio-card-visa-infinite",
+  "bankId": "amio",
+  "type": "card",
+  "cardType": "premium",
+  "network": "visa",
+  "tier": "Infinite",
+  "name": { "hy": "Visa Infinite (Amio Exclusive փաթեթ)", "en": "Visa Infinite (Amio Exclusive package)", "ru": "Visa Infinite (Amio Exclusive)" },
+  "currency": ["AMD", "USD", "EUR"],
+  "annualFee": 0,
+  "annualFeeNote": { "hy": "Քարտի սպասարկումն ինքնին անվճար է. կցվում է Amio Exclusive փաթեթին, որի եռամսյակային վճարը՝ 0 դրամ, եթե միջին օրական մնացորդը վերջին 3 ամսում կազմել է առնվազն 30,000,000 դրամ կամ միջին ամսական շրջանառությունը՝ առնվազն 1,500,000 դրամ, հակառակ դեպքում՝ 20,700 դրամ/եռամսյակ" },
+  "cashbackPct": null,
+  "creditLimitMax": null,
+  "creditRate": null,
+  "features": {
+    "hy": [
+      "Անհատական մենեջեր և առաջնահերթ սպասարկում",
+      "Հատուկ պայմաններ հիփոթեքի և արտարժույթի փոխանակման համար",
+      "Այլընտրանք՝ Mastercard World Elite"
+    ]
+  },
+  "sources": [
+    "https://amiobank.am/en/packages/amio-exclusive",
+    "https://amiobank.am/en/packages"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

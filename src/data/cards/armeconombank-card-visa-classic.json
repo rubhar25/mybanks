@@ -1,0 +1,27 @@
+{
+  "id": "armeconombank-card-visa-classic",
+  "bankId": "armeconombank",
+  "type": "card",
+  "cardType": "debit",
+  "network": "visa",
+  "tier": "Classic",
+  "name": { "hy": "Visa Classic", "en": "Visa Classic", "ru": "Visa Classic" },
+  "currency": ["AMD", "USD", "EUR", "RUB"],
+  "annualFee": 3000,
+  "cashbackPct": null,
+  "creditLimitMax": null,
+  "creditRate": null,
+  "features": {
+    "hy": [
+      "Անհպում (contactless) վճարումներ",
+      "Ընդունվում է աշխարհի 2+ մլն բանկոմատներում և տասնյակ միլիոն վաճառակետերում",
+      "Օրական անկանխիկ գործարքների սահմանաչափ՝ 4,500,000 դրամ",
+      "Կորստի դեպքում ժամանակավոր քարտի տրամադրում"
+    ]
+  },
+  "sources": [
+    "https://www.aeb.am/hy/individual/cards/visa-classic"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

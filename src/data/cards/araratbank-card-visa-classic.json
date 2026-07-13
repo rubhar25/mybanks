@@ -1,0 +1,29 @@
+{
+  "id": "araratbank-card-visa-classic",
+  "bankId": "araratbank",
+  "type": "card",
+  "cardType": "debit",
+  "network": "visa",
+  "tier": "Classic",
+  "name": { "hy": "Visa Classic", "en": "Visa Classic", "ru": "Visa Classic" },
+  "currency": ["AMD", "USD", "EUR", "RUB", "GBP", "AED"],
+  "annualFee": 3000,
+  "annualFeeNote": { "hy": "Լրացուցիչ քարտ՝ 2,000 դրամ/տարի" },
+  "cashbackPct": null,
+  "creditLimitMax": null,
+  "creditRate": null,
+  "features": {
+    "hy": [
+      "Վավերականություն՝ 4 տարի",
+      "Ընդունվում է ամբողջ աշխարհում ԱՏՄ-ներում, խանութներում և ինտերնետում",
+      "Կրկնակի (հիմնական և հավելյալ) քարտի հնարավորություն",
+      "Կորստի դեպքում փոխարինող քարտ՝ 1,000 դրամով",
+      "SMS ծանուցում՝ 15 դրամ/գործարք"
+    ]
+  },
+  "sources": [
+    "https://www.araratbank.am/hy/visa-carder/13/"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

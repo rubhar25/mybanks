@@ -1,0 +1,29 @@
+{
+  "id": "ameriabank-card-visa-infinite",
+  "bankId": "ameriabank",
+  "type": "card",
+  "cardType": "premium",
+  "network": "visa",
+  "tier": "Infinite",
+  "name": { "hy": "Visa Infinite", "en": "Visa Infinite", "ru": "Visa Infinite" },
+  "currency": ["AMD", "USD", "EUR"],
+  "annualFee": null,
+  "annualFeeNote": { "hy": "Սակագնային PDF փաստաթղթերում հանդիպող թվերը հակասական են (որոշ աղբյուրներում՝ 0, մյուսներում՝ 100,000 դրամ/տարի); ստույգ արժեքը հրապարակային էջից հստակ չհաստատվեց։" },
+  "cashbackPct": null,
+  "creditLimitMax": null,
+  "creditRate": null,
+  "features": {
+    "hy": [
+      "Բանկի բարձրագույն կարգի պրեմիում քարտ",
+      "Օդանավակայանի VIP սրահների հասանելիություն (ըստ ընդհանուր արտոնությունների էջի)",
+      "Կոնսիերժ ծառայություն",
+      "Ճամփորդական ապահովագրություն"
+    ]
+  },
+  "sources": [
+    "https://ameriabank.am/personal/cards/more/card-benefits",
+    "https://ameriabank.am/personal/cards/banking-cards"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}

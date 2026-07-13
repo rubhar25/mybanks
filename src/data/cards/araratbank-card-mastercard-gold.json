@@ -1,0 +1,29 @@
+{
+  "id": "araratbank-card-mastercard-gold",
+  "bankId": "araratbank",
+  "type": "card",
+  "cardType": "premium",
+  "network": "mastercard",
+  "tier": "Gold",
+  "name": { "hy": "Mastercard Gold", "en": "Mastercard Gold", "ru": "Mastercard Gold" },
+  "currency": ["AMD", "USD", "EUR", "RUB", "GBP"],
+  "annualFee": 10000,
+  "annualFeeNote": { "hy": "Հավելյալ քարտ՝ 5,000 դրամ/տարի, փոխարինում կորստի դեպքում՝ 2,000 դրամ" },
+  "cashbackPct": null,
+  "creditLimitMax": 5000000,
+  "creditRate": 17,
+  "features": {
+    "hy": [
+      "Վավերականություն՝ 4 տարի",
+      "Անվճար կանխիկացում ԱՐԱՐԱՏԲԱՆԿԻ ԱՏՄ-ներում",
+      "Հնարավոր է կցել օվերդրաֆտ (վարկային գիծ)՝ առավելագույնը 5,000,000 դրամ, անվանական տոկոսադրույք 17% (ՀՀ դրամով), 12-24 ամիս ժամկետով, 30-օրյա արտոնյալ ժամանակաշրջանով",
+      "Անվճար քաղվածքների առաքում էլ. փոստով"
+    ]
+  },
+  "sources": [
+    "https://www.araratbank.am/hy/master-carder/11/",
+    "https://www.araratbank.am/hy/overdraft/218/"
+  ],
+  "verified": true,
+  "updatedAt": "2026-07-13"
+}
